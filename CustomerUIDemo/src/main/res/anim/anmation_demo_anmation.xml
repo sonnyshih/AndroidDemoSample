@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  duration: 暫停多久才開始動畫
+  fillAfter: 在做完動畫後， true: 保持原來， fale:
+  fromAlpha: 透明
+  interpolator: 要使用哪一種特效
+  toAlpha: 不透明
+-->
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="2000" 
+    android:fillAfter="true"
+    android:fromAlpha="0.0"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:toAlpha="1.0" />

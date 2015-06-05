@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/search"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_search"
+        android:showAsAction="always"
+        android:title="@string/menu_searchTitle"/>
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/ic_cart"
+        android:showAsAction="always"
+        android:title="@string/menu_cartTitle"/>
+    <item
+        android:icon="@drawable/ic_more"
+        android:showAsAction="always"
+        android:title="@string/menu_moreTitle">
+        <menu>
+            <item
+                android:id="@+id/menuHome"
+                android:title="@string/menu_homeTitle"/>
+            <item
+                android:id="@+id/menuMyAccount"
+                android:title="@string/menu_myAccountTitle"/>
+            <item
+                android:id="@+id/menuRecentHistory"
+                android:title="@string/menu_recentHistoryTitle"/>
+            <item
+                android:id="@+id/menuWishList"
+                android:title="@string/menu_wishListTitle"/>
+            <item
+                android:id="@+id/menuInformation"
+                android:title="@string/menu_informationTitle"/>
+            <item
+                android:id="@+id/menuSearchGoogleTv"
+                android:title="@string/menu_searchGoogleTvTitle"/>
+        </menu>
+    </item>
+
+</menu>

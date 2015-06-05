@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:background="#000"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:background="#ff0000" />
+
+    <TextView
+        android:id="@+id/show_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Popup Window"
+        android:textColor="#fff" />
+
+</LinearLayout>

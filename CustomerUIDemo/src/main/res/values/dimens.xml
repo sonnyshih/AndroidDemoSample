@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="popup_window_width">200dp</dimen>
+    <dimen name="popup_window_height">100dp</dimen>
+    
+    <dimen name="r5dp">5dp</dimen>
+    <dimen name="r90dp">90dp</dimen>
+    <dimen name="r150dp">150dp</dimen>
+    <dimen name="r325dp">325dp</dimen>
+    <dimen name="r450dp">450dp</dimen>
+    <dimen name="r585dp">585dp</dimen>
+
+</resources>

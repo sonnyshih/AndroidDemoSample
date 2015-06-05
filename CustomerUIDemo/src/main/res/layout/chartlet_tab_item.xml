@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chartlet_tab_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chartlet_tab_bg_selector"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dip" >
+
+    <ImageView
+        android:id="@+id/chartletTab_imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/content_tab_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@drawable/chartlet_tab_text_selector" />
+
+</LinearLayout>

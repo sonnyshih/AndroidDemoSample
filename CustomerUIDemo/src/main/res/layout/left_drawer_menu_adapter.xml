@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:padding="15dp" >
+
+    <ImageView
+        android:id="@+id/main_menuItemImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/main_menuItemNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/main_menuItemImageView"
+        android:layout_toRightOf="@+id/main_menuItemImageView"
+        android:paddingRight="10dp"
+        android:text="Folder name here."
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</RelativeLayout>
