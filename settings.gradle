@@ -1,1 +1,1 @@
-include ':CustomerUIDemo', ':VolleyDemo', ':Fragment Demo'
+include ':CustomerUIDemo', ':VolleyDemo', ':Fragment Demo', ':Service Demo'

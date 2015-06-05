@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ServiceDemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.home.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Service Demo -->
+        <activity
+            android:name=".activity.ServiceDemo.ServiceDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <service android:name=".activity.ServiceDemo.CountService"></service>
+
+        <!-- Bind Service Demo -->
+        <activity
+            android:name=".activity.BindServiceDemo.BindServiceDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <service android:name=".activity.BindServiceDemo.CountBindService"></service>
+
+        <!-- Mix Service Demo -->
+        <activity
+            android:name=".activity.MixServiceDemo.MixServiceDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <service android:name=".activity.MixServiceDemo.CountBindService"></service>
+
+        <!-- Notification Service Demo -->
+        <activity
+            android:name=".activity.NotificationServiceDemo.NotificationActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <service android:name=".activity.NotificationServiceDemo.LocalService"></service>
+
+        <activity
+            android:name=".activity.NotificationServiceDemo.SpecialNotificationResultActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.NotificationServiceDemo.NotificationActivity" />
+        </activity>
+
+
+        <!-- Broadcast Receiver Demo -->
+        <activity
+            android:name=".activity.BroadcastReceiverDemo.BroadcastReceiverDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <receiver
+            android:name=".activity.BroadcastReceiverDemo.SimpleReceiver"
+            android:exported="false" >
+
+            <intent-filter>
+                <action android:name="com.example.broadcastreceiverdemo.action.rec" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>
