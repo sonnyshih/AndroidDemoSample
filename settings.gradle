@@ -1,1 +1,1 @@
-include ':CustomerUIDemo'
+include ':CustomerUIDemo', ':VolleyDemo'
