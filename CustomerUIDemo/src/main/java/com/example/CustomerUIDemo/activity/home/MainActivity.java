@@ -15,6 +15,7 @@ import com.example.CustomerUIDemo.activity.TextviewEditTextDemo.TextViewAndEditV
 import com.example.CustomerUIDemo.activity.Video.VideoDemoActivity;
 import com.example.CustomerUIDemo.activity.ViewHolderDemo.ViewHolderDemoActvity;
 import com.example.CustomerUIDemo.activity.WebViewDemo.WebViewDemoActivity;
+import com.example.CustomerUIDemo.activity.swipeRefreshDemo.SwipeRefreshDemoActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -38,6 +39,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	private Button webViewDemoButton;
 	private Button animationDemoButton;
 	private Button videoDemoButton;
+	private Button swipeRefreshDemoButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +84,11 @@ public class MainActivity extends Activity implements OnClickListener{
 		
 		videoDemoButton = (Button) findViewById(R.id.main_videoDemoButton);
 		videoDemoButton.setOnClickListener(this);
-		
+
+		swipeRefreshDemoButton = (Button) findViewById(R.id.main_swipeRefreshDemoButton);
+		swipeRefreshDemoButton.setOnClickListener(this);
+
+
 	}
 
 	
@@ -143,7 +149,11 @@ public class MainActivity extends Activity implements OnClickListener{
 		case R.id.main_videoDemoButton:
 			intent.setClass(this, VideoDemoActivity.class);
 			break;
-			
+
+		case R.id.main_swipeRefreshDemoButton:
+			intent.setClass(this, SwipeRefreshDemoActivity.class);
+			break;
+
 		default:
 			break;
 		}
