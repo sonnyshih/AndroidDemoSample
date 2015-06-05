@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/CustomerUIDemo" />
             <option value="$PROJECT_DIR$/Fragment Demo" />
             <option value="$PROJECT_DIR$/Service Demo" />
+            <option value="$PROJECT_DIR$/Thread And Async Task Demo" />
             <option value="$PROJECT_DIR$/VolleyDemo" />
           </set>
         </option>
