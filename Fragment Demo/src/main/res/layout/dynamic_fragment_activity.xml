@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dynamic_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/main_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dynamic Fragment Demo" />
+
+    <Button
+        android:id="@+id/dynamicFragment_dynamicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/main_textView"
+        android:layout_below="@+id/main_textView"
+        android:text="Add Fragement" />
+
+</RelativeLayout>
