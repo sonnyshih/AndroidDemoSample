@@ -149,6 +149,10 @@
             android:name=".activity.swipeRefreshDemo.SwipeRefreshDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
 
+        <activity
+            android:name=".activity.RecycleViewDemo.RecycleViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
     </application>
 
 </manifest>

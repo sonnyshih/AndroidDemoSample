@@ -9,6 +9,7 @@ import com.example.CustomerUIDemo.activity.ExpandableListviewDemo.ExpandableList
 import com.example.CustomerUIDemo.activity.ImageViewDemo.ImageViewDemoActivity;
 import com.example.CustomerUIDemo.activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivity;
 import com.example.CustomerUIDemo.activity.PopupWindowDemo.PopupWindowDemoActivity;
+import com.example.CustomerUIDemo.activity.RecycleViewDemo.RecycleViewActivity;
 import com.example.CustomerUIDemo.activity.SendNotificationDemo.SendNotificationDemoActivity;
 import com.example.CustomerUIDemo.activity.TabHost.TabHostDemoActivity;
 import com.example.CustomerUIDemo.activity.TextviewEditTextDemo.TextViewAndEditViewDemoActivity;
@@ -40,7 +41,8 @@ public class MainActivity extends Activity implements OnClickListener{
 	private Button animationDemoButton;
 	private Button videoDemoButton;
 	private Button swipeRefreshDemoButton;
-	
+	private Button RecycleViewDemoButton;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -87,6 +89,9 @@ public class MainActivity extends Activity implements OnClickListener{
 
 		swipeRefreshDemoButton = (Button) findViewById(R.id.main_swipeRefreshDemoButton);
 		swipeRefreshDemoButton.setOnClickListener(this);
+
+		RecycleViewDemoButton = (Button) findViewById(R.id.main_RecycleViewDemoButton);
+		RecycleViewDemoButton.setOnClickListener(this);
 
 
 	}
@@ -152,6 +157,10 @@ public class MainActivity extends Activity implements OnClickListener{
 
 		case R.id.main_swipeRefreshDemoButton:
 			intent.setClass(this, SwipeRefreshDemoActivity.class);
+			break;
+
+		case R.id.main_RecycleViewDemoButton:
+			intent.setClass(this, RecycleViewActivity.class);
 			break;
 
 		default:
