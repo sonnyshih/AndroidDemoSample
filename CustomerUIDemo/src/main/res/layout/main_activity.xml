@@ -130,6 +130,14 @@
             android:layout_marginTop="5dp"
             android:text="Recycle View Demo" />
 
+        <Button
+            android:id="@+id/main_CardviewDemoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_RecycleViewDemoButton"
+            android:layout_marginTop="5dp"
+            android:text="Card View Demo" />
+
     </RelativeLayout>
 
 </ScrollView>

@@ -1,9 +1,17 @@
 package com.example.CustomerUIDemo.activity.home;
 
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
 import com.example.CustomerUIDemo.R;
 import com.example.CustomerUIDemo.activity.AlertDialogDemo.AlertDialogDemoActivity;
 import com.example.CustomerUIDemo.activity.AnimationDemo.AnmationDemoActivity;
+import com.example.CustomerUIDemo.activity.CardViewDemo.CardViewDemoActivity;
 import com.example.CustomerUIDemo.activity.DrawerDemo.DrawerDemoActivity;
 import com.example.CustomerUIDemo.activity.ExpandableListviewDemo.ExpandableListviewDemoActivity;
 import com.example.CustomerUIDemo.activity.ImageViewDemo.ImageViewDemoActivity;
@@ -17,13 +25,6 @@ import com.example.CustomerUIDemo.activity.Video.VideoDemoActivity;
 import com.example.CustomerUIDemo.activity.ViewHolderDemo.ViewHolderDemoActvity;
 import com.example.CustomerUIDemo.activity.WebViewDemo.WebViewDemoActivity;
 import com.example.CustomerUIDemo.activity.swipeRefreshDemo.SwipeRefreshDemoActivity;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 
 public class MainActivity extends Activity implements OnClickListener{
 	
@@ -41,7 +42,8 @@ public class MainActivity extends Activity implements OnClickListener{
 	private Button animationDemoButton;
 	private Button videoDemoButton;
 	private Button swipeRefreshDemoButton;
-	private Button RecycleViewDemoButton;
+	private Button recycleViewDemoButton;
+	private Button cardviewDemoButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -90,9 +92,11 @@ public class MainActivity extends Activity implements OnClickListener{
 		swipeRefreshDemoButton = (Button) findViewById(R.id.main_swipeRefreshDemoButton);
 		swipeRefreshDemoButton.setOnClickListener(this);
 
-		RecycleViewDemoButton = (Button) findViewById(R.id.main_RecycleViewDemoButton);
-		RecycleViewDemoButton.setOnClickListener(this);
+		recycleViewDemoButton = (Button) findViewById(R.id.main_RecycleViewDemoButton);
+		recycleViewDemoButton.setOnClickListener(this);
 
+		cardviewDemoButton = (Button) findViewById(R.id.main_CardviewDemoButton);
+		cardviewDemoButton.setOnClickListener(this);
 
 	}
 
@@ -161,6 +165,10 @@ public class MainActivity extends Activity implements OnClickListener{
 
 		case R.id.main_RecycleViewDemoButton:
 			intent.setClass(this, RecycleViewActivity.class);
+			break;
+
+		case R.id.main_CardviewDemoButton:
+			intent.setClass(this, CardViewDemoActivity.class);
 			break;
 
 		default:

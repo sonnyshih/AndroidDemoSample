@@ -153,6 +153,19 @@
             android:name=".activity.RecycleViewDemo.RecycleViewActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
 
+        <activity
+            android:name=".activity.CardViewDemo.CardViewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <activity
+            android:name=".activity.CardViewDemo.CardViewListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <activity
+            android:name=".activity.CardViewDemo.CardViewRadiusAndElevationActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+
     </application>
 
 </manifest>
