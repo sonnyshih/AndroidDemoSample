@@ -150,7 +150,17 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
 
         <activity
-            android:name=".activity.RecycleViewDemo.RecycleViewActivity"
+            android:name=".activity.RecycleViewDemo.RecycleViewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="RecycleView Demo"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name=".activity.RecycleViewDemo.LinearLayoutRecycleViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <activity
+            android:name=".activity.RecycleViewDemo.GridLayoutRecycleViewActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
 
         <activity

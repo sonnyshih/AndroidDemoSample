@@ -12,7 +12,7 @@ import com.example.CustomerUIDemo.ui.adapter.RecycyleViewAdapter;
 
 import java.util.ArrayList;
 
-public class RecycleViewActivity extends Activity {
+public class LinearLayoutRecycleViewActivity extends Activity {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;

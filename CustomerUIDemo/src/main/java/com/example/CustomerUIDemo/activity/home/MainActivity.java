@@ -17,7 +17,7 @@ import com.example.CustomerUIDemo.activity.ExpandableListviewDemo.ExpandableList
 import com.example.CustomerUIDemo.activity.ImageViewDemo.ImageViewDemoActivity;
 import com.example.CustomerUIDemo.activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivity;
 import com.example.CustomerUIDemo.activity.PopupWindowDemo.PopupWindowDemoActivity;
-import com.example.CustomerUIDemo.activity.RecycleViewDemo.RecycleViewActivity;
+import com.example.CustomerUIDemo.activity.RecycleViewDemo.RecycleViewDemoActivity;
 import com.example.CustomerUIDemo.activity.SendNotificationDemo.SendNotificationDemoActivity;
 import com.example.CustomerUIDemo.activity.TabHost.TabHostDemoActivity;
 import com.example.CustomerUIDemo.activity.TextviewEditTextDemo.TextViewAndEditViewDemoActivity;
@@ -164,7 +164,7 @@ public class MainActivity extends Activity implements OnClickListener{
 			break;
 
 		case R.id.main_RecycleViewDemoButton:
-			intent.setClass(this, RecycleViewActivity.class);
+			intent.setClass(this, RecycleViewDemoActivity.class);
 			break;
 
 		case R.id.main_CardviewDemoButton:
