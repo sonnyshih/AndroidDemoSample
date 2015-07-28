@@ -164,6 +164,10 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
 
         <activity
+            android:name=".activity.RecycleViewDemo.ListViewIncludeRecycleViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <activity
             android:name=".activity.CardViewDemo.CardViewDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
 

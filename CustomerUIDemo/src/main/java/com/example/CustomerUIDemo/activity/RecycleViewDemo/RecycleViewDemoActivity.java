@@ -14,6 +14,7 @@ public class RecycleViewDemoActivity extends Activity implements OnClickListener
 
     private Button linearRecycleViewButton;
     private Button gridRecycleViewButton;
+    private Button listViewIncludeRecycleViewButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +24,11 @@ public class RecycleViewDemoActivity extends Activity implements OnClickListener
         linearRecycleViewButton = (Button) findViewById(R.id.recycleviewDemo_linearRecycleViewButton);
         linearRecycleViewButton.setOnClickListener(this);
 
-        linearRecycleViewButton = (Button) findViewById(R.id.recycleviewDemo_gridRecycleViewButton);
-        linearRecycleViewButton.setOnClickListener(this);
+        gridRecycleViewButton = (Button) findViewById(R.id.recycleviewDemo_gridRecycleViewButton);
+        gridRecycleViewButton.setOnClickListener(this);
 
+        listViewIncludeRecycleViewButton = (Button) findViewById(R.id.recycleviewDemo_listViewIncludeRecycleViewButton);
+        listViewIncludeRecycleViewButton.setOnClickListener(this);
 
     }
 
@@ -39,6 +42,10 @@ public class RecycleViewDemoActivity extends Activity implements OnClickListener
 
             case R.id.recycleviewDemo_gridRecycleViewButton:
                 intent.setClass(this, GridLayoutRecycleViewActivity.class);
+                break;
+
+            case R.id.recycleviewDemo_listViewIncludeRecycleViewButton:
+                intent.setClass(this, ListViewIncludeRecycleViewActivity.class);
                 break;
 
             default:
