@@ -8,9 +8,11 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE"/>
 
+    <!--
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="14" />
+        -->
 
     <application
         android:name=".activity.base.CustomerUIDemoApp"
@@ -179,6 +181,34 @@
             android:name=".activity.CardViewDemo.CardViewRadiusAndElevationActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
 
+        <!-- Intent Filter Demo Start -->
+        <activity
+            android:name=".activity.IntentFilterDemo.IntentFilterDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <activity
+            android:name=".activity.IntentFilterDemo.IntentTest1Activity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <activity
+            android:name=".activity.IntentFilterDemo.ActionActivity"
+            android:label="Action test">
+
+            <intent-filter>
+                <action android:name="com.flysnow.intent.ACTION_VIEW"></action>
+
+                <action android:name="android.intent.action.VIEW"></action>
+
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".activity.IntentFilterDemo.IntentTest2Activity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <!-- Intent Filter Demo End -->
 
     </application>
 
