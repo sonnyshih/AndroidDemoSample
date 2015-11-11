@@ -1,20 +1,19 @@
 package com.example.fragmentdemo.FragmentPagerDemo;
 
-import java.util.List;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import java.util.List;
 
-/** FragmentPagerAdapter »P  FragmentStatePagerAdapter ¨Ï¥Î®É¾÷
+/** FragmentPagerAdapter èˆ‡  FragmentStatePagerAdapter ä½¿ç”¨æ™‚æ©Ÿ
  * - FragmentPagerAdapter
-  * ¬O§â©Ò¦³ªº fragment¦s¦b memory¸Ì
-  * ¾A¦X¤Ö¶q¡BÀRºAªº fragment
-
+ *   æ˜¯æŠŠæ‰€æœ‰çš„ fragmentå­˜åœ¨ memoryè£¡
+ *   é©åˆå°‘é‡ã€éœæ…‹çš„ fragment
  * - FragmentStatePagerAdapter
-  * ¥u¬O¼È¦s¡A¦pªG¤£¦bµe­±¤W®É¡A´N³Qdestory
-  * ¾A¦X¦h¶q¡B°ÊºAªº fragment
- * 
+ *   åªæ˜¯æš«å­˜ï¼Œå¦‚æœä¸åœ¨ç•«é¢ä¸Šæ™‚ï¼Œå°±è¢«destory
+ *   é©åˆå¤šé‡ã€å‹•æ…‹çš„ fragment
+ *
  * */
 
 public class MyPagerAdapter extends FragmentPagerAdapter {

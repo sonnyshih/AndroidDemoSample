@@ -28,14 +28,14 @@ public class ThreadPoolExecutorDemoActivity extends Activity {
 		// Get the ThreadFactory implementation to use
 		ThreadFactory threadFactory = Executors.defaultThreadFactory();
 
-		int corePoolSize = 2; // ¦À¤¤©Ò«O¦sªº½uµ{¼Æ¡A¥]¬AªÅ¶¢½uµ{
-		int maximumPoolSize = 4; // ¦À¤¤¤¹³\ªº³Ì¤j½uµ{¼Æ¡C
-		int keepAliveTime = 10; // ·í½uµ{¼Æ¤j©ó®Ö¤ß®É¡A¦¹¬°²×¤î«e¦h¾lªºªÅ¶¢½uµ{µ¥«İ·s¥ô°Èªº³Ìªø®É¶¡¡C
+		int corePoolSize = 2; // æ± ä¸­æ‰€ä¿å­˜çš„ç·šç¨‹æ•¸ï¼ŒåŒ…æ‹¬ç©ºé–’ç·šç¨‹
+		int maximumPoolSize = 4; // æ± ä¸­å…è¨±çš„æœ€å¤§ç·šç¨‹æ•¸ã€‚
+		int keepAliveTime = 10; // ç•¶ç·šç¨‹æ•¸å¤§æ–¼æ ¸å¿ƒæ™‚ï¼Œæ­¤ç‚ºçµ‚æ­¢å‰å¤šé¤˜çš„ç©ºé–’ç·šç¨‹ç­‰å¾…æ–°ä»»å‹™çš„æœ€é•·æ™‚é–“ã€‚
 
-		// ¨S¦³­­¨îªº Queue
+		// æ²’æœ‰é™åˆ¶çš„ Queue
 		// BlockingQueue<Runnable> queue = new LinkedBlockingQueue<Runnable>();
-		
-		// ­­¨î Queueªº¤j¤p
+
+		// é™åˆ¶ Queueçš„å¤§å°
 		BlockingQueue<Runnable> queue = new ArrayBlockingQueue<Runnable>(corePoolSize);
 		
 		// creating the ThreadPoolExecutor

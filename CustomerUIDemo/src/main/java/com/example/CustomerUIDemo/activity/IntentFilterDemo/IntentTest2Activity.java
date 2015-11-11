@@ -7,9 +7,9 @@ import android.webkit.WebView;
 
 import com.example.CustomerUIDemo.R;
 
+
 public class IntentTest2Activity extends Activity{
     private String localURL = "file:///android_res/raw/test1.html";
-//    private String localURL = "file:///android_asset/test.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

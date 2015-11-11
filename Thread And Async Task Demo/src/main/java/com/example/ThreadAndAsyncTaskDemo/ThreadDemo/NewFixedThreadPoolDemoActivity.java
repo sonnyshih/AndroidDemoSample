@@ -9,19 +9,19 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-/** Thread Pool ����  
- * 1. newFixedThreadPool�G
- *    �Ӥ�k��^�@�ӳ̤j�e�q�T�w���u�{���A���|���ݳЫطs�u�{�A
- *    �u�{�ƶq���j��t�m���ƶq�j�p�C���u�{�ƹF��̤j�H��A�u�{���|�@�������o��h���ܡA�ѤU���|��b Queue
- * 
+/** Thread Pool 種類
+ * 1. newFixedThreadPool：
+ *    該方法返回一個最大容量固定的線程池，它會按需創建新線程，
+ *    線程數量不大於配置的數量大小。當線程數達到最大以後，線程池會一直維持這麼多不變，剩下的會放在 Queue
+ *
  * 2. newCachedThreadPool:
- *    �Ӥ�k��^�@�ӵL�ɪ��u�{���A�]�N�O�u�S���̤j�ƶq����v�C�����u�@�q��p�ɡA�o���u�{���|�P���S�Ϊ��u�{�C
- *    
+ *    該方法返回一個無界的線程池，也就是「沒有最大數量限制」。但當工作量減小時，這類線程池會銷毀沒用的線程。
+ *
  * 3. newSingleThreadedExecutor:
- *    �Ӥ�k��^�@��executor�A���i�H�O�ҩҦ������ȳ��b�@�ӳ�u�{������C
- * 
- * 4. newScheduledThreadPool�G
- *    �Ӥ�k��^�@�өT�w�j�p���u�{���A��������ɩM�w�ɥ��Ȫ�����C
+ *    該方法返回一個executor，它可以保證所有的任務都在一個單線程中執行。
+ *
+ * 4. newScheduledThreadPool：
+ *    該方法返回一個固定大小的線程池，它支持延時和定時任務的執行。
  * */
 
 public class NewFixedThreadPoolDemoActivity extends Activity {
