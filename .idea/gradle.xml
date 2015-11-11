@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/Service Demo" />
             <option value="$PROJECT_DIR$/Thread And Async Task Demo" />
             <option value="$PROJECT_DIR$/VolleyDemo" />
+            <option value="$PROJECT_DIR$/gcmsender" />
           </set>
         </option>
       </GradleProjectSettings>
