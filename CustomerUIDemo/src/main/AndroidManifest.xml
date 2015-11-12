@@ -208,6 +208,68 @@
             android:name=".activity.IntentFilterDemo.IntentTest2Activity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
 
+
+        <activity
+            android:name=".activity.IntentFilterDemo.Action2Activity"
+            android:label="Action test 2-From Web Page">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="hello"
+                    android:host="contactus"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".activity.IntentFilterDemo.Action3Activity"
+            android:label="Action test 3-Click the login in the web page">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="www.abc.com"
+                    android:pathPrefix="/account/login.php"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <receiver
+            android:name=".activity.IntentFilterDemo.ReceiverDemo1"
+            android:enabled="true">
+
+            <intent-filter>
+                <action android:name="com.example.intent.ReceiverDemo1.ACTION_VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </receiver>
+
+        <receiver
+            android:name=".activity.IntentFilterDemo.ReceiverDemo2"
+            android:enabled="true">
+
+            <intent-filter>
+                <action android:name="com.example.intent.ReceiverDemo2.ACTION_VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </receiver>
+
         <!-- Intent Filter Demo End -->
 
     </application>
