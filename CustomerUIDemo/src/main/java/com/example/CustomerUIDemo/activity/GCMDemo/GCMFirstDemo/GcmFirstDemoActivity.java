@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -183,11 +184,12 @@ public class GcmFirstDemoActivity extends Activity implements OnClickListener,
                             "   \"message\":{" +
                             "       \"model\":\"AAA-001\"," +
                             "       \"name\":\"Car\"," +
-                            "       \"color\":\"Red\""+
+                            "       \"color\":\"Red\"" +
                             "       }" +
                             "   }" +
                             "}";
 
+                    Log.d("Mylog", "gcmMessage=" + gcmMessage);
                     // Create connection to send GCM Message request.
                     URL url = new URL("https://android.googleapis.com/gcm/send");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -213,7 +215,8 @@ public class GcmFirstDemoActivity extends Activity implements OnClickListener,
     }
 
     StringBuilder stringBuilder = new StringBuilder();
-    private void showResponse(InputStream inputStream){
+
+    private void showResponse(InputStream inputStream) {
         BufferedReader bufferedReader = null;
 
 
@@ -237,12 +240,15 @@ public class GcmFirstDemoActivity extends Activity implements OnClickListener,
             }
         }
 
+        Log.d("Mylog", "responseMessage=" + stringBuilder);
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 responseTextView.setText(stringBuilder);
             }
         });
+
     }
 
     @Override
