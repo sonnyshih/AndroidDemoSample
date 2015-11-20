@@ -2,27 +2,36 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.CustomerUIDemo"
     android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
-
-    <!--
+    android:versionName="1.0">
+<!--
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="14" />
-        -->
+-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- GCM Setting Start -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- GCM Setting End -->
+
 
     <application
         android:name=".activity.base.CustomerUIDemoApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".activity.home.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,53 +42,53 @@
 
         <activity
             android:name=".activity.TextviewEditTextDemo.TextViewAndEditViewDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.ImageViewDemo.ImageViewDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.TextviewEditTextDemo.ChartletActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:theme="@style/com.sonny.customer.AppTheme.Transparent"/>
+            android:theme="@style/com.sonny.customer.AppTheme.Transparent" />
 
         <activity
             android:name=".activity.TabHost.TabHostDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.TabHost.TabhostAndViewpagerDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.DrawerDemo.DrawerDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:theme="@style/Theme.Customer"/>
+            android:theme="@style/Theme.Customer" />
 
         <activity
             android:name=".activity.ExpandableListviewDemo.ExpandableListviewDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.ViewHolderDemo.ViewHolderDemoActvity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.AlertDialogDemo.AlertDialogDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.PopupWindowDemo.PopupWindowDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.SendNotificationDemo.SendNotificationDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.SendNotificationDemo.NotificationResultActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize" >
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize">
 
             <!-- When open the notification and press back button, the screen will return to which page  -->
             <meta-data
@@ -92,7 +101,7 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
-            android:taskAffinity="" >
+            android:taskAffinity="">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.SendNotificationDemo.SendNotificationDemoActivity" />
@@ -100,95 +109,95 @@
 
         <activity
             android:name=".activity.WebViewDemo.WebViewDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.AnimationDemo.AnmationDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.MenuAndActionBarDemo.ActionBarDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.MenuAndActionBarDemo.CustomerActionBarActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:theme="@style/Theme.Customer"/>
+            android:theme="@style/Theme.Customer" />
 
         <activity
             android:name=".activity.MenuAndActionBarDemo.FloatContextMenuDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.MenuAndActionBarDemo.IndividualViewActionModeDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.MenuAndActionBarDemo.ListViewActionModeDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.MenuAndActionBarDemo.CustomListViewActionModeActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.Video.VideoDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.Video.VideoViewActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.Video.VideoMediaPlayerActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.swipeRefreshDemo.SwipeRefreshDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.RecycleViewDemo.RecycleViewDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="RecycleView Demo"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask" />
 
         <activity
             android:name=".activity.RecycleViewDemo.LinearLayoutRecycleViewActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.RecycleViewDemo.GridLayoutRecycleViewActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.RecycleViewDemo.ListViewIncludeRecycleViewActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.CardViewDemo.CardViewDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.CardViewDemo.CardViewListActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.CardViewDemo.CardViewRadiusAndElevationActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <!-- Intent Filter Demo Start -->
         <activity
             android:name=".activity.IntentFilterDemo.IntentFilterDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.IntentFilterDemo.IntentTest1Activity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
             android:name=".activity.IntentFilterDemo.ActionActivity"
@@ -206,7 +215,7 @@
 
         <activity
             android:name=".activity.IntentFilterDemo.IntentTest2Activity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
 
         <activity
@@ -221,8 +230,8 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="hello"
-                    android:host="contactus"/>
+                    android:host="contactus"
+                    android:scheme="hello" />
 
             </intent-filter>
 
@@ -240,9 +249,9 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="http"
                     android:host="www.abc.com"
-                    android:pathPrefix="/account/login.php"/>
+                    android:pathPrefix="/account/login.php"
+                    android:scheme="http" />
 
             </intent-filter>
 
@@ -271,6 +280,31 @@
         </receiver>
 
         <!-- Intent Filter Demo End -->
+
+
+        <!-- GCM Demo Start -->
+        <activity
+            android:name=".activity.GCMDemo.GCMDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.GCMDemo.GCMFirstDemo.GcmFirstDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <receiver
+            android:name=".activity.GCMDemo.GCMFirstDemo.GCMFirstReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.CustomerUIDemo" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.GCMDemo.GcmSecondDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <!-- GCM Demo End -->
 
     </application>
 

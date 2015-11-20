@@ -1,26 +1,26 @@
 package com.example.volleydemo.CustomerGsonRequest;
 
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.List;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.example.volleydemo.R;
-import com.example.volleydemo.CustomerGsonRequest.entity.UserInfoEntity;
-import com.example.volleydemo.CustomerGsonRequest.entity.VStoreNavigationItemInfoEntity;
-import com.example.volleydemo.SingletonPattern.MySingleton;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.example.volleydemo.CustomerGsonRequest.entity.UserInfoEntity;
+import com.example.volleydemo.CustomerGsonRequest.entity.VStoreNavigationItemInfoEntity;
+import com.example.volleydemo.R;
+import com.example.volleydemo.SingletonPattern.MySingleton;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.List;
 
 public class CustomerGsonRequestActivity extends Activity implements OnClickListener{
 	private RequestQueue requestQueue;
@@ -107,8 +107,8 @@ public class CustomerGsonRequestActivity extends Activity implements OnClickList
 		headers.put("Accept-Charset", "utf-8");
   	    headers.put("Accept-Encoding", "gzip,deflate");
 		headers.put("X-HighResolution", "false");
-//		headers.put("Content-type", "application/json"); // For JSON 加了會產生 http code 400
-//		headers.put("Content-type", "application/x-www-form-urlencoded"); // For UrlEncoded 加了會產生 http code 400
+//		headers.put("Content-type", "application/json");
+//		headers.put("Content-type", "application/x-www-form-urlencoded");
 		
 		return headers;
 

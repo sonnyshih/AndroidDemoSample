@@ -1,10 +1,11 @@
 package com.example.volleydemo.JsonOjbectRequest;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -14,12 +15,11 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.volleydemo.R;
 import com.example.volleydemo.SingletonPattern.MySingleton;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.TextView;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class JsonObjectRequestActivity extends Activity implements
 		OnClickListener {
@@ -112,8 +112,8 @@ public class JsonObjectRequestActivity extends Activity implements
 		headers.put("Accept-Charset", "utf-8");
   	    headers.put("Accept-Encoding", "gzip,deflate");
 		headers.put("X-HighResolution", "false");
-//		headers.put("Content-type", "application/json"); // For JSON 加了會產生 http code 400
-//		headers.put("Content-type", "application/x-www-form-urlencoded"); // For UrlEncoded 加了會產生 http code 400
+//		headers.put("Content-type", "application/json"); //
+//		headers.put("Content-type", "application/x-www-form-urlencoded"); //
 		
 		return headers;
 

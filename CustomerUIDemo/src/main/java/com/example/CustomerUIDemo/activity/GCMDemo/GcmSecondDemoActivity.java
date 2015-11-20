@@ -7,11 +7,11 @@ import android.os.Bundle;
 
 import com.example.CustomerUIDemo.R;
 
-public class SecondDemoActivity extends Activity{
+public class GcmSecondDemoActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gcm_demo_activity);
+        setContentView(R.layout.gcm_second_demo_activity);
     }
 }

@@ -14,6 +14,7 @@ import com.example.CustomerUIDemo.activity.AnimationDemo.AnmationDemoActivity;
 import com.example.CustomerUIDemo.activity.CardViewDemo.CardViewDemoActivity;
 import com.example.CustomerUIDemo.activity.DrawerDemo.DrawerDemoActivity;
 import com.example.CustomerUIDemo.activity.ExpandableListviewDemo.ExpandableListviewDemoActivity;
+import com.example.CustomerUIDemo.activity.GCMDemo.GCMDemoActivity;
 import com.example.CustomerUIDemo.activity.ImageViewDemo.ImageViewDemoActivity;
 import com.example.CustomerUIDemo.activity.IntentFilterDemo.IntentFilterDemoActivity;
 import com.example.CustomerUIDemo.activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivity;
@@ -46,6 +47,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Button recycleViewDemoButton;
     private Button cardviewDemoButton;
     private Button intentFilterDemoButton;
+    private Button gcmDemoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +105,8 @@ public class MainActivity extends Activity implements OnClickListener {
         intentFilterDemoButton = (Button) findViewById(R.id.main_intentFilterDemoButton);
         intentFilterDemoButton.setOnClickListener(this);
 
+        gcmDemoButton = (Button) findViewById(R.id.main_gcmDemoButton);
+        gcmDemoButton.setOnClickListener(this);
 
     }
 
@@ -179,6 +183,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_intentFilterDemoButton:
                 intent.setClass(this, IntentFilterDemoActivity.class);
+                break;
+
+            case R.id.main_gcmDemoButton:
+                intent.setClass(this, GCMDemoActivity.class);
                 break;
 
             default:
