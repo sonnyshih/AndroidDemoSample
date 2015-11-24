@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
-public class GCMFirstReceiver extends BroadcastReceiver {
+public class DownstreamMessagingReceiver extends BroadcastReceiver {
 
 
     @Override
@@ -32,8 +32,10 @@ public class GCMFirstReceiver extends BroadcastReceiver {
                         Toast.LENGTH_LONG).show();
 
             } else if (GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE.equals(messageType)) {
+//                Toast.makeText(context, " GCM MESSAGE = " + extras.getString("message"),
+//                        Toast.LENGTH_LONG).show();
 
-                Toast.makeText(context, " GCM MESSAGE = " + extras.getString("message"),
+                Toast.makeText(context, " GCM MESSAGE = " + extras.toString(),
                         Toast.LENGTH_LONG).show();
 
 //                Intent i = new Intent(context, MainActivity.class);

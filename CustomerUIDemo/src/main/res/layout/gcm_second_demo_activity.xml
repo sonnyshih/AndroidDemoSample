@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/gcmDemo_firstDemo"
+        android:id="@+id/gcmDemo_downstreamMessagingDemo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

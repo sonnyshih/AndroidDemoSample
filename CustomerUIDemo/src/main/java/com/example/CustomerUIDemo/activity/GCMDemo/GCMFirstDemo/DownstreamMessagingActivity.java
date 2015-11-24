@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,9 +29,10 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class GcmFirstDemoActivity extends Activity implements OnClickListener,
+public class DownstreamMessagingActivity extends Activity implements OnClickListener,
         RegisterGCMTaskListener,
-        UnregisterGCMTaskListener {
+        UnregisterGCMTaskListener,
+        RadioGroup.OnCheckedChangeListener {
 
 
     private static final String PROPERTY_REG_ID = "registration_id";
@@ -39,10 +41,15 @@ public class GcmFirstDemoActivity extends Activity implements OnClickListener,
     public static final String API_KEY = "AIzaSyBbzlhXB5HQcz28I9xwqLMB04uTAd8qYtE";
     private final static String senderId = "643534156510";
 
+    private String sendMessage;
     private Button registerButton;
     private Button unregisterButton;
     private Button pushMessageButton;
     private TextView responseTextView;
+    private TextView sendGCMMessageTextView;
+
+    private RadioGroup messageTypeRadioGroup;
+
 
     public enum PlayServicesState {
         SUPPROT, NEED_PLAY_SERVICE, UNSUPPORT;
@@ -68,6 +75,11 @@ public class GcmFirstDemoActivity extends Activity implements OnClickListener,
         pushMessageButton.setOnClickListener(this);
 
         responseTextView = (TextView) findViewById(R.id.gcmFirstDemo_responseTextView);
+
+        sendGCMMessageTextView = (TextView) findViewById(R.id.gcmFirstDemo_sendGCMMessageTextView);
+
+        messageTypeRadioGroup = (RadioGroup) findViewById(R.id.gcmFirstDemo_messageTypeRadioGroup);
+        messageTypeRadioGroup.setOnCheckedChangeListener(this);
     }
 
     private GCMState register() {
@@ -169,27 +181,16 @@ public class GcmFirstDemoActivity extends Activity implements OnClickListener,
     }
 
 
-    private void pushMessage() {
+    private void pushMessage(final String sendMessage) {
 
 
         new Thread(new Runnable() {
             @Override
             public void run() {
-                String regId = getRegistrationId();
                 try {
 
-                    String gcmMessage = "{" +
-                            "\"registration_ids\":[\"" + regId + "\"]," +
-                            "\"data\":{" +
-                            "   \"message\":{" +
-                            "       \"model\":\"AAA-001\"," +
-                            "       \"name\":\"Car\"," +
-                            "       \"color\":\"Red\"" +
-                            "       }" +
-                            "   }" +
-                            "}";
-
-                    Log.d("Mylog", "gcmMessage=" + gcmMessage);
+                    showSendMessage(sendMessage);
+                    Log.d("Mylog", "gcmMessage=" + sendMessage);
                     // Create connection to send GCM Message request.
                     URL url = new URL("https://android.googleapis.com/gcm/send");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -200,7 +201,7 @@ public class GcmFirstDemoActivity extends Activity implements OnClickListener,
 
                     // Send GCM message content.
                     OutputStream outputStream = conn.getOutputStream();
-                    outputStream.write(gcmMessage.getBytes());
+                    outputStream.write(sendMessage.getBytes());
 
                     // Read GCM response.
                     InputStream inputStream = conn.getInputStream();
@@ -214,11 +215,22 @@ public class GcmFirstDemoActivity extends Activity implements OnClickListener,
 
     }
 
-    StringBuilder stringBuilder = new StringBuilder();
+    private void showSendMessage(final String sendMessage) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                sendGCMMessageTextView.setText(sendMessage);
+            }
+        });
+
+    }
+
+    StringBuilder stringBuilder;
 
     private void showResponse(InputStream inputStream) {
-        BufferedReader bufferedReader = null;
 
+        stringBuilder = new StringBuilder();
+        BufferedReader bufferedReader = null;
 
         String line;
         try {
@@ -281,6 +293,48 @@ public class GcmFirstDemoActivity extends Activity implements OnClickListener,
                 Toast.LENGTH_LONG).show();
     }
 
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        String regId = getRegistrationId();
+
+        switch (checkedId) {
+            case R.id.gcmFirstDemo_singleMessageRadioButton:
+                // Message JSON Type 1
+                sendMessage = "{" +
+                        "\"to\":\"" + regId + "\"," +
+                        "\"data\":{" +
+                        "   \"message\":{" +
+                        "       \"model\":\"AAA-001\"," +
+                        "       \"name\":\"Car\"," +
+                        "       \"color\":\"Red\"" +
+                        "       }" +
+                        "   }" +
+                        "}";
+
+                break;
+
+            case R.id.gcmFirstDemo_multiUserRadioButton:
+                // Message JSON Type 2
+                sendMessage = "{" +
+                        "\"registration_ids\":[\"" + regId + "\"]," +
+                        "\"data\":{" +
+                        "   \"message\":{" +
+                        "       \"model\":\"AAA-001\"," +
+                        "       \"name\":\"Car\"," +
+                        "       \"color\":\"Red\"" +
+                        "       }" +
+                        "   }" +
+                        "}";
+
+                break;
+
+            default:
+                break;
+        }
+    }
+
+
     @Override
     public void onClick(View view) {
 
@@ -294,7 +348,13 @@ public class GcmFirstDemoActivity extends Activity implements OnClickListener,
                 break;
 
             case R.id.gcmFirstDemo_pushMessageButton:
-                pushMessage();
+                if (messageTypeRadioGroup.getCheckedRadioButtonId() != -1) {
+                    pushMessage(sendMessage);
+                } else {
+                    Toast.makeText(this, "Choose one message type!",
+                            Toast.LENGTH_LONG).show();
+                }
+
                 break;
 
             default:

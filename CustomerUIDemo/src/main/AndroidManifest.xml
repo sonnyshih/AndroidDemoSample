@@ -288,11 +288,11 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
-            android:name=".activity.GCMDemo.GCMFirstDemo.GcmFirstDemoActivity"
+            android:name=".activity.GCMDemo.GCMFirstDemo.DownstreamMessagingActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <receiver
-            android:name=".activity.GCMDemo.GCMFirstDemo.GCMFirstReceiver"
+            android:name=".activity.GCMDemo.GCMFirstDemo.DownstreamMessagingReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />

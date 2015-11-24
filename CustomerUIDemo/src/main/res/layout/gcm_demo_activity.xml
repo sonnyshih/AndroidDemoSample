@@ -9,17 +9,16 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/gcmDemo_firstDemo"
+        android:id="@+id/gcmDemo_downstreamMessagingDemo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="First Demo" />
+        android:text="Downstream Messaging Demo" />
 
     <Button
         android:id="@+id/gcmDemo_secondDemo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/alertDialog_standardAlertDialogDemoButton"
         android:layout_marginTop="5dp"
         android:text="Second Demo" />
 

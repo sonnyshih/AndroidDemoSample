@@ -9,11 +9,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.CustomerUIDemo.R;
-import com.example.CustomerUIDemo.activity.GCMDemo.GCMFirstDemo.GcmFirstDemoActivity;
+import com.example.CustomerUIDemo.activity.GCMDemo.GCMFirstDemo.DownstreamMessagingActivity;
 
 public class GCMDemoActivity extends Activity implements OnClickListener{
 
-    private Button firstDemo;
+    private Button downstreamMessagingDemo;
     private Button secondDemo;
 
     @Override
@@ -21,8 +21,8 @@ public class GCMDemoActivity extends Activity implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gcm_demo_activity);
 
-        firstDemo = (Button) findViewById(R.id.gcmDemo_firstDemo);
-        firstDemo.setOnClickListener(this);
+        downstreamMessagingDemo = (Button) findViewById(R.id.gcmDemo_downstreamMessagingDemo);
+        downstreamMessagingDemo.setOnClickListener(this);
 
         secondDemo = (Button) findViewById(R.id.gcmDemo_secondDemo);
         secondDemo.setOnClickListener(this);
@@ -34,8 +34,8 @@ public class GCMDemoActivity extends Activity implements OnClickListener{
     public void onClick(View view) {
 
         switch (view.getId()) {
-            case R.id.gcmDemo_firstDemo:
-                startActivity(new Intent(this, GcmFirstDemoActivity.class));
+            case R.id.gcmDemo_downstreamMessagingDemo:
+                startActivity(new Intent(this, DownstreamMessagingActivity.class));
                 break;
 
             case R.id.gcmDemo_secondDemo:
