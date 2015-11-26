@@ -15,7 +15,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <!-- GCM Setting End -->
+    <permission android:name="com.example.CustomerUIDemo.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.CustomerUIDemo.permission.C2D_MESSAGE" />
+    <!--GCM Setting End-->
 
 
     <application
@@ -24,10 +27,6 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
 
         <activity
             android:name=".activity.home.MainActivity"
@@ -287,22 +286,60 @@
             android:name=".activity.GCMDemo.GCMDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
+        <!-- Downstream Messaging Demo Start -->
         <activity
-            android:name=".activity.GCMDemo.GCMFirstDemo.DownstreamMessagingActivity"
+            android:name=".activity.GCMDemo.DownstreamMessagingDemo.DownstreamMessagingActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <receiver
-            android:name=".activity.GCMDemo.GCMFirstDemo.DownstreamMessagingReceiver"
+            android:name=".activity.GCMDemo.DownstreamMessagingDemo.DownstreamMessagingReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <category android:name="com.example.CustomerUIDemo" />
             </intent-filter>
         </receiver>
+        <!-- Downstream Messaging Demo End-->
 
+        <!-- Topics Message Demo Start -->
         <activity
-            android:name=".activity.GCMDemo.GcmSecondDemoActivity"
+            android:name=".activity.GCMDemo.TopicsMessagesDemo.TopicsMessagingDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+
+        <!-- [START gcm_receiver] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.CustomerUIDemo" />
+            </intent-filter>
+        </receiver>
+        <!-- [END gcm_receiver] -->
+
+        <!-- [START instanceId_listener] -->
+        <service
+            android:name=".activity.GCMDemo.TopicsMessagesDemo.UpdateTokenInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <!-- [END instanceId_listener] -->
+
+        <!-- [START gcm_listener] -->
+        <service
+            android:name=".activity.GCMDemo.TopicsMessagesDemo.TopicsMessageGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <!-- [END gcm_listener] -->
+
+        <!-- Topics Message Demo Start -->
 
         <!-- GCM Demo End -->
 

@@ -9,21 +9,21 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <Button
-        android:id="@+id/gcmFirstDemo_registerButton"
+        android:id="@+id/downstreamMessaging_registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Register" />
 
     <Button
-        android:id="@+id/gcmFirstDemo_unregisterButton"
+        android:id="@+id/downstreamMessaging_unregisterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="UnRegister" />
 
     <Button
-        android:id="@+id/gcmFirstDemo_pushMessageButton"
+        android:id="@+id/downstreamMessaging_pushMessageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -35,19 +35,19 @@
         android:orientation="horizontal">
 
         <RadioGroup
-            android:id="@+id/gcmFirstDemo_messageTypeRadioGroup"
+            android:id="@+id/downstreamMessaging_messageTypeRadioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true">
 
             <RadioButton
-                android:id="@+id/gcmFirstDemo_singleMessageRadioButton"
+                android:id="@+id/downstreamMessaging_singleMessageRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Single User" />
 
             <RadioButton
-                android:id="@+id/gcmFirstDemo_multiUserRadioButton"
+                android:id="@+id/downstreamMessaging_multiUserRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Multi-Users" />
@@ -56,14 +56,14 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/gcmFirstDemo_sendGCMMessageTextView"
+        android:id="@+id/downstreamMessaging_sendGCMMessageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="send JSON Message" />
 
     <TextView
-        android:id="@+id/gcmFirstDemo_responseTextView"
+        android:id="@+id/downstreamMessaging_responseTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

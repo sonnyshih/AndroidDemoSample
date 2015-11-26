@@ -7,9 +7,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="ok">OK</string>
-    
-    
-    
+
+
+    <string name="gcm_api_key">AIzaSyBAE0oqIeeUKBluhXCCRU1GhigR5ByL5Hs</string>
+    <string name="gcm_senderId">518863485658</string>
+
     <!-- Drawer Demo -->
     <string name="main_drawer_open">Open navigation drawer</string>
     <string name="main_drawer_close">Close navigation drawer</string>

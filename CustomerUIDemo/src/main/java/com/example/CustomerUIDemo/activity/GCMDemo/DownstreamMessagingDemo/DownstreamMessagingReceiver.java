@@ -1,10 +1,11 @@
-package com.example.CustomerUIDemo.activity.GCMDemo.GCMFirstDemo;
+package com.example.CustomerUIDemo.activity.GCMDemo.DownstreamMessagingDemo;
 
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
@@ -38,14 +39,7 @@ public class DownstreamMessagingReceiver extends BroadcastReceiver {
                 Toast.makeText(context, " GCM MESSAGE = " + extras.toString(),
                         Toast.LENGTH_LONG).show();
 
-//                Intent i = new Intent(context, MainActivity.class);
-//                i.setAction("android.intent.action.MAIN");
-//                i.addCategory("android.intent.category.LAUNCHER");
-//                MagicLenGCM.sendLocalNotification(context, NOTIFICATION_ID,
-//                        R.drawable.ic_launcher, "GCM 通知", extras
-//                                .getString("message"), "magiclen.org", false,
-//                        PendingIntent.getActivity(context, 0, i,
-//                                PendingIntent.FLAG_CANCEL_CURRENT));
+                Log.d("Mylog", "Get JSON=" + extras.toString());
             }
 
         }

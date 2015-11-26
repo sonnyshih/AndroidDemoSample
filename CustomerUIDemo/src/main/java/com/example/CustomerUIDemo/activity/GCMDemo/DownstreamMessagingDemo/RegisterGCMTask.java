@@ -1,5 +1,5 @@
 
-package com.example.CustomerUIDemo.activity.GCMDemo.GCMFirstDemo;
+package com.example.CustomerUIDemo.activity.GCMDemo.DownstreamMessagingDemo;
 
 import android.content.Context;
 import android.os.AsyncTask;

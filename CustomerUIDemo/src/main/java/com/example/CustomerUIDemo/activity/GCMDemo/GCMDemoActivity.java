@@ -9,7 +9,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.CustomerUIDemo.R;
-import com.example.CustomerUIDemo.activity.GCMDemo.GCMFirstDemo.DownstreamMessagingActivity;
+import com.example.CustomerUIDemo.activity.GCMDemo.DownstreamMessagingDemo.DownstreamMessagingActivity;
+import com.example.CustomerUIDemo.activity.GCMDemo.TopicsMessagesDemo.TopicsMessagingDemoActivity;
 
 public class GCMDemoActivity extends Activity implements OnClickListener{
 
@@ -39,7 +40,7 @@ public class GCMDemoActivity extends Activity implements OnClickListener{
                 break;
 
             case R.id.gcmDemo_secondDemo:
-                startActivity(new Intent(this, GcmSecondDemoActivity.class));
+                startActivity(new Intent(this, TopicsMessagingDemoActivity.class));
                 break;
 
             default:

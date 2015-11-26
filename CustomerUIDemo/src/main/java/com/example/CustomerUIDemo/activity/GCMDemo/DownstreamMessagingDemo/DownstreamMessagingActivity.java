@@ -1,4 +1,4 @@
-package com.example.CustomerUIDemo.activity.GCMDemo.GCMFirstDemo;
+package com.example.CustomerUIDemo.activity.GCMDemo.DownstreamMessagingDemo;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,8 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.CustomerUIDemo.R;
-import com.example.CustomerUIDemo.activity.GCMDemo.GCMFirstDemo.RegisterGCMTask.RegisterGCMTaskListener;
-import com.example.CustomerUIDemo.activity.GCMDemo.GCMFirstDemo.UnregisterGCMTask.UnregisterGCMTaskListener;
+import com.example.CustomerUIDemo.activity.GCMDemo.DownstreamMessagingDemo.RegisterGCMTask.RegisterGCMTaskListener;
+import com.example.CustomerUIDemo.activity.GCMDemo.DownstreamMessagingDemo.UnregisterGCMTask.UnregisterGCMTaskListener;
 import com.example.CustomerUIDemo.util.StringUtil;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -34,12 +34,15 @@ public class DownstreamMessagingActivity extends Activity implements OnClickList
         UnregisterGCMTaskListener,
         RadioGroup.OnCheckedChangeListener {
 
+    public static final String SHARE_PREFERENCE_GCM = "SHARE_PREFERNCE_GCM";
 
-    private static final String PROPERTY_REG_ID = "registration_id";
-    private static final String PROPERTY_APP_VERSION = "appVersion";
+    public static final String PROPERTY_REG_ID = "registration_id";
+    public static final String PROPERTY_APP_VERSION = "appVersion";
+    public static final String PROPERTY_TOKEN = "token";
+
     public final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
-    public static final String API_KEY = "AIzaSyBbzlhXB5HQcz28I9xwqLMB04uTAd8qYtE";
-    private final static String senderId = "643534156510";
+    private String API_KEY;
+    private String SEND_ID;
 
     private String sendMessage;
     private Button registerButton;
@@ -63,22 +66,25 @@ public class DownstreamMessagingActivity extends Activity implements OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gcm_first_demo_activity);
+        setContentView(R.layout.downsteam_messaging_activity);
 
-        registerButton = (Button) findViewById(R.id.gcmFirstDemo_registerButton);
+        API_KEY = getString(R.string.gcm_api_key);
+        SEND_ID = getString(R.string.gcm_senderId);
+
+        registerButton = (Button) findViewById(R.id.downstreamMessaging_registerButton);
         registerButton.setOnClickListener(this);
 
-        unregisterButton = (Button) findViewById(R.id.gcmFirstDemo_unregisterButton);
+        unregisterButton = (Button) findViewById(R.id.downstreamMessaging_unregisterButton);
         unregisterButton.setOnClickListener(this);
 
-        pushMessageButton = (Button) findViewById(R.id.gcmFirstDemo_pushMessageButton);
+        pushMessageButton = (Button) findViewById(R.id.downstreamMessaging_pushMessageButton);
         pushMessageButton.setOnClickListener(this);
 
-        responseTextView = (TextView) findViewById(R.id.gcmFirstDemo_responseTextView);
+        responseTextView = (TextView) findViewById(R.id.downstreamMessaging_responseTextView);
 
-        sendGCMMessageTextView = (TextView) findViewById(R.id.gcmFirstDemo_sendGCMMessageTextView);
+        sendGCMMessageTextView = (TextView) findViewById(R.id.downstreamMessaging_sendGCMMessageTextView);
 
-        messageTypeRadioGroup = (RadioGroup) findViewById(R.id.gcmFirstDemo_messageTypeRadioGroup);
+        messageTypeRadioGroup = (RadioGroup) findViewById(R.id.downstreamMessaging_messageTypeRadioGroup);
         messageTypeRadioGroup.setOnCheckedChangeListener(this);
     }
 
@@ -118,7 +124,7 @@ public class DownstreamMessagingActivity extends Activity implements OnClickList
 
 
     private void registerInBackground() {
-        new RegisterGCMTask(this, this, senderId).execute();
+        new RegisterGCMTask(this, this, SEND_ID).execute();
     }
 
     public String getRegistrationId() {
@@ -148,7 +154,7 @@ public class DownstreamMessagingActivity extends Activity implements OnClickList
     }
 
     private SharedPreferences getGCMPreferences() {
-        return getSharedPreferences(this.getClass().getSimpleName(), Context.MODE_PRIVATE);
+        return getSharedPreferences(SHARE_PREFERENCE_GCM, Context.MODE_PRIVATE);
     }
 
     private void storeRegistrationId(String regId) {
@@ -299,7 +305,7 @@ public class DownstreamMessagingActivity extends Activity implements OnClickList
         String regId = getRegistrationId();
 
         switch (checkedId) {
-            case R.id.gcmFirstDemo_singleMessageRadioButton:
+            case R.id.downstreamMessaging_singleMessageRadioButton:
                 // Message JSON Type 1
                 sendMessage = "{" +
                         "\"to\":\"" + regId + "\"," +
@@ -314,7 +320,7 @@ public class DownstreamMessagingActivity extends Activity implements OnClickList
 
                 break;
 
-            case R.id.gcmFirstDemo_multiUserRadioButton:
+            case R.id.downstreamMessaging_multiUserRadioButton:
                 // Message JSON Type 2
                 sendMessage = "{" +
                         "\"registration_ids\":[\"" + regId + "\"]," +
@@ -339,15 +345,15 @@ public class DownstreamMessagingActivity extends Activity implements OnClickList
     public void onClick(View view) {
 
         switch (view.getId()) {
-            case R.id.gcmFirstDemo_registerButton:
+            case R.id.downstreamMessaging_registerButton:
                 register();
                 break;
 
-            case R.id.gcmFirstDemo_unregisterButton:
+            case R.id.downstreamMessaging_unregisterButton:
                 unregister();
                 break;
 
-            case R.id.gcmFirstDemo_pushMessageButton:
+            case R.id.downstreamMessaging_pushMessageButton:
                 if (messageTypeRadioGroup.getCheckedRadioButtonId() != -1) {
                     pushMessage(sendMessage);
                 } else {

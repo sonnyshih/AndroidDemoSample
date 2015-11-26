@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Second Demo" />
+        android:text="Topics Message Demo" />
 
 
 </LinearLayout>
