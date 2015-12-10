@@ -88,4 +88,9 @@
     </string>
     <string name="cardview_radius_seekbar_text">Radius</string>
     <string name="cardview_elevation_seekbar_text">Elevation</string>
+
+    <!-- Check permission Demo -->
+    <string name="check_premission_rationale">CALL_PHONE permission initiate a phone call without going through the Dialer.</string>
+    <string name="check_premission_warning_permission">Permission were not granted!</string>
+
 </resources>

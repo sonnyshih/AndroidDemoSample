@@ -19,4 +19,9 @@
     <color name="light_blue">#CCDAEE</color>
     
     <color name="gray_light">#DFDFDF</color>
+
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
 </resources>

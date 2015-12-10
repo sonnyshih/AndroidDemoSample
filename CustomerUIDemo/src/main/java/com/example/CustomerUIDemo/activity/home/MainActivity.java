@@ -12,6 +12,7 @@ import com.example.CustomerUIDemo.R;
 import com.example.CustomerUIDemo.activity.AlertDialogDemo.AlertDialogDemoActivity;
 import com.example.CustomerUIDemo.activity.AnimationDemo.AnmationDemoActivity;
 import com.example.CustomerUIDemo.activity.CardViewDemo.CardViewDemoActivity;
+import com.example.CustomerUIDemo.activity.CheckPermissionDemoMoreThanAndroidV60.CheckPermissionDemoActivity;
 import com.example.CustomerUIDemo.activity.DrawerDemo.DrawerDemoActivity;
 import com.example.CustomerUIDemo.activity.ExpandableListviewDemo.ExpandableListviewDemoActivity;
 import com.example.CustomerUIDemo.activity.GCMDemo.GCMDemoActivity;
@@ -48,6 +49,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Button cardviewDemoButton;
     private Button intentFilterDemoButton;
     private Button gcmDemoButton;
+    private Button checkPremissionDemoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +109,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
         gcmDemoButton = (Button) findViewById(R.id.main_gcmDemoButton);
         gcmDemoButton.setOnClickListener(this);
+
+        checkPremissionDemoButton = (Button) findViewById(R.id.main_checkPremissionDemoButton);
+        checkPremissionDemoButton.setOnClickListener(this);
 
     }
 
@@ -187,6 +192,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_gcmDemoButton:
                 intent.setClass(this, GCMDemoActivity.class);
+                break;
+
+            case R.id.main_checkPremissionDemoButton:
+                intent.setClass(this, CheckPermissionDemoActivity.class);
                 break;
 
             default:
