@@ -145,6 +145,13 @@
             android:layout_marginTop="5dp"
             android:text="Check Premission Demo" />
 
+        <Button
+            android:id="@+id/main_fullGridViewDemoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Full Gride View Demo" />
+
     </LinearLayout>
 
 </ScrollView>

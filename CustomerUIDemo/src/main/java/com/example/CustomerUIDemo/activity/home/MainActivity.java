@@ -15,6 +15,7 @@ import com.example.CustomerUIDemo.activity.CardViewDemo.CardViewDemoActivity;
 import com.example.CustomerUIDemo.activity.CheckPermissionDemoMoreThanAndroidV60.CheckPermissionDemoActivity;
 import com.example.CustomerUIDemo.activity.DrawerDemo.DrawerDemoActivity;
 import com.example.CustomerUIDemo.activity.ExpandableListviewDemo.ExpandableListviewDemoActivity;
+import com.example.CustomerUIDemo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewActivity;
 import com.example.CustomerUIDemo.activity.GCMDemo.GCMDemoActivity;
 import com.example.CustomerUIDemo.activity.ImageViewDemo.ImageViewDemoActivity;
 import com.example.CustomerUIDemo.activity.IntentFilterDemo.IntentFilterDemoActivity;
@@ -50,6 +51,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Button intentFilterDemoButton;
     private Button gcmDemoButton;
     private Button checkPremissionDemoButton;
+    private Button fullGridViewDemoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +114,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
         checkPremissionDemoButton = (Button) findViewById(R.id.main_checkPremissionDemoButton);
         checkPremissionDemoButton.setOnClickListener(this);
+
+        fullGridViewDemoButton = (Button) findViewById(R.id.main_fullGridViewDemoButton);
+        fullGridViewDemoButton.setOnClickListener(this);
 
     }
 
@@ -196,6 +201,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_checkPremissionDemoButton:
                 intent.setClass(this, CheckPermissionDemoActivity.class);
+                break;
+
+            case R.id.main_fullGridViewDemoButton:
+                intent.setClass(this, FullGridViewActivity.class);
                 break;
 
             default:

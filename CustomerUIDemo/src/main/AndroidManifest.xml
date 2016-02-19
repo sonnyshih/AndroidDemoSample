@@ -352,6 +352,10 @@
             android:name=".activity.CheckPermissionDemoMoreThanAndroidV60.CheckPermissionDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
+        <activity
+            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
     </application>
 
 </manifest>
