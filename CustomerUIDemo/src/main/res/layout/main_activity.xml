@@ -152,6 +152,13 @@
             android:layout_marginTop="5dp"
             android:text="Full Gride View Demo" />
 
+        <Button
+            android:id="@+id/main_alarmManagerDemoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Alerm Manager Demo" />
+
     </LinearLayout>
 
 </ScrollView>

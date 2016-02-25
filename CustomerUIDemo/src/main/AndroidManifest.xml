@@ -356,6 +356,22 @@
             android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
+        <!-- Alarm Manager Demo Start -->
+        <activity
+            android:name=".activity.AlarmManagerDemo.AlarmManagerDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <receiver
+            android:name=".activity.AlarmManagerDemo.AlarmManagerReceiver"
+            android:enabled="true">
+
+            <intent-filter>
+                <action android:name="com.example.CustomerUIDemo.AlarmManager.action" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </receiver>
+        <!-- Alarm Manager Demo End -->
     </application>
 
 </manifest>

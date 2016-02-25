@@ -9,13 +9,13 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.CustomerUIDemo.R;
+import com.example.CustomerUIDemo.activity.AlarmManagerDemo.AlarmManagerDemoActivity;
 import com.example.CustomerUIDemo.activity.AlertDialogDemo.AlertDialogDemoActivity;
 import com.example.CustomerUIDemo.activity.AnimationDemo.AnmationDemoActivity;
 import com.example.CustomerUIDemo.activity.CardViewDemo.CardViewDemoActivity;
 import com.example.CustomerUIDemo.activity.CheckPermissionDemoMoreThanAndroidV60.CheckPermissionDemoActivity;
 import com.example.CustomerUIDemo.activity.DrawerDemo.DrawerDemoActivity;
 import com.example.CustomerUIDemo.activity.ExpandableListviewDemo.ExpandableListviewDemoActivity;
-import com.example.CustomerUIDemo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewActivity;
 import com.example.CustomerUIDemo.activity.GCMDemo.GCMDemoActivity;
 import com.example.CustomerUIDemo.activity.ImageViewDemo.ImageViewDemoActivity;
 import com.example.CustomerUIDemo.activity.IntentFilterDemo.IntentFilterDemoActivity;
@@ -25,6 +25,7 @@ import com.example.CustomerUIDemo.activity.RecycleViewDemo.RecycleViewDemoActivi
 import com.example.CustomerUIDemo.activity.SendNotificationDemo.SendNotificationDemoActivity;
 import com.example.CustomerUIDemo.activity.TabHost.TabHostDemoActivity;
 import com.example.CustomerUIDemo.activity.TextviewEditTextDemo.TextViewAndEditViewDemoActivity;
+import com.example.CustomerUIDemo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewActivity;
 import com.example.CustomerUIDemo.activity.Video.VideoDemoActivity;
 import com.example.CustomerUIDemo.activity.ViewHolderDemo.ViewHolderDemoActvity;
 import com.example.CustomerUIDemo.activity.WebViewDemo.WebViewDemoActivity;
@@ -52,6 +53,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Button gcmDemoButton;
     private Button checkPremissionDemoButton;
     private Button fullGridViewDemoButton;
+    private Button alarmManagerDemoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +119,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
         fullGridViewDemoButton = (Button) findViewById(R.id.main_fullGridViewDemoButton);
         fullGridViewDemoButton.setOnClickListener(this);
+
+        alarmManagerDemoButton = (Button) findViewById(R.id.main_alarmManagerDemoButton);
+        alarmManagerDemoButton.setOnClickListener(this);
 
     }
 
@@ -205,6 +210,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_fullGridViewDemoButton:
                 intent.setClass(this, FullGridViewActivity.class);
+                break;
+
+            case R.id.main_alarmManagerDemoButton:
+                intent.setClass(this, AlarmManagerDemoActivity.class);
                 break;
 
             default:
