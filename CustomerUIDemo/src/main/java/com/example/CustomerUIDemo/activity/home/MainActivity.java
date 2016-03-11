@@ -17,6 +17,7 @@ import com.example.CustomerUIDemo.activity.CheckPermissionDemoMoreThanAndroidV60
 import com.example.CustomerUIDemo.activity.DrawerDemo.DrawerDemoActivity;
 import com.example.CustomerUIDemo.activity.ExpandableListviewDemo.ExpandableListviewDemoActivity;
 import com.example.CustomerUIDemo.activity.GCMDemo.GCMDemoActivity;
+import com.example.CustomerUIDemo.activity.GoogleCredentialDemo.GoogleCredentialActivity;
 import com.example.CustomerUIDemo.activity.ImageViewDemo.ImageViewDemoActivity;
 import com.example.CustomerUIDemo.activity.IntentFilterDemo.IntentFilterDemoActivity;
 import com.example.CustomerUIDemo.activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivity;
@@ -54,6 +55,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Button checkPremissionDemoButton;
     private Button fullGridViewDemoButton;
     private Button alarmManagerDemoButton;
+    private Button googleCredentialDemoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,6 +124,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
         alarmManagerDemoButton = (Button) findViewById(R.id.main_alarmManagerDemoButton);
         alarmManagerDemoButton.setOnClickListener(this);
+
+        googleCredentialDemoButton = (Button) findViewById(R.id.main_googleCredentialDemoButton);
+        googleCredentialDemoButton.setOnClickListener(this);
 
     }
 
@@ -214,6 +219,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_alarmManagerDemoButton:
                 intent.setClass(this, AlarmManagerDemoActivity.class);
+                break;
+
+            case R.id.main_googleCredentialDemoButton:
+                intent.setClass(this, GoogleCredentialActivity.class);
                 break;
 
             default:

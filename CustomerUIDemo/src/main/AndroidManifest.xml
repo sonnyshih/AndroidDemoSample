@@ -372,6 +372,22 @@
 
         </receiver>
         <!-- Alarm Manager Demo End -->
+
+        <!-- Google Credential Demo (Smart Lock For Passwords) Start -->
+        <activity
+            android:name=".activity.GoogleCredentialDemo.GoogleCredentialActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.GoogleCredentialDemo.MyAccountActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.GoogleCredentialDemo.AccountManageActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <!-- Google Credential Demo (Smart Lock For Passwords) End -->
+
     </application>
 
 </manifest>
