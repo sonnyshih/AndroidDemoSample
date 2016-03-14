@@ -42,6 +42,24 @@
             </intent-filter>
         </activity>
 
+        <!-- Fragment Demo Start -->
+        <activity
+            android:name=".activity.FragmentDemo.FragmentDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.FragmentDemo.DynamicDemo.DynamicFragmentActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.FragmentDemo.StaticDemo.StaticFragmentActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.FragmentDemo.FragmentPagerDemo.FragmentPagerActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <!-- Fragment Demo End -->
 
         <activity
             android:name=".activity.TextviewEditTextDemo.TextViewAndEditViewDemoActivity"

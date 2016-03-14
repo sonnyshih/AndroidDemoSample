@@ -16,6 +16,7 @@ import com.example.CustomerUIDemo.activity.CardViewDemo.CardViewDemoActivity;
 import com.example.CustomerUIDemo.activity.CheckPermissionDemoMoreThanAndroidV60.CheckPermissionDemoActivity;
 import com.example.CustomerUIDemo.activity.DrawerDemo.DrawerDemoActivity;
 import com.example.CustomerUIDemo.activity.ExpandableListviewDemo.ExpandableListviewDemoActivity;
+import com.example.CustomerUIDemo.activity.FragmentDemo.FragmentDemoActivity;
 import com.example.CustomerUIDemo.activity.GCMDemo.GCMDemoActivity;
 import com.example.CustomerUIDemo.activity.GoogleCredentialDemo.GoogleCredentialActivity;
 import com.example.CustomerUIDemo.activity.ImageViewDemo.ImageViewDemoActivity;
@@ -34,6 +35,7 @@ import com.example.CustomerUIDemo.activity.swipeRefreshDemo.SwipeRefreshDemoActi
 
 public class MainActivity extends Activity implements OnClickListener {
 
+    private Button fragmentDemoButton;
     private Button textviewAndEditTextDemoButton;
     private Button imageViewDemoButton;
     private Button tabhostDemoButton;
@@ -61,6 +63,9 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+
+        fragmentDemoButton = (Button) findViewById(R.id.main_fragmentDemoButton);
+        fragmentDemoButton.setOnClickListener(this);
 
         textviewAndEditTextDemoButton = (Button) findViewById(R.id.main_textviewAndEditTextDemoButton);
         textviewAndEditTextDemoButton.setOnClickListener(this);
@@ -137,6 +142,11 @@ public class MainActivity extends Activity implements OnClickListener {
         Intent intent = new Intent();
 
         switch (view.getId()) {
+
+            case R.id.main_fragmentDemoButton:
+                intent.setClass(this, FragmentDemoActivity.class);
+                break;
+
             case R.id.main_textviewAndEditTextDemoButton:
                 intent.setClass(this, TextViewAndEditViewDemoActivity.class);
                 break;
