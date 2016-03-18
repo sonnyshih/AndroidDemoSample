@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.demo"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+<!--
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+-->
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- GCM Setting Start -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:name="com.example.demo.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.demo.permission.C2D_MESSAGE" />
+    <!--GCM Setting End-->
+
+
+    <application
+        android:name=".activity.base.CustomerUIDemoApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".activity.home.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Fragment Demo Start -->
+        <activity
+            android:name=".activity.FragmentDemo.FragmentDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.FragmentDemo.DynamicDemo.DynamicFragmentActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.FragmentDemo.StaticDemo.StaticFragmentActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.FragmentDemo.FragmentPagerDemo.FragmentPagerActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <!-- Fragment Demo End -->
+
+        <activity
+            android:name=".activity.TextviewEditTextDemo.TextViewAndEditViewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.ImageViewDemo.ImageViewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.TextviewEditTextDemo.ChartletActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:theme="@style/com.sonny.customer.AppTheme.Transparent" />
+
+        <activity
+            android:name=".activity.TabHost.TabHostDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.TabHost.TabhostAndViewpagerDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.DrawerDemo.DrawerDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:theme="@style/Theme.Customer" />
+
+        <activity
+            android:name=".activity.ExpandableListviewDemo.ExpandableListviewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.ViewHolderDemo.ViewHolderDemoActvity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.AlertDialogDemo.AlertDialogDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.PopupWindowDemo.PopupWindowDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.SendNotificationDemo.SendNotificationDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.SendNotificationDemo.NotificationResultActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize">
+
+            <!-- When open the notification and press back button, the screen will return to which page  -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SendNotificationDemo.SendNotificationDemoActivity" />
+        </activity>
+
+        <activity
+            android:name=".activity.SendNotificationDemo.SpecialNotificationResultActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SendNotificationDemo.SendNotificationDemoActivity" />
+        </activity>
+
+        <activity
+            android:name=".activity.WebViewDemo.WebViewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.AnimationDemo.AnmationDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.MenuAndActionBarDemo.ActionBarDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.MenuAndActionBarDemo.CustomerActionBarActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:theme="@style/Theme.Customer" />
+
+        <activity
+            android:name=".activity.MenuAndActionBarDemo.FloatContextMenuDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.MenuAndActionBarDemo.IndividualViewActionModeDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.MenuAndActionBarDemo.ListViewActionModeDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.MenuAndActionBarDemo.CustomListViewActionModeActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.Video.VideoDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.Video.VideoViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.Video.VideoMediaPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.swipeRefreshDemo.SwipeRefreshDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.RecycleViewDemo.RecycleViewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="RecycleView Demo"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".activity.RecycleViewDemo.LinearLayoutRecycleViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.RecycleViewDemo.GridLayoutRecycleViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.RecycleViewDemo.ListViewIncludeRecycleViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.CardViewDemo.CardViewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.CardViewDemo.CardViewListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.CardViewDemo.CardViewRadiusAndElevationActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <!-- Intent Filter Demo Start -->
+        <activity
+            android:name=".activity.IntentFilterDemo.IntentFilterDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.IntentFilterDemo.IntentTest1Activity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.IntentFilterDemo.ActionActivity"
+            android:label="Action test">
+
+            <intent-filter>
+                <action android:name="com.flysnow.intent.ACTION_VIEW"></action>
+
+                <action android:name="android.intent.action.VIEW"></action>
+
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".activity.IntentFilterDemo.IntentTest2Activity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+
+        <activity
+            android:name=".activity.IntentFilterDemo.Action2Activity"
+            android:label="Action test 2-From Web Page">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="contactus"
+                    android:scheme="hello" />
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".activity.IntentFilterDemo.Action3Activity"
+            android:label="Action test 3-Click the login in the web page">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.abc.com"
+                    android:pathPrefix="/account/login.php"
+                    android:scheme="http" />
+
+            </intent-filter>
+
+        </activity>
+
+        <receiver
+            android:name=".activity.IntentFilterDemo.ReceiverDemo1"
+            android:enabled="true">
+
+            <intent-filter>
+                <action android:name="com.example.intent.ReceiverDemo1.ACTION_VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </receiver>
+
+        <receiver
+            android:name=".activity.IntentFilterDemo.ReceiverDemo2"
+            android:enabled="true">
+
+            <intent-filter>
+                <action android:name="com.example.intent.ReceiverDemo2.ACTION_VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </receiver>
+
+        <!-- Intent Filter Demo End -->
+
+
+        <!-- GCM Demo Start -->
+        <activity
+            android:name=".activity.GCMDemo.GCMDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <!-- Downstream Messaging Demo Start -->
+        <activity
+            android:name=".activity.GCMDemo.DownstreamMessagingDemo.DownstreamMessagingActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <receiver
+            android:name=".activity.GCMDemo.DownstreamMessagingDemo.DownstreamMessagingReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.demo" />
+            </intent-filter>
+        </receiver>
+        <!-- Downstream Messaging Demo End-->
+
+        <!-- Topics Message Demo Start -->
+        <activity
+            android:name=".activity.GCMDemo.TopicsMessagesDemo.TopicsMessagingDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+
+        <!-- [START gcm_receiver] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.demo" />
+            </intent-filter>
+        </receiver>
+        <!-- [END gcm_receiver] -->
+
+        <!-- [START instanceId_listener] -->
+        <service
+            android:name=".activity.GCMDemo.TopicsMessagesDemo.UpdateTokenInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <!-- [END instanceId_listener] -->
+
+        <!-- [START gcm_listener] -->
+        <service
+            android:name=".activity.GCMDemo.TopicsMessagesDemo.TopicsMessageGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <!-- [END gcm_listener] -->
+
+        <!-- Topics Message Demo Start -->
+
+        <!-- GCM Demo End -->
+
+
+        <activity
+            android:name=".activity.CheckPermissionDemoMoreThanAndroidV60.CheckPermissionDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <!-- Alarm Manager Demo Start -->
+        <activity
+            android:name=".activity.AlarmManagerDemo.AlarmManagerDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <receiver
+            android:name=".activity.AlarmManagerDemo.AlarmManagerReceiver"
+            android:enabled="true">
+
+            <intent-filter>
+                <action android:name="com.example.demo.AlarmManager.action" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </receiver>
+        <!-- Alarm Manager Demo End -->
+
+        <!-- Google Credential Demo (Smart Lock For Passwords) Start -->
+        <activity
+            android:name=".activity.GoogleCredentialDemo.GoogleCredentialActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.GoogleCredentialDemo.MyAccountActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.GoogleCredentialDemo.AccountManageActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <!-- Google Credential Demo (Smart Lock For Passwords) End -->
+
+    </application>
+
+</manifest>

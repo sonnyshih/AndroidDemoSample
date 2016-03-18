@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sample Code Demo</string>
+    <string name="app_version">0.1</string>
+    <string name="sqlite_version">1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="ok">OK</string>
+
+
+    <string name="gcm_api_key">AIzaSyBAE0oqIeeUKBluhXCCRU1GhigR5ByL5Hs</string>
+    <string name="gcm_senderId">518863485658</string>
+
+    <!-- Drawer Demo -->
+    <string name="main_drawer_open">Open navigation drawer</string>
+    <string name="main_drawer_close">Close navigation drawer</string>
+
+    <!-- Customer Action Bar Demo -->
+    <string name="menu_searchTitle">Search</string>
+    <string name="menu_cartTitle">Cart</string>
+    <string name="menu_moreTitle">More</string>
+    <string name="menu_homeTitle">Home</string>
+    <string name="menu_myAccountTitle">My Account</string>
+    <string name="menu_recentHistoryTitle">Recent History</string>
+    <string name="menu_wishListTitle">Wish List</string>
+    <string name="menu_informationTitle">Information</string>
+    <string name="menu_searchGoogleTvTitle">Search Google TV</string>
+    
+    <!-- Alert Dialog Demo -->
+    <string name="alertDialogDemo_email">Email:</string>
+	<string name="alertDialogDemo_password">Password:</string>
+    
+    <string name="alertDialogDemo_standardAlertDialogDemoMessage">
+        Plloaso mako nuto siwuf cakso dodtos anr koop a
+        cupy uf cak vux noaw yerw phuno. Whag schengos, uf efed, quiel
+        ba mada su otrenzr.\n\nSwipontgwook proudgs hus yag su ba dagarmidad.
+        Plasa maku noga wipont trenzsa schengos ent kaap zux comy.\n\nWipont trenz
+        kipg naar mixent phona. Cak pwico siructiun
+        ruous nust apoply tyu cak Uhex sisulutiun munityuw uw dseg\n\n
+        Plloaso mako nuto siwuf cakso dodtos anr koop a
+        cupy uf cak vux noaw yerw phuno. Whag schengos, uf efed, quiel
+        ba mada su otrenzr.\n\nSwipontgwook proudgs hus yag su ba dagarmidad.
+        Plasa maku noga wipont trenzsa schengos ent kaap zux comy.\n\nWipont trenz
+        kipg naar mixent phona. Cak pwico siructiun
+        ruous nust apoply tyu cak Uhex sisulutiun munityuw uw dseg\n\n
+        Plloaso mako nuto siwuf cakso dodtos anr koop a
+        cupy uf cak vux noaw yerw phuno. Whag schengos, uf efed, quiel
+        ba mada su otrenzr.\n\nSwipontgwook proudgs hus yag su ba dagarmidad.
+        Plasa maku noga wipont trenzsa schengos ent kaap zux comy.\n\nWipont trenz
+        kipg naar mixent phona. Cak pwico siructiun
+        ruous nust apoply tyu cak Uhex sisulutiun munityuw uw dseg\n\n
+        Plloaso mako nuto siwuf cakso dodtos anr koop a
+        cupy uf cak vux noaw yerw phuno. Whag schengos, uf efed, quiel
+        ba mada su otrenzr.\n\nSwipontgwook proudgs hus yag su ba dagarmidad.
+        Plasa maku noga wipont trenzsa schengos ent kaap zux comy.\n\nWipont trenz
+        kipg naar mixent phona. Cak pwico siructiun
+        ruous nust apoply tyu cak Uhex sisulutiun munityuw uw dseg\n\n
+        Plloaso mako nuto siwuf cakso dodtos anr koop a
+        cupy uf cak vux noaw yerw phuno. Whag schengos, uf efed, quiel
+        ba mada su otrenzr.\n\nSwipontgwook proudgs hus yag su ba dagarmidad.
+        Plasa maku noga wipont trenzsa schengos ent kaap zux comy.\n\nWipont trenz
+        kipg naar mixent phona. Cak pwico siructiun
+        ruous nust apoply tyu cak Uhex sisulutiun munityuw uw dseg\n\n
+        Plloaso mako nuto siwuf cakso dodtos anr koop a
+        cupy uf cak vux noaw yerw phuno. Whag schengos, uf efed, quiel
+        ba mada su otrenzr.\n\nSwipontgwook proudgs hus yag su ba dagarmidad.
+        Plasa maku noga wipont trenzsa schengos ent kaap zux comy.\n\nWipont trenz
+        kipg naar mixent phona. Cak pwico siructiun
+        ruous nust apoply tyu cak Uhex sisulutiun munityuw uw dseg\n\n</string>
+
+    
+    <string-array name="itemSelectArray">
+        <item></item>
+        <item>select all</item>
+        <item>unselect all</item>
+        </string-array>
+
+
+    <!-- Cardview List Demo -->
+    <string name="title_activity_card_view">CardViewActivity</string>
+    <string name="cardview_contents">This is a CardView widget. CardView widgets can have
+        shadows and rounded corners.
+        \n\nTo create a card with a shadow, use the <font fgcolor="#FFFFFFFF">android:elevation</font>
+        attribute.
+        \n\nTo set the corner radius in your layouts, use the <font
+            fgcolor="#FFFFFFFF">card_view:cardCornerRadius</font> attribute.
+    </string>
+    <string name="cardview_radius_seekbar_text">Radius</string>
+    <string name="cardview_elevation_seekbar_text">Elevation</string>
+
+    <!-- Check permission Demo -->
+    <string name="check_premission_rationale">CALL_PHONE permission initiate a phone call without going through the Dialer.</string>
+    <string name="check_premission_warning_permission">Permission were not granted!</string>
+
+</resources>

@@ -1,1 +1,1 @@
-include ':CustomerUIDemo', ':VolleyDemo', ':Service Demo', ':Thread And Async Task Demo', ':gcmsender'
+include ':SampleCodeDemo', ':VolleyDemo', ':Service Demo', ':Thread And Async Task Demo', ':gcmsender'
