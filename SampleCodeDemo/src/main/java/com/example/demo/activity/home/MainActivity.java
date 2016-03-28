@@ -30,6 +30,7 @@ import com.example.demo.activity.TextviewEditTextDemo.TextViewAndEditViewDemoAct
 import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewActivity;
 import com.example.demo.activity.Video.VideoDemoActivity;
 import com.example.demo.activity.ViewHolderDemo.ViewHolderDemoActvity;
+import com.example.demo.activity.VolleyDemo.VolleyDemoActivity;
 import com.example.demo.activity.WebViewDemo.WebViewDemoActivity;
 import com.example.demo.activity.swipeRefreshDemo.SwipeRefreshDemoActivity;
 
@@ -58,6 +59,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Button fullGridViewDemoButton;
     private Button alarmManagerDemoButton;
     private Button googleCredentialDemoButton;
+    private Button volleyDemoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,6 +134,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
         googleCredentialDemoButton = (Button) findViewById(R.id.main_googleCredentialDemoButton);
         googleCredentialDemoButton.setOnClickListener(this);
+
+        volleyDemoButton = (Button) findViewById(R.id.main_volleyDemoButton);
+        volleyDemoButton.setOnClickListener(this);
 
     }
 
@@ -233,6 +238,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_googleCredentialDemoButton:
                 intent.setClass(this, GoogleCredentialActivity.class);
+                break;
+
+            case R.id.main_volleyDemoButton:
+                intent.setClass(this, VolleyDemoActivity.class);
                 break;
 
             default:

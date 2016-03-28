@@ -407,6 +407,34 @@
 
         <!-- Google Credential Demo (Smart Lock For Passwords) End -->
 
+
+        <!-- Volley Demo Start -->
+        <activity
+            android:name=".activity.VolleyDemo.VolleyDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.VolleyDemo.ShowSimpleRequestDemo.ShowSimpleRequestActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.VolleyDemo.SingletonPatternDemo.SingletonPatternActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.VolleyDemo.ImageLoaderDemo.ImageLoaderActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.VolleyDemo.JsonOjbectRequestDemo.JsonObjectRequestActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.VolleyDemo.CustomerGsonRequestDemo.CustomerGsonRequestActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <!-- Volley Demo End -->
+
     </application>
 
 </manifest>

@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Fragment Demo" />
 
         <Button
@@ -24,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="TextView and EditText Demo" />
 
         <Button
@@ -31,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="ImageView Demo" />
 
         <Button
@@ -38,6 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Tabhost Demo" />
 
         <Button
@@ -45,6 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Drawer Demo" />
 
         <Button
@@ -52,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="View Holder Demo" />
 
         <Button
@@ -59,6 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Expandable Listview Demo" />
 
         <Button
@@ -66,6 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Menu And Action Bar Demo" />
 
         <Button
@@ -73,6 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Alert Dialog Demo" />
 
         <Button
@@ -80,6 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Popup Window Demo" />
 
         <Button
@@ -87,6 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Send Notification Demo" />
 
         <Button
@@ -94,6 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Webview Demo" />
 
         <Button
@@ -101,6 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Animation Demo" />
 
         <Button
@@ -108,6 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Video Demo" />
 
         <Button
@@ -115,6 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Swipe Refresh Layout Demo" />
 
         <Button
@@ -122,6 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Recycle View Demo" />
 
         <Button
@@ -129,6 +145,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Card View Demo" />
 
         <Button
@@ -136,6 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Intent Filter Demo" />
 
         <Button
@@ -143,6 +161,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="GCM Demo" />
 
         <Button
@@ -150,6 +169,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Check Premission Demo" />
 
         <Button
@@ -157,6 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Full Gride View Demo" />
 
         <Button
@@ -164,6 +185,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAllCaps="false"
             android:text="Alerm Manager Demo" />
 
 
@@ -172,7 +194,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Credential Demo \n(Smart Lock For Passwords) " />
+            android:textAllCaps="false"
+            android:text="Credential Demo \n(Smart Lock For Passwords)" />
+
+        <Button
+            android:id="@+id/main_volleyDemoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAllCaps="false"
+            android:text="Volley Demo" />
 
     </LinearLayout>
 
