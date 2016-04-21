@@ -1,12 +1,16 @@
 package com.example.demo.activity.base;
 
-import com.example.demo.R;
-import com.example.demo.Database.DBManager;
-import com.example.demo.manage.ApplicationManager;
-
 import android.app.Application;
 
-public class CustomerUIDemoApp extends Application{
+import com.example.demo.Database.DBManager;
+import com.example.demo.R;
+import com.example.demo.manage.ApplicationManager;
+import com.example.demo.activity.ManagerDemo.manager.AppManagerCenter;
+import com.example.demo.activity.ManagerDemo.manager.AppManagerType;
+import com.example.demo.activity.ManagerDemo.manager.LoginAppManager;
+import com.example.demo.activity.ManagerDemo.manager.SettingManager;
+
+public class SampleCodeDemoApp extends Application{
 	private static boolean isDebugMode = false;
 	
 	@Override
@@ -22,6 +26,7 @@ public class CustomerUIDemoApp extends Application{
 		// Create and check the database schema - Sonny Shih 2014/10/30
 		DBManager.getInstance().startDatabase();
 
+		registerAppManager();
 	}
 
 	private String getAppVersion() {
@@ -39,6 +44,11 @@ public class CustomerUIDemoApp extends Application{
 	public static boolean isDebugMode() {
 		return isDebugMode;
 	}
-	
 
+
+	private void registerAppManager() {
+		AppManagerCenter.getInstance().register(AppManagerType.Setting, SettingManager.getInstance());
+		AppManagerCenter.getInstance().register(AppManagerType.Login, new LoginAppManager(this));
+
+	}
 }

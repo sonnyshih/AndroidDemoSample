@@ -18,9 +18,10 @@ import com.example.demo.activity.DrawerDemo.DrawerDemoActivity;
 import com.example.demo.activity.ExpandableListviewDemo.ExpandableListviewDemoActivity;
 import com.example.demo.activity.FragmentDemo.FragmentDemoActivity;
 import com.example.demo.activity.GCMDemo.GCMDemoActivity;
-import com.example.demo.activity.GoogleCredentialDemo.GoogleCredentialActivity;
+import com.example.demo.activity.GoogleSmartLockDemo.GoogleSmartLockActivity;
 import com.example.demo.activity.ImageViewDemo.ImageViewDemoActivity;
 import com.example.demo.activity.IntentFilterDemo.IntentFilterDemoActivity;
+import com.example.demo.activity.ManagerDemo.ManagerDemoActivity;
 import com.example.demo.activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivity;
 import com.example.demo.activity.PopupWindowDemo.PopupWindowDemoActivity;
 import com.example.demo.activity.RecycleViewDemo.RecycleViewDemoActivity;
@@ -36,107 +37,110 @@ import com.example.demo.activity.swipeRefreshDemo.SwipeRefreshDemoActivity;
 
 public class MainActivity extends Activity implements OnClickListener {
 
-    private Button fragmentDemoButton;
-    private Button textviewAndEditTextDemoButton;
-    private Button imageViewDemoButton;
-    private Button tabhostDemoButton;
-    private Button drawerDemoButton;
-    private Button viewHolderDemoButton;
-    private Button expandableListviewDemoButton;
-    private Button menuAndActionBarDemoButton;
-    private Button alertDialogDemoButton;
-    private Button popupWindowDemoButton;
-    private Button sendNotificationDemoButton;
-    private Button webViewDemoButton;
-    private Button animationDemoButton;
-    private Button videoDemoButton;
-    private Button swipeRefreshDemoButton;
-    private Button recycleViewDemoButton;
-    private Button cardviewDemoButton;
-    private Button intentFilterDemoButton;
-    private Button gcmDemoButton;
-    private Button checkPremissionDemoButton;
-    private Button fullGridViewDemoButton;
-    private Button alarmManagerDemoButton;
-    private Button googleCredentialDemoButton;
-    private Button volleyDemoButton;
+//    private Button fragmentDemoButton;
+//    private Button textviewAndEditTextDemoButton;
+//    private Button imageViewDemoButton;
+//    private Button tabhostDemoButton;
+//    private Button drawerDemoButton;
+//    private Button viewHolderDemoButton;
+//    private Button expandableListviewDemoButton;
+//    private Button menuAndActionBarDemoButton;
+//    private Button alertDialogDemoButton;
+//    private Button popupWindowDemoButton;
+//    private Button sendNotificationDemoButton;
+//    private Button webViewDemoButton;
+//    private Button animationDemoButton;
+//    private Button videoDemoButton;
+//    private Button swipeRefreshDemoButton;
+//    private Button recycleViewDemoButton;
+//    private Button cardviewDemoButton;
+//    private Button intentFilterDemoButton;
+//    private Button gcmDemoButton;
+//    private Button checkPremissionDemoButton;
+//    private Button fullGridViewDemoButton;
+//    private Button alarmManagerDemoButton;
+//    private Button googleCredentialDemoButton;
+//    private Button volleyDemoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        fragmentDemoButton = (Button) findViewById(R.id.main_fragmentDemoButton);
+        Button fragmentDemoButton = (Button) findViewById(R.id.main_fragmentDemoButton);
         fragmentDemoButton.setOnClickListener(this);
 
-        textviewAndEditTextDemoButton = (Button) findViewById(R.id.main_textviewAndEditTextDemoButton);
+        Button textviewAndEditTextDemoButton = (Button) findViewById(R.id.main_textviewAndEditTextDemoButton);
         textviewAndEditTextDemoButton.setOnClickListener(this);
 
-        imageViewDemoButton = (Button) findViewById(R.id.main_imageViewDemoButton);
+        Button imageViewDemoButton = (Button) findViewById(R.id.main_imageViewDemoButton);
         imageViewDemoButton.setOnClickListener(this);
 
-        tabhostDemoButton = (Button) findViewById(R.id.main_tabhostDemoButton);
+        Button tabhostDemoButton = (Button) findViewById(R.id.main_tabhostDemoButton);
         tabhostDemoButton.setOnClickListener(this);
 
-        drawerDemoButton = (Button) findViewById(R.id.main_drawerDemoButton);
+        Button drawerDemoButton = (Button) findViewById(R.id.main_drawerDemoButton);
         drawerDemoButton.setOnClickListener(this);
 
-        viewHolderDemoButton = (Button) findViewById(R.id.main_viewHolderDemoButton);
+        Button viewHolderDemoButton = (Button) findViewById(R.id.main_viewHolderDemoButton);
         viewHolderDemoButton.setOnClickListener(this);
 
-        expandableListviewDemoButton = (Button) findViewById(R.id.main_expandableListviewDemoButton);
+        Button expandableListviewDemoButton = (Button) findViewById(R.id.main_expandableListviewDemoButton);
         expandableListviewDemoButton.setOnClickListener(this);
 
-        menuAndActionBarDemoButton = (Button) findViewById(R.id.main_menuAndActionBarDemoButton);
+        Button menuAndActionBarDemoButton = (Button) findViewById(R.id.main_menuAndActionBarDemoButton);
         menuAndActionBarDemoButton.setOnClickListener(this);
 
-        alertDialogDemoButton = (Button) findViewById(R.id.main_alertDialogDemoButton);
+        Button alertDialogDemoButton = (Button) findViewById(R.id.main_alertDialogDemoButton);
         alertDialogDemoButton.setOnClickListener(this);
 
-        popupWindowDemoButton = (Button) findViewById(R.id.main_popupWindowDemoButton);
+        Button popupWindowDemoButton = (Button) findViewById(R.id.main_popupWindowDemoButton);
         popupWindowDemoButton.setOnClickListener(this);
 
-        sendNotificationDemoButton = (Button) findViewById(R.id.main_sendNotificationDemoButton);
+        Button sendNotificationDemoButton = (Button) findViewById(R.id.main_sendNotificationDemoButton);
         sendNotificationDemoButton.setOnClickListener(this);
 
-        webViewDemoButton = (Button) findViewById(R.id.main_webViewDemoButton);
+        Button webViewDemoButton = (Button) findViewById(R.id.main_webViewDemoButton);
         webViewDemoButton.setOnClickListener(this);
 
-        animationDemoButton = (Button) findViewById(R.id.main_animationDemoButton);
+        Button animationDemoButton = (Button) findViewById(R.id.main_animationDemoButton);
         animationDemoButton.setOnClickListener(this);
 
-        videoDemoButton = (Button) findViewById(R.id.main_videoDemoButton);
+        Button videoDemoButton = (Button) findViewById(R.id.main_videoDemoButton);
         videoDemoButton.setOnClickListener(this);
 
-        swipeRefreshDemoButton = (Button) findViewById(R.id.main_swipeRefreshDemoButton);
+        Button swipeRefreshDemoButton = (Button) findViewById(R.id.main_swipeRefreshDemoButton);
         swipeRefreshDemoButton.setOnClickListener(this);
 
-        recycleViewDemoButton = (Button) findViewById(R.id.main_RecycleViewDemoButton);
+        Button recycleViewDemoButton = (Button) findViewById(R.id.main_RecycleViewDemoButton);
         recycleViewDemoButton.setOnClickListener(this);
 
-        cardviewDemoButton = (Button) findViewById(R.id.main_CardviewDemoButton);
+        Button cardviewDemoButton = (Button) findViewById(R.id.main_CardviewDemoButton);
         cardviewDemoButton.setOnClickListener(this);
 
-        intentFilterDemoButton = (Button) findViewById(R.id.main_intentFilterDemoButton);
+        Button intentFilterDemoButton = (Button) findViewById(R.id.main_intentFilterDemoButton);
         intentFilterDemoButton.setOnClickListener(this);
 
-        gcmDemoButton = (Button) findViewById(R.id.main_gcmDemoButton);
+        Button gcmDemoButton = (Button) findViewById(R.id.main_gcmDemoButton);
         gcmDemoButton.setOnClickListener(this);
 
-        checkPremissionDemoButton = (Button) findViewById(R.id.main_checkPremissionDemoButton);
+        Button checkPremissionDemoButton = (Button) findViewById(R.id.main_checkPremissionDemoButton);
         checkPremissionDemoButton.setOnClickListener(this);
 
-        fullGridViewDemoButton = (Button) findViewById(R.id.main_fullGridViewDemoButton);
+        Button fullGridViewDemoButton = (Button) findViewById(R.id.main_fullGridViewDemoButton);
         fullGridViewDemoButton.setOnClickListener(this);
 
-        alarmManagerDemoButton = (Button) findViewById(R.id.main_alarmManagerDemoButton);
+        Button alarmManagerDemoButton = (Button) findViewById(R.id.main_alarmManagerDemoButton);
         alarmManagerDemoButton.setOnClickListener(this);
 
-        googleCredentialDemoButton = (Button) findViewById(R.id.main_googleCredentialDemoButton);
+        Button googleCredentialDemoButton = (Button) findViewById(R.id.main_googleCredentialDemoButton);
         googleCredentialDemoButton.setOnClickListener(this);
 
-        volleyDemoButton = (Button) findViewById(R.id.main_volleyDemoButton);
+        Button volleyDemoButton = (Button) findViewById(R.id.main_volleyDemoButton);
         volleyDemoButton.setOnClickListener(this);
+
+        Button managerDemoButton = (Button) findViewById(R.id.main_managerDemoButton);
+        managerDemoButton.setOnClickListener(this);
 
     }
 
@@ -237,11 +241,15 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
 
             case R.id.main_googleCredentialDemoButton:
-                intent.setClass(this, GoogleCredentialActivity.class);
+                intent.setClass(this, GoogleSmartLockActivity.class);
                 break;
 
             case R.id.main_volleyDemoButton:
                 intent.setClass(this, VolleyDemoActivity.class);
+                break;
+
+            case R.id.main_managerDemoButton:
+                intent.setClass(this, ManagerDemoActivity.class);
                 break;
 
             default:

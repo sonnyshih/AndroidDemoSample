@@ -1,4 +1,4 @@
-package com.example.demo.activity.GoogleCredentialDemo;
+package com.example.demo.activity.GoogleSmartLockDemo;
 
 
 import com.google.android.gms.auth.api.credentials.Credential;

@@ -1,4 +1,4 @@
-package com.example.demo.activity.GoogleCredentialDemo;
+package com.example.demo.activity.GoogleSmartLockDemo;
 
 public class UsernamesAndPasswords {
 

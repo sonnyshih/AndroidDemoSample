@@ -1,4 +1,4 @@
-package com.example.demo.activity.GoogleCredentialDemo;
+package com.example.demo.activity.GoogleSmartLockDemo;
 
 
 import android.content.Intent;
@@ -29,7 +29,7 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 
 
-public class GoogleCredentialActivity extends AppCompatActivity
+public class GoogleSmartLockActivity extends AppCompatActivity
         implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener {
 
     private static final String TAG = "Mylog";

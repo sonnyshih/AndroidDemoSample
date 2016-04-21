@@ -1,4 +1,4 @@
-package com.example.demo.activity.GoogleCredentialDemo;
+package com.example.demo.activity.GoogleSmartLockDemo;
 
 
 import android.content.Intent;
@@ -69,7 +69,7 @@ public class MyAccountActivity extends AppCompatActivity
 
     private void onLogoutButtonClick(){
         Toast.makeText(this, "Completed to logout.", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, GoogleCredentialActivity.class);
+        Intent intent = new Intent(this, GoogleSmartLockActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();

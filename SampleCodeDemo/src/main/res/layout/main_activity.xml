@@ -205,6 +205,14 @@
             android:textAllCaps="false"
             android:text="Volley Demo" />
 
+        <Button
+            android:id="@+id/main_managerDemoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAllCaps="false"
+            android:text="Manager Demo" />
+
     </LinearLayout>
 
 </ScrollView>

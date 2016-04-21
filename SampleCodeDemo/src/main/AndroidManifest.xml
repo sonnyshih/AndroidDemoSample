@@ -4,14 +4,14 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-<!--
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="14" />
--->
+    <!--
+        <uses-sdk
+            android:minSdkVersion="14"
+            android:targetSdkVersion="14" />
+    -->
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -20,14 +20,16 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <permission android:name="com.example.demo.permission.C2D_MESSAGE"
+
+    <permission
+        android:name="com.example.demo.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
     <uses-permission android:name="com.example.demo.permission.C2D_MESSAGE" />
     <!--GCM Setting End-->
 
 
     <application
-        android:name=".activity.base.CustomerUIDemoApp"
+        android:name=".activity.base.SampleCodeDemoApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -316,7 +318,7 @@
 
         <receiver
             android:name=".activity.GCMDemo.DownstreamMessagingDemo.DownstreamMessagingReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <category android:name="com.example.demo" />
@@ -334,7 +336,7 @@
         <receiver
             android:name="com.google.android.gms.gcm.GcmReceiver"
             android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <category android:name="com.example.demo" />
@@ -347,7 +349,7 @@
             android:name=".activity.GCMDemo.TopicsMessagesDemo.UpdateTokenInstanceIDListenerService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.android.gms.iid.InstanceID"/>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
             </intent-filter>
         </service>
         <!-- [END instanceId_listener] -->
@@ -355,7 +357,7 @@
         <!-- [START gcm_listener] -->
         <service
             android:name=".activity.GCMDemo.TopicsMessagesDemo.TopicsMessageGcmListenerService"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
@@ -394,15 +396,15 @@
 
         <!-- Google Credential Demo (Smart Lock For Passwords) Start -->
         <activity
-            android:name=".activity.GoogleCredentialDemo.GoogleCredentialActivity"
+            android:name=".activity.GoogleSmartLockDemo.GoogleSmartLockActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
-            android:name=".activity.GoogleCredentialDemo.MyAccountActivity"
+            android:name=".activity.GoogleSmartLockDemo.MyAccountActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
-            android:name=".activity.GoogleCredentialDemo.AccountManageActivity"
+            android:name=".activity.GoogleSmartLockDemo.AccountManageActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <!-- Google Credential Demo (Smart Lock For Passwords) End -->
@@ -435,6 +437,31 @@
 
         <!-- Volley Demo End -->
 
+        <!-- Manager Demo Start -->
+        <!--
+            Reference
+            1. http://blog.mosil.biz/2014/10/android-toolbar/
+            2. Add the "AppTheme.Toolbar" style in values/styles.xml and values-v21/styles.xml
+        -->
+        <activity
+            android:name=".activity.ManagerDemo.ManagerDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Toolbar" />
+
+        <activity
+            android:name=".activity.ManagerDemo.MyPageActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Toolbar" />
+
+        <activity
+            android:name=".activity.ManagerDemo.SettingActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Toolbar" />
+
+        <!-- Manager Demo End -->
     </application>
 
 </manifest>
