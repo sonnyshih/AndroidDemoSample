@@ -3,19 +3,22 @@ package com.example.demo.activity.GoogleSmartLockDemo;
 
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.Toolbar.OnMenuItemClickListener;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.demo.R;
-import com.example.demo.util.StringUtil;
+import com.example.demo.util.SystemUtil;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.credentials.Credential;
 import com.google.android.gms.auth.api.credentials.CredentialRequest;
@@ -30,51 +33,69 @@ import com.google.android.gms.common.api.Status;
 
 
 public class GoogleSmartLockActivity extends AppCompatActivity
-        implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener {
+        implements OnMenuItemClickListener, ConnectionCallbacks, OnConnectionFailedListener {
 
     private static final String TAG = "Mylog";
+
+    private String SIGN_IN_FRAGMENT_TAG = "SIGN_IN_FRAGMENT_TAG";
+    private String SIGN_UP_FRAGMENT_TAG = "SIGN_UP_FRAGMENT_TAG";
 
     private static final int RC_SAVE = 1;
     private static final int RC_READ = 3;
 
-
+    private Toolbar toolbar;
     private GoogleApiClient googleApiClient;
+    private SignInFragment signInFragment;
+    private SignUpFragment signUpFragment;
 
-    private LinearLayout mainLayout;
-    private ProgressBar signInProgressBar;
-
-    private TextInputLayout usernameTextInputLayout;
-    private TextInputLayout passwordTextInputLayout;
-
-    private Button signInButton;
-    private Button clearButton;
+    private FrameLayout loadingLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.google_credential_activity);
+        setContentView(R.layout.google_smart_lock_activity);
 
-        googleApiClient = new GoogleApiClient.Builder(this)
-                .addConnectionCallbacks(this)
-                .enableAutoManage(this, this)
-                .addApi(Auth.CREDENTIALS_API)
-                .build();
+        loadingLayout = (FrameLayout) findViewById(R.id.loadingLayout);
 
-        mainLayout = (LinearLayout) findViewById(R.id.googleCredential_mainLayout);
-        mainLayout.setVisibility(View.GONE);
+        showLoading();
+        layoutActionBar();
+        initFragment();
+        initGoogleApiClient();
 
-        signInProgressBar = (ProgressBar) findViewById(R.id.googleCredential_signInProgressBar);
-        signInProgressBar.setVisibility(View.VISIBLE);
+    }
 
-        usernameTextInputLayout = (TextInputLayout) findViewById(R.id.googleCredential_usernameTextInputLayout);
-        passwordTextInputLayout = (TextInputLayout) findViewById(R.id.googleCredential_passwordTextInputLayout);
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
 
-        signInButton = (Button) findViewById(R.id.googleCredential_signInButton);
-        signInButton.setOnClickListener(this);
+        SystemUtil.hideSoftKeyboard(getCurrentFocus());
 
-        clearButton = (Button) findViewById(R.id.googleCredential_clearButton);
-        clearButton.setOnClickListener(this);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        toolbar.inflateMenu(R.menu.login_menu);
+        toolbar.setOnMenuItemClickListener(this);
+        showMenuItem(R.id.loginMenu_signUp);
+
+        return true;
+    }
+
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.loginMenu_signIn:
+                onSignInMenuClick();
+                break;
+
+            case R.id.loginMenu_signUp:
+                onSignUpMenuClick();
+                break;
+        }
+
+        return false;
     }
 
     @Override
@@ -91,8 +112,7 @@ public class GoogleSmartLockActivity extends AppCompatActivity
 
                 } else {
                     Log.e(TAG, "Credential Read: NOT OK");
-                    mainLayout.setVisibility(View.VISIBLE);
-                    signInProgressBar.setVisibility(View.GONE);
+                    hiddenLoading();
                 }
 
                 break;
@@ -114,6 +134,91 @@ public class GoogleSmartLockActivity extends AppCompatActivity
 
     }
 
+    private void layoutActionBar(){
+        findViewById(R.id.baseNavigationDrawer_normalActionModeToolbarContainer).setVisibility(View.VISIBLE);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setVisibility(View.VISIBLE);
+        toolbar.setTitleTextAppearance(this, R.style.Newegg_Toolbar_TitleText_Bold_White16);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
+
+    }
+
+    private void initGoogleApiClient(){
+        googleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .enableAutoManage(this, this)
+                .addApi(Auth.CREDENTIALS_API)
+                .build();
+    }
+
+
+    private void initFragment() {
+        if (signInFragment == null) {
+            signInFragment = new SignInFragment();
+        }
+
+        if (signUpFragment == null) {
+            signUpFragment = new SignUpFragment();
+        }
+
+        replaceFragment(signInFragment, SIGN_IN_FRAGMENT_TAG);
+    }
+
+
+    private void onSignInMenuClick() {
+
+//        getSupportActionBar().setTitle("Sign In");
+        showMenuItem(R.id.loginMenu_signUp);
+        replaceFragment(signInFragment, SIGN_IN_FRAGMENT_TAG);
+        SystemUtil.hideSoftKeyboard(getCurrentFocus());
+    }
+
+    private void onSignUpMenuClick() {
+//        getSupportActionBar().setTitle("Sign Up");
+        showMenuItem(R.id.loginMenu_signIn);
+        replaceFragment(signUpFragment, SIGN_UP_FRAGMENT_TAG);
+        SystemUtil.hideSoftKeyboard(getCurrentFocus());
+    }
+
+    private void showMenuItem(int id){
+        switch (id) {
+            case R.id.loginMenu_signIn:
+                toolbar.getMenu().findItem(R.id.loginMenu_signIn).setVisible(true);
+                toolbar.getMenu().findItem(R.id.loginMenu_signUp).setVisible(false);
+                break;
+
+            case R.id.loginMenu_signUp:
+                toolbar.getMenu().findItem(R.id.loginMenu_signIn).setVisible(false);
+                toolbar.getMenu().findItem(R.id.loginMenu_signUp).setVisible(true);
+                break;
+
+            default:
+                toolbar.getMenu().findItem(R.id.loginMenu_signIn).setVisible(true);
+                toolbar.getMenu().findItem(R.id.loginMenu_signUp).setVisible(false);
+                break;
+        }
+    }
+
+    public void replaceFragment(Fragment fragment, String tag){
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.sliding_in, R.anim.sliding_out);
+
+//        fragmentTransaction.setCustomAnimations(R.anim.slide_in_up, R.anim.slide_out_up);
+//        fragmentTransaction.setCustomAnimations(R.anim.sliding_in_alpha, R.anim.sliding_out_alpha);
+
+        fragmentTransaction.replace(R.id.googleSmartLock_fragmentContainer, fragment, tag)
+                .commitAllowingStateLoss();
+    }
+
+    private void showLoading(){
+        loadingLayout.setVisibility(View.VISIBLE);
+    }
+
+    private void hiddenLoading(){
+        loadingLayout.setVisibility(View.GONE);
+    }
 
     @Override
     public void onConnected(Bundle bundle) {
@@ -133,58 +238,6 @@ public class GoogleSmartLockActivity extends AppCompatActivity
         Log.d(TAG, "onConnectionFailed: " + connectionResult);
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.googleCredential_signInButton:
-                onSignInButtonClick();
-                break;
-
-            case R.id.googleCredential_clearButton:
-                onClearButtonClick();
-                break;
-
-            default:
-                break;
-        }
-
-    }
-
-    private void onSignInButtonClick() {
-        String username = usernameTextInputLayout.getEditText().getText().toString();
-        String password = passwordTextInputLayout.getEditText().getText().toString();
-
-        if (StringUtil.isEmpty(username)) {
-            usernameTextInputLayout.setError("username is empty");
-            return;
-        }
-
-        if (StringUtil.isEmpty(password)) {
-            passwordTextInputLayout.setError("password is empty");
-            return;
-        }
-
-
-        Credential credential = new Credential.Builder(username)
-                .setPassword(password)
-                .build();
-
-        if (LoginChecked.isValidCredential(credential)) {
-            saveCredential(credential);
-        } else {
-            Log.d(TAG, "Credentials are invalid. Username or password are " +
-                    "incorrect.");
-            Toast.makeText(this, "Credentials are invalid",
-                    Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    private void onClearButtonClick() {
-        usernameTextInputLayout.getEditText().setText("");
-        passwordTextInputLayout.getEditText().setText("");
-
-    }
 
     private void requestCredentials() {
 
@@ -196,6 +249,7 @@ public class GoogleSmartLockActivity extends AppCompatActivity
                 new ResultCallback<CredentialRequestResult>() {
                     @Override
                     public void onResult(CredentialRequestResult credentialRequestResult) {
+                        hiddenLoading();
 
                         Status status = credentialRequestResult.getStatus();
                         if (credentialRequestResult.getStatus().isSuccess()) {
@@ -219,13 +273,9 @@ public class GoogleSmartLockActivity extends AppCompatActivity
                                 // have any saved credentials and thus needs to provide a username
                                 // and password to sign in.
                                 Log.d(TAG, "Sign in required");
-                                mainLayout.setVisibility(View.VISIBLE);
-                                signInProgressBar.setVisibility(View.GONE);
 
                             } else {
                                 Log.w(TAG, "Unrecognized status code: " + status.getStatusCode());
-                                mainLayout.setVisibility(View.VISIBLE);
-                                signInProgressBar.setVisibility(View.GONE);
                             }
 
                         }
@@ -260,11 +310,9 @@ public class GoogleSmartLockActivity extends AppCompatActivity
             String username = credential.getId();
             String password = credential.getPassword();
 
-            mainLayout.setVisibility(View.VISIBLE);
-            signInProgressBar.setVisibility(View.GONE);
+            signInFragment.getUsernameEditText().setText(username);
+            signInFragment.getPasswordEditText().setText(password);
 
-            usernameTextInputLayout.getEditText().setText(username);
-            passwordTextInputLayout.getEditText().setText(password);
         }
     }
 

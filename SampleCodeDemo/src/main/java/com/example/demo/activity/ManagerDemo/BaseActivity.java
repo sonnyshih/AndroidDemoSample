@@ -54,12 +54,12 @@ public class BaseActivity extends AppCompatActivity {
 
         final Toolbar toolbar = getToolbar();
 
-        // Setting title - Sonny Shih 2015/07/01
+        // Setting title
         if (!StringUtil.isEmpty(title)) {
             toolbar.setTitle(title);
         }
 
-        // Setting the home icon - Sonny Shih 2015/07/01
+        // Setting the home icon
         if (resId > 0) {
             toolbar.setNavigationIcon(resId);
         }

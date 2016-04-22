@@ -397,7 +397,8 @@
         <!-- Google Credential Demo (Smart Lock For Passwords) Start -->
         <activity
             android:name=".activity.GoogleSmartLockDemo.GoogleSmartLockActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:theme="@style/AppTheme.Toolbar"/>
 
         <activity
             android:name=".activity.GoogleSmartLockDemo.MyAccountActivity"
