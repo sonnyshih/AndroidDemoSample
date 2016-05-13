@@ -463,6 +463,16 @@
             android:theme="@style/AppTheme.Toolbar" />
 
         <!-- Manager Demo End -->
+
+
+        <!-- Google Sign In Start -->
+        <activity
+            android:name=".activity.GoogleSignInDemo.SignInActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <!-- Google Sign In End -->
+
+
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.example.demo.activity.GoogleSmartLockDemo;
 
 
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.res.Configuration;
@@ -18,11 +19,14 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.demo.R;
+import com.example.demo.util.StringUtil;
 import com.example.demo.util.SystemUtil;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.credentials.Credential;
+import com.google.android.gms.auth.api.credentials.CredentialPickerConfig;
 import com.google.android.gms.auth.api.credentials.CredentialRequest;
 import com.google.android.gms.auth.api.credentials.CredentialRequestResult;
+import com.google.android.gms.auth.api.credentials.HintRequest;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -42,6 +46,7 @@ public class GoogleSmartLockActivity extends AppCompatActivity
 
     private static final int RC_SAVE = 1;
     private static final int RC_READ = 3;
+    private static final int RC_HINT = 4;
 
     private Toolbar toolbar;
     private GoogleApiClient googleApiClient;
@@ -126,6 +131,17 @@ public class GoogleSmartLockActivity extends AppCompatActivity
                 }
                 goToMyAccount();
 
+                break;
+
+            case RC_HINT:
+                if (resultCode == RESULT_OK) {
+                    Credential credential = data.getParcelableExtra(Credential.EXTRA_KEY);
+                    autoFillAccountAndPassword(credential);
+
+                } else {
+                    Log.e(TAG, "Credential Read: NOT OK");
+                    hiddenLoading();
+                }
                 break;
 
             default:
@@ -273,6 +289,7 @@ public class GoogleSmartLockActivity extends AppCompatActivity
                                 // have any saved credentials and thus needs to provide a username
                                 // and password to sign in.
                                 Log.d(TAG, "Sign in required");
+                                retrieveHints();
 
                             } else {
                                 Log.w(TAG, "Unrecognized status code: " + status.getStatusCode());
@@ -304,14 +321,36 @@ public class GoogleSmartLockActivity extends AppCompatActivity
 
     }
 
+    private void retrieveHints(){
+        HintRequest hintRequest = new HintRequest.Builder()
+                .setHintPickerConfig(new CredentialPickerConfig.Builder()
+                        .setShowCancelButton(true)
+                        .build())
+                .setEmailAddressIdentifierSupported(true)
+                .build();
+
+        PendingIntent intent =
+                Auth.CredentialsApi.getHintPickerIntent(googleApiClient, hintRequest);
+        try {
+            startIntentSenderForResult(intent.getIntentSender(), RC_HINT, null, 0, 0, 0);
+        } catch (IntentSender.SendIntentException e) {
+            Log.e(TAG, "Could not start hint picker Intent", e);
+        }
+    }
+
     private void autoFillAccountAndPassword(Credential credential){
 
         if (credential != null) {
             String username = credential.getId();
             String password = credential.getPassword();
 
-            signInFragment.getUsernameEditText().setText(username);
-            signInFragment.getPasswordEditText().setText(password);
+            if (!StringUtil.isEmpty(username)) {
+                signInFragment.getUsernameEditText().setText(username);
+            }
+
+            if (!StringUtil.isEmpty(password)) {
+                signInFragment.getPasswordEditText().setText(password);
+            }
 
         }
     }

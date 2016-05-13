@@ -190,12 +190,12 @@
 
 
         <Button
-            android:id="@+id/main_googleCredentialDemoButton"
+            android:id="@+id/main_googleSmartLockDemoButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textAllCaps="false"
-            android:text="Credential Demo \n(Smart Lock For Passwords)" />
+            android:text="Google Smart Lock For Passwords" />
 
         <Button
             android:id="@+id/main_volleyDemoButton"
@@ -212,6 +212,14 @@
             android:layout_marginTop="5dp"
             android:textAllCaps="false"
             android:text="Manager Demo" />
+
+        <Button
+            android:id="@+id/main_googleSignInDemoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAllCaps="false"
+            android:text="Google Sign In Demo" />
 
     </LinearLayout>
 

@@ -18,6 +18,7 @@ import com.example.demo.activity.DrawerDemo.DrawerDemoActivity;
 import com.example.demo.activity.ExpandableListviewDemo.ExpandableListviewDemoActivity;
 import com.example.demo.activity.FragmentDemo.FragmentDemoActivity;
 import com.example.demo.activity.GCMDemo.GCMDemoActivity;
+import com.example.demo.activity.GoogleSignInDemo.SignInActivity;
 import com.example.demo.activity.GoogleSmartLockDemo.GoogleSmartLockActivity;
 import com.example.demo.activity.ImageViewDemo.ImageViewDemoActivity;
 import com.example.demo.activity.IntentFilterDemo.IntentFilterDemoActivity;
@@ -36,31 +37,6 @@ import com.example.demo.activity.WebViewDemo.WebViewDemoActivity;
 import com.example.demo.activity.swipeRefreshDemo.SwipeRefreshDemoActivity;
 
 public class MainActivity extends Activity implements OnClickListener {
-
-//    private Button fragmentDemoButton;
-//    private Button textviewAndEditTextDemoButton;
-//    private Button imageViewDemoButton;
-//    private Button tabhostDemoButton;
-//    private Button drawerDemoButton;
-//    private Button viewHolderDemoButton;
-//    private Button expandableListviewDemoButton;
-//    private Button menuAndActionBarDemoButton;
-//    private Button alertDialogDemoButton;
-//    private Button popupWindowDemoButton;
-//    private Button sendNotificationDemoButton;
-//    private Button webViewDemoButton;
-//    private Button animationDemoButton;
-//    private Button videoDemoButton;
-//    private Button swipeRefreshDemoButton;
-//    private Button recycleViewDemoButton;
-//    private Button cardviewDemoButton;
-//    private Button intentFilterDemoButton;
-//    private Button gcmDemoButton;
-//    private Button checkPremissionDemoButton;
-//    private Button fullGridViewDemoButton;
-//    private Button alarmManagerDemoButton;
-//    private Button googleCredentialDemoButton;
-//    private Button volleyDemoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,14 +109,17 @@ public class MainActivity extends Activity implements OnClickListener {
         Button alarmManagerDemoButton = (Button) findViewById(R.id.main_alarmManagerDemoButton);
         alarmManagerDemoButton.setOnClickListener(this);
 
-        Button googleCredentialDemoButton = (Button) findViewById(R.id.main_googleCredentialDemoButton);
-        googleCredentialDemoButton.setOnClickListener(this);
+        Button googleSmartLockDemoButton = (Button) findViewById(R.id.main_googleSmartLockDemoButton);
+        googleSmartLockDemoButton.setOnClickListener(this);
 
         Button volleyDemoButton = (Button) findViewById(R.id.main_volleyDemoButton);
         volleyDemoButton.setOnClickListener(this);
 
         Button managerDemoButton = (Button) findViewById(R.id.main_managerDemoButton);
         managerDemoButton.setOnClickListener(this);
+
+        Button googleSignInDemoButton = (Button) findViewById(R.id.main_googleSignInDemoButton);
+        googleSignInDemoButton.setOnClickListener(this);
 
     }
 
@@ -240,7 +219,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 intent.setClass(this, AlarmManagerDemoActivity.class);
                 break;
 
-            case R.id.main_googleCredentialDemoButton:
+            case R.id.main_googleSmartLockDemoButton:
                 intent.setClass(this, GoogleSmartLockActivity.class);
                 break;
 
@@ -250,6 +229,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_managerDemoButton:
                 intent.setClass(this, ManagerDemoActivity.class);
+                break;
+
+            case R.id.main_googleSignInDemoButton:
+                intent.setClass(this, SignInActivity.class);
                 break;
 
             default:

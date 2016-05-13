@@ -8,13 +8,19 @@
     {
       "client_info": {
         "mobilesdk_app_id": "1:518863485658:android:fba24e8cba34eb59",
-        "client_id": "android:com.example.demo",
+        "client_id": "android:com.example.CustomerUIDemo",
         "client_type": 1,
         "android_client_info": {
-          "package_name": "com.example.demo"
+          "package_name": "com.example.CustomerUIDemo",
+          "certificate_hash": []
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "518863485658-amesncu6b5u63v6gm9gfv5ia1s6sf2r6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [],
       "services": {
         "analytics_service": {
@@ -30,6 +36,51 @@
         },
         "google_signin_service": {
           "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518863485658:android:2889d4d8c9335bd0",
+        "client_id": "android:com.example.demo",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.example.demo",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518863485658-88apm6d6dc6pos8dfg4rap3ud8url7e9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.demo",
+            "certificate_hash": "F4956F11B17F564EC4A692A8F797800EA3234FF3"
+          }
+        },
+        {
+          "client_id": "518863485658-amesncu6b5u63v6gm9gfv5ia1s6sf2r6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
         },
         "ads_service": {
           "status": 1
