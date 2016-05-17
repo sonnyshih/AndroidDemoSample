@@ -33,6 +33,7 @@ import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGri
 import com.example.demo.activity.Video.VideoDemoActivity;
 import com.example.demo.activity.ViewHolderDemo.ViewHolderDemoActvity;
 import com.example.demo.activity.VolleyDemo.VolleyDemoActivity;
+import com.example.demo.activity.WebServiceTaskManagerDemo.WebServiceTaskManagerDemoActivity;
 import com.example.demo.activity.WebViewDemo.WebViewDemoActivity;
 import com.example.demo.activity.swipeRefreshDemo.SwipeRefreshDemoActivity;
 
@@ -120,6 +121,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
         Button googleSignInDemoButton = (Button) findViewById(R.id.main_googleSignInDemoButton);
         googleSignInDemoButton.setOnClickListener(this);
+
+        Button webServiceTaskManagerDemoButton = (Button) findViewById(R.id.main_webServiceTaskManagerDemoButton);
+        webServiceTaskManagerDemoButton.setOnClickListener(this);
 
     }
 
@@ -233,6 +237,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_googleSignInDemoButton:
                 intent.setClass(this, SignInActivity.class);
+                break;
+
+            case R.id.main_webServiceTaskManagerDemoButton:
+                intent.setClass(this, WebServiceTaskManagerDemoActivity.class);
                 break;
 
             default:

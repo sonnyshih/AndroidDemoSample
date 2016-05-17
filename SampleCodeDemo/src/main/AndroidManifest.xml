@@ -472,6 +472,9 @@
 
         <!-- Google Sign In End -->
 
+        <activity
+            android:name=".activity.WebServiceTaskManagerDemo.WebServiceTaskManagerDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
     </application>
 

@@ -3,11 +3,14 @@ package com.example.demo.manage;
 import android.content.Context;
 import android.os.Environment;
 
+import com.example.demo.activity.WebServiceTaskManagerDemo.type.DeviceType;
+
 
 public class ApplicationManager {
 	private static ApplicationManager instance;
 	private Context context;
 	private String appVersion;
+	private DeviceType deviceType;
 	private int sqliteDBVersion;
 	private String bulidNumber;
 	private String date;
@@ -36,6 +39,26 @@ public class ApplicationManager {
 
 	public void setAppVersion(String appVersion) {
 		this.appVersion = appVersion;
+	}
+
+	public DeviceType getDeviceType() {
+		return deviceType;
+	}
+
+	public void setDeviceType(DeviceType deviceType) {
+		this.deviceType = deviceType;
+	}
+
+
+	public String getAuthToken() {
+		return "";
+//		if (AppManagerCenter.getLoginAppManager().isLogin()) {
+//			String authToken = AppManagerCenter.getLoginAppManager().getAuthToken();
+//			return authToken == null ? "" : authToken;
+//		}
+//
+//		String guestAuthToken = AppManagerCenter.getCheckFlowSwitcherManger().getAuthToken();
+//		return guestAuthToken == null ? "" : guestAuthToken;
 	}
 
 	public int getSqliteDBVersion() {
