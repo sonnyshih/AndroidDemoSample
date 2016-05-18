@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -43,6 +44,11 @@ public class Action3Activity extends Activity {
             uriTextView.setText("uri = " + uri.toString());
             searialNumberTextview.setText("searialNumber = " + uri.getQueryParameter("searialNumber"));
             typeTextView.setText("type = " + uri.getQueryParameter("type"));
+
+            Log.d("Mylog", "scheme = " + uri.getScheme());  // "http"
+            Log.d("Mylog", "host = " + uri.getHost());    // "twitter.com"
+            Log.d("Mylog", "path = " + uri.getPath());  // "path"
+//            Log.d("Mylog", "scheme = " + uri.getScheme());  // "http"
         }
 
     }
