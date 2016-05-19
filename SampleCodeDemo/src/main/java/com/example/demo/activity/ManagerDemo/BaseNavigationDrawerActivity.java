@@ -112,7 +112,7 @@ public abstract class BaseNavigationDrawerActivity extends BaseActivity implemen
         toolbarContainer.setVisibility(View.VISIBLE);
         toolbar = (Toolbar) toolbarContainer.findViewById(R.id.toolbar);
         toolbar.setVisibility(View.VISIBLE);
-        toolbar.setTitleTextAppearance(this, R.style.Newegg_Toolbar_TitleText_Bold_White16);
+        toolbar.setTitleTextAppearance(this, R.style.SampelCodeDemo_Toolbar_TitleText_Bold_White16);
         setSupportActionBar(toolbar);
     }
 

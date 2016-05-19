@@ -1,14 +1,14 @@
 package com.example.ThreadAndAsyncTaskDemo.AsyncTaskDemo;
 
+import android.os.AsyncTask;
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
-import android.os.AsyncTask;
-import android.util.Log;
 
 public class HttpURLConnectionGetAsyncTask extends AsyncTask<String, Integer, String>{
 
@@ -26,7 +26,7 @@ public class HttpURLConnectionGetAsyncTask extends AsyncTask<String, Integer, St
 					.openConnection();
 
 			httpURLConnection.setRequestMethod("GET");
-			httpURLConnection.setRequestProperty("User-Agent", "Newegg Android App / 3.2.1");
+			httpURLConnection.setRequestProperty("User-Agent", "Android App / 3.2.1");
 
 			StringBuilder builder = new StringBuilder();
 			if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {

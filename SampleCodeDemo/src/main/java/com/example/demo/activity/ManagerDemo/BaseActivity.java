@@ -89,7 +89,7 @@ public class BaseActivity extends AppCompatActivity {
         }
         toolbar = (Toolbar) contentView.findViewById(R.id.toolbar);
         toolbar.setVisibility(View.VISIBLE);
-        toolbar.setTitleTextAppearance(this, R.style.Newegg_Toolbar_TitleText_Bold_White16);
+        toolbar.setTitleTextAppearance(this, R.style.SampelCodeDemo_Toolbar_TitleText_Bold_White16);
         setSupportActionBar(toolbar);
     }
 

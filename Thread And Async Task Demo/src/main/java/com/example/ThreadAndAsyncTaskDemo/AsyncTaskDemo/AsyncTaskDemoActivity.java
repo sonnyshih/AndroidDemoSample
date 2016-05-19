@@ -1,10 +1,5 @@
 package com.example.ThreadAndAsyncTaskDemo.AsyncTaskDemo;
 
-import java.io.FileNotFoundException;
-import java.io.OutputStream;
-
-import com.example.ThreadAndAsyncTaskDemo.R;
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -13,6 +8,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+
+import com.example.ThreadAndAsyncTaskDemo.R;
+
+import java.io.FileNotFoundException;
+import java.io.OutputStream;
 
 public class AsyncTaskDemoActivity extends Activity implements OnClickListener {
 	private Button httpURLConnectionGetButton;
@@ -114,7 +114,7 @@ public class AsyncTaskDemoActivity extends Activity implements OnClickListener {
 
 	private void onHttpURLConnectionGetClick() {
 
-		String url = "http://www.ows.newegg.com/Stores.egg/ShopAllNavigation";
+		String url = "http://175.98.136.168:4080/Stores.egg/ShopAllNavigation";
 
 		HttpURLConnectionGetAsyncTask httpURLConnectionGetAsyncTask = new HttpURLConnectionGetAsyncTask();
 		httpURLConnectionGetAsyncTask.execute(url);
@@ -122,7 +122,7 @@ public class AsyncTaskDemoActivity extends Activity implements OnClickListener {
 
 	private void onHttpURLConnectionPostClick() {
 
-		String url = "http://202.153.189.188/user/login";
+		String url = "http://175.98.136.168:4000/user/login";
 		String inputJSON = "{ \"user\": \"herdyboy\",  \"password\": \"123456\", \"device_id\":\"0900000015\"}";
 
 		HttpURLConnectionPostAsyncTask httpURLConnectionPostAsyncTask = new HttpURLConnectionPostAsyncTask();
@@ -131,14 +131,14 @@ public class AsyncTaskDemoActivity extends Activity implements OnClickListener {
 	}
 
 	private void onGetClick() {
-		String url = "http://www.ows.newegg.com/Stores.egg/ShopAllNavigation";
+		String url = "http://175.98.136.168:4080/Stores.egg/ShopAllNavigation";
 
 		GetAsyncTask getAsyncTask = new GetAsyncTask();
 		getAsyncTask.execute(url);
 	}
 
 	private void onPostClick() {
-		String url = "http://202.153.189.188/user/login";
+		String url = "http://175.98.136.168:4000/user/login";
 		String inputJSON = "{ \"user\": \"herdyboy\",  \"password\": \"123456\", \"device_id\":\"0900000015\"}";
 
 		PostAsyncTask postAsyncTask = new PostAsyncTask();

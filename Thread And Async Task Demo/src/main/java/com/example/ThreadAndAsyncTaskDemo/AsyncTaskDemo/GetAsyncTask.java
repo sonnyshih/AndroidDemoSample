@@ -1,12 +1,11 @@
 package com.example.ThreadAndAsyncTaskDemo.AsyncTaskDemo;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Type;
-import java.net.HttpURLConnection;
-import java.util.List;
+import android.os.AsyncTask;
+import android.util.Log;
+
+import com.example.ThreadAndAsyncTaskDemo.entity.ShopAllNavigationEntity;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -16,12 +15,13 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import com.example.ThreadAndAsyncTaskDemo.entity.ShopAllNavigationEntity;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import android.os.AsyncTask;
-import android.util.Log;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
+import java.net.HttpURLConnection;
+import java.util.List;
 
 public class GetAsyncTask extends AsyncTask<String, Integer, String>{
 
@@ -34,7 +34,7 @@ public class GetAsyncTask extends AsyncTask<String, Integer, String>{
 
 		HttpGet httpRequest = new HttpGet(urlString);
 		
-		httpRequest.addHeader("User-Agent", "Newegg Android App / 3.2.1");
+		httpRequest.addHeader("User-Agent", "Android App / 3.2.1");
 		httpRequest.addHeader("Accept", "application/json");
 		httpRequest.addHeader("Accept-Charset", "utf-8");
 

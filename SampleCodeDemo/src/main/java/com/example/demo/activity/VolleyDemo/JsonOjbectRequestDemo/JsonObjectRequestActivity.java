@@ -64,7 +64,7 @@ public class JsonObjectRequestActivity extends AppCompatActivity implements
     }
 
     private void getMethod() {
-        String url = "http://www.ows.newegg.com/configuration.egg/iphoneclient";
+        String url = "http://175.98.136.168:4080/configuration.egg/iphoneclient";
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest(
                 Request.Method.GET, url, null,
@@ -99,7 +99,7 @@ public class JsonObjectRequestActivity extends AppCompatActivity implements
     }
 
     private void postMethod() {
-        String url = "http://www.ows.newegg.com/Search.egg/Query";
+        String url = "http://175.98.136.168:4080/Search.egg/Query";
 
         String inputJSON ="{";
         inputJSON +="   \"BrandList\":[],";

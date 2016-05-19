@@ -21,7 +21,7 @@ public class GetUrlCountryIdTask extends WebServiceTask<TrackingCountryInfoEntit
 
     @Override
     public String generateServiceUrl() {
-        return "http://www.ows.newegg.com/Tracking.egg/Country";
+        return "http://175.98.136.168:4080/Tracking.egg/Country";
     }
 
     @Override

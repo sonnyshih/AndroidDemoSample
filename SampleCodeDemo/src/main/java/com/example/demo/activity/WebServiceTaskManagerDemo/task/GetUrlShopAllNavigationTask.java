@@ -24,7 +24,7 @@ public class GetUrlShopAllNavigationTask extends WebServiceTask<List<VStoreNavig
 
     @Override
     public String generateServiceUrl() {
-        return "http://www.ows.newegg.com/Stores.egg/ShopAllNavigation";
+        return "http://175.98.136.168:4080/Stores.egg/ShopAllNavigation";
     }
 
     @Override

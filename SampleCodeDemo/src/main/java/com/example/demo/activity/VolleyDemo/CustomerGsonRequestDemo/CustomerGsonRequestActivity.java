@@ -68,7 +68,7 @@ public class CustomerGsonRequestActivity extends AppCompatActivity implements On
         textView.setVisibility(View.GONE);
         progressBar.setVisibility(View.VISIBLE);
 
-        String url = "http://www.ows.newegg.com/Stores.egg/ShopAllNavigation";
+        String url = "http://175.98.136.168:4080/Stores.egg/ShopAllNavigation";
         Type messageType = new TypeToken<List<VStoreNavigationItemInfoEntity>>() {
         }.getType();
 
