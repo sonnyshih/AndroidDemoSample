@@ -1,12 +1,5 @@
 package com.example.ThreadAndAsyncTaskDemo.AsyncTaskDemo;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -14,6 +7,13 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class ImageLoaderToFileAsyncTask extends
 		AsyncTask<String, Integer, Bitmap> {
@@ -46,9 +46,32 @@ public class ImageLoaderToFileAsyncTask extends
 				httpURLConnection.setDoInput(true);
 				httpURLConnection.setDoOutput(false);
 				httpURLConnection.setConnectTimeout(20 * 1000);
-				
-				if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-					inputStream = httpURLConnection.getInputStream();
+
+				switch (httpURLConnection.getResponseCode()) {
+
+					case HttpURLConnection.HTTP_OK:
+						inputStream = httpURLConnection.getInputStream();
+						break;
+
+					// Redirect URL
+					case HttpURLConnection.HTTP_MOVED_PERM:
+					case HttpURLConnection.HTTP_MOVED_TEMP:
+						String newUrl = httpURLConnection.getHeaderField("Location");
+						url = new URL(newUrl);
+						httpURLConnection = (HttpURLConnection) url.openConnection();
+						httpURLConnection.setDoInput(true);
+						httpURLConnection.setDoOutput(false);
+						httpURLConnection.setConnectTimeout(20 * 1000);
+						inputStream = httpURLConnection.getInputStream();
+
+						break;
+
+					default:
+						break;
+
+				}
+
+				if (inputStream != null) {
 					byte[] buf = new byte[8196];
 					int seg = 0;
 					final long total = httpURLConnection.getContentLength();
@@ -61,7 +84,7 @@ public class ImageLoaderToFileAsyncTask extends
 						SystemClock.sleep(1000);
 					}
 				}
-				
+
 
 			} finally {
 				if (httpURLConnection != null) {
