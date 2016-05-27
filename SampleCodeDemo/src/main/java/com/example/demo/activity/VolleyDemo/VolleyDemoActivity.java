@@ -10,37 +10,36 @@ import android.widget.Button;
 
 import com.example.demo.R;
 import com.example.demo.activity.VolleyDemo.CustomerGsonRequestDemo.CustomerGsonRequestActivity;
+import com.example.demo.activity.VolleyDemo.FileDownloadDemo.FileDownloadVolleyRequestActivity;
 import com.example.demo.activity.VolleyDemo.ImageLoaderDemo.ImageLoaderActivity;
 import com.example.demo.activity.VolleyDemo.JsonOjbectRequestDemo.JsonObjectRequestActivity;
 import com.example.demo.activity.VolleyDemo.ShowSimpleRequestDemo.ShowSimpleRequestActivity;
 import com.example.demo.activity.VolleyDemo.SingletonPatternDemo.SingletonPatternActivity;
 
 public class VolleyDemoActivity extends AppCompatActivity implements OnClickListener{
-    private Button showSimpleRequestButton;
-    private Button singletonPatternButton;
-    private Button imageLoaderButton;
-    private Button jsonObjectRequestButton;
-    private Button customerGsonRequestButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.volley_demo_activity);
 
-        showSimpleRequestButton = (Button) findViewById(R.id.volleyDemo_showSimpleRequestButton);
+        Button showSimpleRequestButton = (Button) findViewById(R.id.volleyDemo_showSimpleRequestButton);
         showSimpleRequestButton.setOnClickListener(this);
 
-        singletonPatternButton = (Button) findViewById(R.id.volleyDemo_singletonPatternButton);
+        Button singletonPatternButton = (Button) findViewById(R.id.volleyDemo_singletonPatternButton);
         singletonPatternButton.setOnClickListener(this);
 
-        imageLoaderButton = (Button) findViewById(R.id.volleyDemo_imageLoaderButton);
+        Button imageLoaderButton = (Button) findViewById(R.id.volleyDemo_imageLoaderButton);
         imageLoaderButton.setOnClickListener(this);
 
-        jsonObjectRequestButton = (Button) findViewById(R.id.volleyDemo_jsonObjectRequestButton);
+        Button jsonObjectRequestButton = (Button) findViewById(R.id.volleyDemo_jsonObjectRequestButton);
         jsonObjectRequestButton.setOnClickListener(this);
 
-        jsonObjectRequestButton = (Button) findViewById(R.id.volleyDemo_customerGsonRequestButton);
-        jsonObjectRequestButton.setOnClickListener(this);
+        Button customerGsonRequestButton = (Button) findViewById(R.id.volleyDemo_customerGsonRequestButton);
+        customerGsonRequestButton.setOnClickListener(this);
+
+        Button fileDownloadRequestButton = (Button) findViewById(R.id.volleyDemo_fileDownloadRequestButton);
+        fileDownloadRequestButton.setOnClickListener(this);
 
     }
 
@@ -65,6 +64,10 @@ public class VolleyDemoActivity extends AppCompatActivity implements OnClickList
 
             case R.id.volleyDemo_customerGsonRequestButton:
                 startActivity(new Intent(this, CustomerGsonRequestActivity.class));
+                break;
+
+            case R.id.volleyDemo_fileDownloadRequestButton:
+                startActivity(new Intent(this, FileDownloadVolleyRequestActivity.class));
                 break;
 
             default:

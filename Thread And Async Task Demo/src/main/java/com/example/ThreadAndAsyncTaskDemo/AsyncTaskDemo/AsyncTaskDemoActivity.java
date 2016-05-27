@@ -15,21 +15,12 @@ import java.io.FileNotFoundException;
 import java.io.OutputStream;
 
 public class AsyncTaskDemoActivity extends Activity implements OnClickListener {
-	private Button httpURLConnectionGetButton;
-	private Button httpURLConnectionPostButton;
-
-	private Button httpGetButton;
-	private Button httpPostButton;
 
 	private ImageLoaderAsyncTask imageLoaderAsyncTask;
 	private ImageView imageView;
-	private Button loadImageButton;
-	private Button cancelButton;
 
 	private ImageLoaderToFileAsyncTask imageLoaderToFileAsyncTask;
 	private ImageView fileImageView;
-	private Button fileLoadImageButton;
-	private Button fileCancelButton;
 	private ProgressBar progressBar;
 
 	@Override
@@ -37,39 +28,36 @@ public class AsyncTaskDemoActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.async_task_demo_activity);
 
-		httpURLConnectionGetButton = (Button) findViewById(R.id.async_task_demo_httpURLConnectionGetButton);
+		Button httpURLConnectionGetButton = (Button) findViewById(R.id.async_task_demo_httpURLConnectionGetButton);
 		httpURLConnectionGetButton.setOnClickListener(this);
-		httpURLConnectionPostButton = (Button) findViewById(R.id.async_task_demo_httpURLConnectionPostButton);
+		Button httpURLConnectionPostButton = (Button) findViewById(R.id.async_task_demo_httpURLConnectionPostButton);
 		httpURLConnectionPostButton.setOnClickListener(this);
 
-		httpGetButton = (Button) findViewById(R.id.async_task_demo_httpGetButton);
+		Button httpGetButton = (Button) findViewById(R.id.async_task_demo_httpGetButton);
 		httpGetButton.setOnClickListener(this);
-		httpPostButton = (Button) findViewById(R.id.async_task_demo_httpPostButton);
+		Button httpPostButton = (Button) findViewById(R.id.async_task_demo_httpPostButton);
 		httpPostButton.setOnClickListener(this);
 
 		imageView = (ImageView) findViewById(R.id.async_task_demo_imageView);
-		loadImageButton = (Button) findViewById(R.id.async_task_demo_loadImageButton);
+		Button loadImageButton = (Button) findViewById(R.id.async_task_demo_loadImageButton);
 		loadImageButton.setOnClickListener(this);
-		cancelButton = (Button) findViewById(R.id.async_task_demo_cancelButton);
+		Button cancelButton = (Button) findViewById(R.id.async_task_demo_cancelButton);
 		cancelButton.setOnClickListener(this);
 
 		fileImageView = (ImageView) findViewById(R.id.async_task_demo_fileImageView);
-		fileLoadImageButton = (Button) findViewById(R.id.async_task_demo_fileLoadImageButton);
+		Button fileLoadImageButton = (Button) findViewById(R.id.async_task_demo_fileLoadImageButton);
 		fileLoadImageButton.setOnClickListener(this);
-		fileCancelButton = (Button) findViewById(R.id.async_task_demo_fileCancelButton);
+		Button fileCancelButton = (Button) findViewById(R.id.async_task_demo_fileCancelButton);
 		fileCancelButton.setOnClickListener(this);
 		progressBar = (ProgressBar) findViewById(R.id.async_task_demo_progressBar);
 
 	}
 
-	
-	
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();
 		finish();
 	}
-
 
 	@Override
 	public void onClick(View view) {

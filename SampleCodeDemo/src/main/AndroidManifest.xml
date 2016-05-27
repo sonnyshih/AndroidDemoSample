@@ -436,6 +436,10 @@
             android:name=".activity.VolleyDemo.CustomerGsonRequestDemo.CustomerGsonRequestActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
+        <activity
+            android:name=".activity.VolleyDemo.FileDownloadDemo.FileDownloadVolleyRequestActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
         <!-- Volley Demo End -->
 
         <!-- Manager Demo Start -->
