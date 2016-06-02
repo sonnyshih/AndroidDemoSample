@@ -30,6 +30,7 @@
     <color name="color_gray_background">#f5f5f5</color>
     <color name="color_transparent">#00000000</color>
 
+    <color name="color_divider">#eeeeee</color>
 
 
 </resources>

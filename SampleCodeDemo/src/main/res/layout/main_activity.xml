@@ -229,6 +229,14 @@
             android:textAllCaps="false"
             android:text="Web Service Task Manager Demo" />
 
+        <Button
+            android:id="@+id/main_settingLanguageDemoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAllCaps="false"
+            android:text="Setting Language Demo" />
+
     </LinearLayout>
 
 </ScrollView>

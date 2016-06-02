@@ -27,6 +27,7 @@ import com.example.demo.activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivi
 import com.example.demo.activity.PopupWindowDemo.PopupWindowDemoActivity;
 import com.example.demo.activity.RecycleViewDemo.RecycleViewDemoActivity;
 import com.example.demo.activity.SendNotificationDemo.SendNotificationDemoActivity;
+import com.example.demo.activity.SettingLanguageDemo.SettingLanguageActivity;
 import com.example.demo.activity.TabHost.TabHostDemoActivity;
 import com.example.demo.activity.TextviewEditTextDemo.TextViewAndEditViewDemoActivity;
 import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewActivity;
@@ -38,6 +39,7 @@ import com.example.demo.activity.WebViewDemo.WebViewDemoActivity;
 import com.example.demo.activity.swipeRefreshDemo.SwipeRefreshDemoActivity;
 
 public class MainActivity extends Activity implements OnClickListener {
+    public static final String BUNDLE_BOOLEAN_IS_CHANGE_LANGUAGE = "BUNDLE_BOOLEAN_IS_CHANGE_LANGUAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,6 +126,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
         Button webServiceTaskManagerDemoButton = (Button) findViewById(R.id.main_webServiceTaskManagerDemoButton);
         webServiceTaskManagerDemoButton.setOnClickListener(this);
+
+        Button settingLanguageDemoButton = (Button) findViewById(R.id.main_settingLanguageDemoButton);
+        settingLanguageDemoButton.setOnClickListener(this);
 
     }
 
@@ -241,6 +246,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_webServiceTaskManagerDemoButton:
                 intent.setClass(this, WebServiceTaskManagerDemoActivity.class);
+                break;
+
+            case R.id.main_settingLanguageDemoButton:
+                intent.setClass(this, SettingLanguageActivity.class);
                 break;
 
             default:

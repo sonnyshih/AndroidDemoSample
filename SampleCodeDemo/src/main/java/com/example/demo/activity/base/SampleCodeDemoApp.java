@@ -8,8 +8,10 @@ import com.example.demo.activity.ManagerDemo.manager.AppManagerCenter;
 import com.example.demo.activity.ManagerDemo.manager.AppManagerType;
 import com.example.demo.activity.ManagerDemo.manager.LoginAppManager;
 import com.example.demo.activity.ManagerDemo.manager.SettingManager;
+import com.example.demo.activity.SettingLanguageDemo.manager.SettingLanguageManager;
 import com.example.demo.activity.WebServiceTaskManagerDemo.type.DeviceType;
 import com.example.demo.manage.ApplicationManager;
+import java.util.Locale;
 
 public class SampleCodeDemoApp extends Application{
 	private static boolean isDebugMode = false;
@@ -29,6 +31,8 @@ public class SampleCodeDemoApp extends Application{
 		DBManager.getInstance().startDatabase();
 
 		registerAppManager();
+
+		setLanguage();
 	}
 
 	private String getAppVersion() {
@@ -63,5 +67,30 @@ public class SampleCodeDemoApp extends Application{
 		AppManagerCenter.getInstance().register(AppManagerType.Setting, SettingManager.getInstance());
 		AppManagerCenter.getInstance().register(AppManagerType.Login, new LoginAppManager(this));
 
+	}
+
+	private void setLanguage() {
+
+		if (SettingLanguageManager.getInstance().getLanguage() != SettingLanguageManager.Language.None) {
+			SettingLanguageManager.getInstance().changeLanguage(SettingLanguageManager.getInstance().getLanguage());
+		} else {
+			setDefaultLanguage();
+		}
+
+	}
+
+	private void setDefaultLanguage(){
+		Locale locale = getResources().getConfiguration().locale;
+		switch (locale.getLanguage()) {
+			case "zh":
+				SettingLanguageManager.getInstance().changeLanguage(SettingLanguageManager.Language.Traditional);
+				break;
+
+			case "en":
+			default:
+				SettingLanguageManager.getInstance().changeLanguage(SettingLanguageManager.Language.English);
+				break;
+
+		}
 	}
 }

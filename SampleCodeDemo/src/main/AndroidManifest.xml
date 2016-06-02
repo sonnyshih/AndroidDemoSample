@@ -480,6 +480,11 @@
             android:name=".activity.WebServiceTaskManagerDemo.WebServiceTaskManagerDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
+        <!-- Setting Language -->
+        <activity
+            android:name=".activity.SettingLanguageDemo.SettingLanguageActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
     </application>
 
 </manifest>

@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Setting -->
+    <string name="setting_language">語言</string>
+    <string name="setting_english">English</string>
+    <string name="setting_traditional">繁體</string>
+    <string name="setting_Notification">通知</string>
+    <string name="setting_Version">版本</string>
+    <string name="setting_share">分享此應用程式</string>
+
+</resources>

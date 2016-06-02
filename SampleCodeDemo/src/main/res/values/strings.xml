@@ -93,4 +93,12 @@
     <string name="check_premission_rationale">CALL_PHONE permission initiate a phone call without going through the Dialer.</string>
     <string name="check_premission_warning_permission">Permission were not granted!</string>
 
+    <!-- Setting Language -->
+    <string name="setting_language">Language</string>
+    <string name="setting_english">English</string>
+    <string name="setting_traditional">繁體</string>
+    <string name="setting_Notification">Notification</string>
+    <string name="setting_Version">Version</string>
+    <string name="setting_share">Share this App</string>
+
 </resources>
