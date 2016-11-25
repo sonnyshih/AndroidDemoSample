@@ -203,6 +203,21 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
+            android:name=".activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewItemAnimatorDemoActivity"
+            android:label="RecycleView Item Animator Demo"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewDefaultAnimatorDemo.RecycleViewItemDefaultAnimatorDemoActivity"
+            android:label="RecycleView Default Animator Demo"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewCustomerAnimatorDemo.RecycleViewItemCustomerAnimatorDemoActivity"
+            android:label="RecycleView Customer Animator Demo"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
             android:name=".activity.CardViewDemo.CardViewDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 

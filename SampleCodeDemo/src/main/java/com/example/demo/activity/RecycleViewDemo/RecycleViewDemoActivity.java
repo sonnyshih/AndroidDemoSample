@@ -9,12 +9,14 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.demo.R;
+import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewItemAnimatorDemoActivity;
 
 public class RecycleViewDemoActivity extends Activity implements OnClickListener{
 
     private Button linearRecycleViewButton;
     private Button gridRecycleViewButton;
     private Button listViewIncludeRecycleViewButton;
+    private Button recycleViewItemAnimatorButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,11 @@ public class RecycleViewDemoActivity extends Activity implements OnClickListener
 
         listViewIncludeRecycleViewButton = (Button) findViewById(R.id.recycleviewDemo_listViewIncludeRecycleViewButton);
         listViewIncludeRecycleViewButton.setOnClickListener(this);
+
+        recycleViewItemAnimatorButton = (Button) findViewById(R.id.recycleviewDemo_recycleViewItemAnimatorDemoButton);
+        recycleViewItemAnimatorButton.setOnClickListener(this);
+
+
 
     }
 
@@ -46,6 +53,10 @@ public class RecycleViewDemoActivity extends Activity implements OnClickListener
 
             case R.id.recycleviewDemo_listViewIncludeRecycleViewButton:
                 intent.setClass(this, ListViewIncludeRecycleViewActivity.class);
+                break;
+
+            case R.id.recycleviewDemo_recycleViewItemAnimatorDemoButton:
+                intent.setClass(this, RecycleViewItemAnimatorDemoActivity.class);
                 break;
 
             default:
