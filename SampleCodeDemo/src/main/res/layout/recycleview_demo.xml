@@ -3,28 +3,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:padding="10dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
 
     <Button
         android:id="@+id/recycleviewDemo_linearRecycleViewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Linear RecycleView" />
+        android:text="Linear RecycleView"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/recycleviewDemo_gridRecycleViewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Grid RecycleView" />
+        android:text="Grid RecycleView"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/recycleviewDemo_listViewIncludeRecycleViewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ListView include RecycleView" />
+        android:text="ListView include RecycleView"
+        android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/recycleviewDemo_recycleViewItemAnimatorDemoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecycleView Item Animator"
+        android:textAllCaps="false" />
 
 
 </LinearLayout>
