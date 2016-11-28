@@ -24,9 +24,6 @@ public class ListViewIncludeRecycleViewAnimatorAdapter extends BaseAdapter {
     private LayoutInflater myInflater;
     private Context context;
 
-//    private ViewHolder viewHolder;
-//    private RecyclerView.Adapter mAdapter;
-
     public ListViewIncludeRecycleViewAnimatorAdapter(Context context, ArrayList<MainItem> mainItemList) {
         this.context = context;
         this.mainItemList = mainItemList;

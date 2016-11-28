@@ -2,6 +2,7 @@ package com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.an
 
 import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.animators.holder.AnimateViewHolder;
 import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.animators.internal.ViewHelper;
+
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPropertyAnimatorCompat;
 import android.support.v4.view.ViewPropertyAnimatorListener;
