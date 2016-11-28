@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.demo.R;
+import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.ListViewIncludeRecycleViewAnimatorDemo.ListViewIncludeRecycleViewAnimatorActivity;
 import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewCustomerAnimatorDemo.RecycleViewItemCustomerAnimatorDemoActivity;
 import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewDefaultAnimatorDemo.RecycleViewItemDefaultAnimatorDemoActivity;
 
@@ -18,6 +19,7 @@ public class RecycleViewItemAnimatorDemoActivity extends AppCompatActivity
 
     private Button defaultAnimatorButton;
     private Button customerAnimatorButton;
+    private Button listViewIncludeRecycleViewAnimatorButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class RecycleViewItemAnimatorDemoActivity extends AppCompatActivity
         customerAnimatorButton = (Button) findViewById(R.id.recycleViewItemAnimatorDemo_customerAnimatorButton);
         customerAnimatorButton.setOnClickListener(this);
 
+        listViewIncludeRecycleViewAnimatorButton = (Button) findViewById(R.id.recycleViewItemAnimatorDemo_listViewIncludeRecycleViewAnimatorButton);
+        listViewIncludeRecycleViewAnimatorButton.setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +47,10 @@ public class RecycleViewItemAnimatorDemoActivity extends AppCompatActivity
 
             case R.id.recycleViewItemAnimatorDemo_customerAnimatorButton:
                 intent.setClass(this, RecycleViewItemCustomerAnimatorDemoActivity.class);
+                break;
+
+            case R.id.recycleViewItemAnimatorDemo_listViewIncludeRecycleViewAnimatorButton:
+                intent.setClass(this, ListViewIncludeRecycleViewAnimatorActivity.class);
                 break;
 
             default:
