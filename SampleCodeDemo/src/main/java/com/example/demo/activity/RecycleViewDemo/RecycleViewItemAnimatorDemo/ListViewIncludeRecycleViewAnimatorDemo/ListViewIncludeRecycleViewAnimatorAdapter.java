@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.example.demo.R;
 import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.ListViewIncludeRecycleViewAnimatorDemo.entity.MainItem;
 import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.ListViewIncludeRecycleViewAnimatorDemo.entity.SubItem;
-import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.animators.SlideInRightAnimator;
+import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.animators.ShockAnimator;
 import com.example.demo.ui.FullyGridLayoutManager;
 
 import java.util.ArrayList;
@@ -64,7 +64,9 @@ public class ListViewIncludeRecycleViewAnimatorAdapter extends BaseAdapter {
         viewHolder.keyTextView.setText("Key item " + position);
         viewHolder.valueTextView.setText(mainItemList.get(position).getMainTitle());
 
-        SlideInRightAnimator itemAnimator = new SlideInRightAnimator();
+        ShockAnimator itemAnimator = new ShockAnimator(context);
+        itemAnimator.setAddDuration(500);
+        itemAnimator.setRemoveDuration(1000);
 //        itemAnimator.setAddDuration(500);
         viewHolder.recyclerView.setItemAnimator(itemAnimator);
         viewHolder.recyclerView.setHasFixedSize(true);
@@ -107,6 +109,33 @@ public class ListViewIncludeRecycleViewAnimatorAdapter extends BaseAdapter {
 
         );
 
+        viewHolder.deleteButton.setOnClickListener(new View.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(View view) {
+
+                                                        if (subItemList.size() == 0) {
+                                                            return;
+                                                        }
+                                                        subItemList.remove(subItemList.size() - 1);
+                                                        mAdapter.notifyItemRemoved(viewHolder.recyclerView.getAdapter().getItemCount());
+                                                        viewHolder.recyclerView.smoothScrollToPosition(viewHolder.recyclerView.getAdapter().getItemCount());
+
+                                                        Handler handler = new Handler();
+                                                        Runnable runnable = new Runnable() {
+                                                            @Override
+                                                            public void run() {
+                                                                viewHolder.recyclerView.setLayoutManager(viewHolder.recyclerView.getLayoutManager());
+                                                                viewHolder.recyclerView.setAdapter(mAdapter);
+
+                                                            }
+                                                        };
+
+                                                        handler.postDelayed(runnable, 1000);
+
+                                                    }
+                                                }
+
+        );
 
         return convertView;
     }
