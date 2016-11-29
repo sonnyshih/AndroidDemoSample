@@ -36,6 +36,7 @@ public class ListViewIncludeRecycleViewAnimatorSubItemAdapter extends RecyclerVi
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.txtHeader.setText(subItemList.get(position).getTitle());
         holder.txtFooter.setText("Footer: " + subItemList.get(position).getFooter());
+        holder.itemView.setTag(position);
 
     }
 
