@@ -28,5 +28,12 @@
         android:text="ListView Include RecycleView Animator"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/recycleViewItemAnimatorDemo_recycleViewIncludeRecycleViewAnimatorButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecycleView Include RecycleView Animator"
+        android:textAllCaps="false" />
+
 
 </LinearLayout>
