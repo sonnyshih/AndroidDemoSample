@@ -13,6 +13,7 @@ import com.example.demo.R;
 import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.ListViewIncludeRecycleViewAnimatorDemo.ListViewIncludeRecycleViewAnimatorActivity;
 import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewCustomerAnimatorDemo.RecycleViewItemCustomerAnimatorDemoActivity;
 import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewDefaultAnimatorDemo.RecycleViewItemDefaultAnimatorDemoActivity;
+import com.example.demo.activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewIncludeRecycelViewAnimatorDemo.RecycleViewIncludeRecycleViewAnimatorActivity;
 
 public class RecycleViewItemAnimatorDemoActivity extends AppCompatActivity
     implements OnClickListener{
@@ -20,6 +21,7 @@ public class RecycleViewItemAnimatorDemoActivity extends AppCompatActivity
     private Button defaultAnimatorButton;
     private Button customerAnimatorButton;
     private Button listViewIncludeRecycleViewAnimatorButton;
+    private Button recycleViewIncludeRecycleViewAnimatorButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,9 @@ public class RecycleViewItemAnimatorDemoActivity extends AppCompatActivity
 
         listViewIncludeRecycleViewAnimatorButton = (Button) findViewById(R.id.recycleViewItemAnimatorDemo_listViewIncludeRecycleViewAnimatorButton);
         listViewIncludeRecycleViewAnimatorButton.setOnClickListener(this);
+
+        recycleViewIncludeRecycleViewAnimatorButton = (Button) findViewById(R.id.recycleViewItemAnimatorDemo_recycleViewIncludeRecycleViewAnimatorButton);
+        recycleViewIncludeRecycleViewAnimatorButton.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +56,10 @@ public class RecycleViewItemAnimatorDemoActivity extends AppCompatActivity
 
             case R.id.recycleViewItemAnimatorDemo_listViewIncludeRecycleViewAnimatorButton:
                 intent.setClass(this, ListViewIncludeRecycleViewAnimatorActivity.class);
+                break;
+
+            case R.id.recycleViewItemAnimatorDemo_recycleViewIncludeRecycleViewAnimatorButton:
+                intent.setClass(this, RecycleViewIncludeRecycleViewAnimatorActivity.class);
                 break;
 
             default:
