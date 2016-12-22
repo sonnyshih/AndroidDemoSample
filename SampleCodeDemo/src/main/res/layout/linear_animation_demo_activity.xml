@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearAnimationDemo_demoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_10"
+            android:background="@color/red">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This Linear Layout"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/linearAnimationDemo_showButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Show" />
+
+        <Button
+            android:id="@+id/linearAnimationExamplesDemo_hideButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Hide" />
+
+
+    </LinearLayout>
+
+</ScrollView>
