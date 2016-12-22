@@ -17,10 +17,17 @@
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/animationDemo_animationExamplesDemoButton"
+        android:id="@+id/animationDemo_textViewAnimationDemoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Animation Examples Demo"
+        android:text="TextView Animation Demo"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/animationDemo_linearLayoutAnimationDemoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linear lyaout Animation Demo"
         android:textAllCaps="false" />
 
 

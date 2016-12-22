@@ -148,12 +148,16 @@
             android:launchMode="singleTask"/>
 
         <activity
-            android:name=".activity.AnimationDemo.AnimationExamplesDemo.AnimationExamplesDemoActivity"
+            android:name=".activity.AnimationDemo.TextViewAnimationDemo.TextViewAnimationDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:label="Animation Examples Demo"
+            android:label="TextView Animation Demo"
             android:launchMode="singleTask" />
 
-
+        <activity
+            android:name=".activity.AnimationDemo.LinearAnimationDemo.LinearAnimationDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="Linear Layout Animation Demo"
+            android:launchMode="singleTask" />
 
         <activity
             android:name=".activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivity"

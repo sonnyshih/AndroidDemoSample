@@ -1,7 +1,7 @@
 /*
 * Refer to: http://www.journaldev.com/9481/android-animation-example
 * */
-package com.example.demo.activity.AnimationDemo.AnimationExamplesDemo;
+package com.example.demo.activity.AnimationDemo.TextViewAnimationDemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,12 +13,12 @@ import android.widget.TextView;
 
 import com.example.demo.R;
 
-public class AnimationExamplesDemoActivity extends AppCompatActivity {
+public class TextViewAnimationDemoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.animation_examples_demo_activity);
+        setContentView(R.layout.textview_animation_demo_activity);
 
         fadeIn();
         fadeOut();

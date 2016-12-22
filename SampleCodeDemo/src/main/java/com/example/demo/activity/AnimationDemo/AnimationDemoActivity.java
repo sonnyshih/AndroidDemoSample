@@ -8,7 +8,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.demo.R;
-import com.example.demo.activity.AnimationDemo.AnimationExamplesDemo.AnimationExamplesDemoActivity;
+import com.example.demo.activity.AnimationDemo.TextViewAnimationDemo.TextViewAnimationDemoActivity;
+import com.example.demo.activity.AnimationDemo.LinearAnimationDemo.LinearAnimationDemoActivity;
 import com.example.demo.activity.AnimationDemo.RotationDemo.RotationAnimationDemoActivity;
 
 public class AnimationDemoActivity extends AppCompatActivity
@@ -22,8 +23,12 @@ public class AnimationDemoActivity extends AppCompatActivity
         Button rotationAnimationDemoButton = (Button) findViewById(R.id.animationDemo_rotationAnimationDemoButton);
         rotationAnimationDemoButton.setOnClickListener(this);
 
-        Button animationExamplesDemo = (Button) findViewById(R.id.animationDemo_animationExamplesDemoButton);
-        animationExamplesDemo.setOnClickListener(this);
+        Button textViewAnimationDemoButton = (Button) findViewById(R.id.animationDemo_textViewAnimationDemoButton);
+        textViewAnimationDemoButton.setOnClickListener(this);
+
+        Button linearLayoutAnimationDemoButton = (Button) findViewById(R.id.animationDemo_linearLayoutAnimationDemoButton);
+        linearLayoutAnimationDemoButton.setOnClickListener(this);
+
 
     }
 
@@ -37,8 +42,12 @@ public class AnimationDemoActivity extends AppCompatActivity
                 intent.setClass(this, RotationAnimationDemoActivity.class);
                 break;
 
-            case R.id.animationDemo_animationExamplesDemoButton:
-                intent.setClass(this, AnimationExamplesDemoActivity.class);
+            case R.id.animationDemo_textViewAnimationDemoButton:
+                intent.setClass(this, TextViewAnimationDemoActivity.class);
+                break;
+
+            case R.id.animationDemo_linearLayoutAnimationDemoButton:
+                intent.setClass(this, LinearAnimationDemoActivity.class);
                 break;
 
             default:
