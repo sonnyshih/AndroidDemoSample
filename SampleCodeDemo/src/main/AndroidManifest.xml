@@ -136,8 +136,24 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
-            android:name=".activity.AnimationDemo.AnmationDemoActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+            android:name=".activity.AnimationDemo.AnimationDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="Animation Demo"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".activity.AnimationDemo.RotationDemo.RotationAnimationDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="Rotation Animation Demo"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name=".activity.AnimationDemo.AnimationExamplesDemo.AnimationExamplesDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="Animation Examples Demo"
+            android:launchMode="singleTask" />
+
+
 
         <activity
             android:name=".activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivity"
@@ -204,28 +220,28 @@
 
         <activity
             android:name=".activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewItemAnimatorDemoActivity"
-            android:label="RecycleView Item Animator Demo"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="RecycleView Item Animator Demo" />
 
         <activity
             android:name=".activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewDefaultAnimatorDemo.RecycleViewItemDefaultAnimatorDemoActivity"
-            android:label="RecycleView Default Animator Demo"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="RecycleView Default Animator Demo" />
 
         <activity
             android:name=".activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewCustomerAnimatorDemo.RecycleViewItemCustomerAnimatorDemoActivity"
-            android:label="RecycleView Customer Animator Demo"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="RecycleView Customer Animator Demo" />
 
         <activity
             android:name=".activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.ListViewIncludeRecycleViewAnimatorDemo.ListViewIncludeRecycleViewAnimatorActivity"
-            android:label="ListView Include RecycleView Animator Demo"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="ListView Include RecycleView Animator Demo" />
 
         <activity
             android:name=".activity.RecycleViewDemo.RecycleViewItemAnimatorDemo.RecycleViewIncludeRecycelViewAnimatorDemo.RecycleViewIncludeRecycleViewAnimatorActivity"
-            android:label="RecycleView Include RecycleView Animator Demo"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="RecycleView Include RecycleView Animator Demo" />
 
         <activity
             android:name=".activity.CardViewDemo.CardViewDemoActivity"
@@ -423,7 +439,7 @@
         <activity
             android:name=".activity.GoogleSmartLockDemo.GoogleSmartLockActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:theme="@style/AppTheme.Toolbar"/>
+            android:theme="@style/AppTheme.Toolbar" />
 
         <activity
             android:name=".activity.GoogleSmartLockDemo.MyAccountActivity"

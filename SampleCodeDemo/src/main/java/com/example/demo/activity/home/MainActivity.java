@@ -11,7 +11,8 @@ import android.widget.Button;
 import com.example.demo.R;
 import com.example.demo.activity.AlarmManagerDemo.AlarmManagerDemoActivity;
 import com.example.demo.activity.AlertDialogDemo.AlertDialogDemoActivity;
-import com.example.demo.activity.AnimationDemo.AnmationDemoActivity;
+import com.example.demo.activity.AnimationDemo.AnimationDemoActivity;
+import com.example.demo.activity.AnimationDemo.RotationDemo.RotationAnimationDemoActivity;
 import com.example.demo.activity.CardViewDemo.CardViewDemoActivity;
 import com.example.demo.activity.CheckPermissionDemoMoreThanAndroidV60.CheckPermissionDemoActivity;
 import com.example.demo.activity.DrawerDemo.DrawerDemoActivity;
@@ -189,7 +190,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
 
             case R.id.main_animationDemoButton:
-                intent.setClass(this, AnmationDemoActivity.class);
+                intent.setClass(this, AnimationDemoActivity.class);
                 break;
 
             case R.id.main_videoDemoButton:

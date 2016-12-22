@@ -1,4 +1,4 @@
-package com.example.demo.activity.AnimationDemo;
+package com.example.demo.activity.AnimationDemo.RotationDemo;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.example.demo.R;
 
-public class AnmationDemoActivity extends Activity implements OnClickListener{
+public class RotationAnimationDemoActivity extends Activity implements OnClickListener{
 
 	private TextView textView;
 	private Button rotationButton;
@@ -27,7 +27,7 @@ public class AnmationDemoActivity extends Activity implements OnClickListener{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.anmation_demo_activity);
+		setContentView(R.layout.ratation_animation_demo_activity);
 		textView = (TextView)findViewById(R.id.anmationDemo_textView);
 		textView.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anmation_demo_anmation));
 		
