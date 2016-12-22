@@ -1,4 +1,4 @@
-package com.example.demo.activity.AnimationDemo;
+package com.example.demo.activity.AnimationDemo.RotationDemo;
 
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
