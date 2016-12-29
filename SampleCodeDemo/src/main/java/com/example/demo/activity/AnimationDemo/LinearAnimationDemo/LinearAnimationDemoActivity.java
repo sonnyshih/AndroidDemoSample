@@ -1,6 +1,4 @@
-
 package com.example.demo.activity.AnimationDemo.LinearAnimationDemo;
-
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -35,12 +33,8 @@ public class LinearAnimationDemoActivity extends AppCompatActivity implements On
         Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.animation_examples_fade_in);
 
-        linearLayout.setVisibility(View.VISIBLE);
-        // Set Animation. When linear layout is set visible, the linear layout will use the animation.
-        linearLayout.setAnimation(animFadeIn);
-
         // Start the Animation
-//        linearLayout.startAnimation(animFadeIn);
+        linearLayout.startAnimation(animFadeIn);
 
     }
 
@@ -68,14 +62,9 @@ public class LinearAnimationDemoActivity extends AppCompatActivity implements On
             }
         });
 
-        linearLayout.setVisibility(View.GONE);
-        // Set Animation. When linear layout is set gone, the linear layout will use the animation.
-        linearLayout.setAnimation(animFadeOut);
 
         // Start the Animation
-//        linearLayout.startAnimation(animFadeOut);
-
-
+        linearLayout.startAnimation(animFadeOut);
     }
 
     @Override

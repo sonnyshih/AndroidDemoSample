@@ -9,11 +9,44 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/linearAnimationDemo_showButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Show" />
+
+            <Button
+                android:id="@+id/linearAnimationExamplesDemo_hideButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Hide" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:id="@+id/linearAnimationDemo_demoLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_10"
+            android:orientation="vertical"
             android:background="@color/red">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This Linear Layout"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This Linear Layout"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -22,19 +55,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/linearAnimationDemo_showButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Show" />
-
-        <Button
-            android:id="@+id/linearAnimationExamplesDemo_hideButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Hide" />
 
 
     </LinearLayout>
