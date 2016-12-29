@@ -22,7 +22,7 @@ public class LinearAnimationDemoActivity extends AppCompatActivity implements On
         Button showButton = (Button) findViewById(R.id.linearAnimationDemo_showButton);
         showButton.setOnClickListener(this);
 
-        Button hideButton = (Button) findViewById(R.id.linearAnimationExamplesDemo_hideButton);
+        Button hideButton = (Button) findViewById(R.id.linearAnimationDemo_hideButton);
         hideButton.setOnClickListener(this);
 
     }
@@ -74,7 +74,7 @@ public class LinearAnimationDemoActivity extends AppCompatActivity implements On
                 onShowButtonClick();
                 break;
 
-            case R.id.linearAnimationExamplesDemo_hideButton:
+            case R.id.linearAnimationDemo_hideButton:
                 onHideButtonClick();
                 break;
 

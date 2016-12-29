@@ -30,5 +30,12 @@
         android:text="Linear lyaout Animation Demo"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/animationDemo_customerAnimationDemoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer Animation Demo"
+        android:textAllCaps="false" />
+
 
 </LinearLayout>

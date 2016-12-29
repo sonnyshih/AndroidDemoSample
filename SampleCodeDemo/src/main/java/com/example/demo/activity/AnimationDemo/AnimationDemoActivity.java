@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.demo.R;
+import com.example.demo.activity.AnimationDemo.CustomerAnimationDemo.CustomerAnimationDemoActivity;
 import com.example.demo.activity.AnimationDemo.TextViewAnimationDemo.TextViewAnimationDemoActivity;
 import com.example.demo.activity.AnimationDemo.LinearAnimationDemo.LinearAnimationDemoActivity;
 import com.example.demo.activity.AnimationDemo.RotationDemo.RotationAnimationDemoActivity;
@@ -29,6 +30,8 @@ public class AnimationDemoActivity extends AppCompatActivity
         Button linearLayoutAnimationDemoButton = (Button) findViewById(R.id.animationDemo_linearLayoutAnimationDemoButton);
         linearLayoutAnimationDemoButton.setOnClickListener(this);
 
+        Button customerAnimationDemoButton = (Button) findViewById(R.id.animationDemo_customerAnimationDemoButton);
+        customerAnimationDemoButton.setOnClickListener(this);
 
     }
 
@@ -48,6 +51,10 @@ public class AnimationDemoActivity extends AppCompatActivity
 
             case R.id.animationDemo_linearLayoutAnimationDemoButton:
                 intent.setClass(this, LinearAnimationDemoActivity.class);
+                break;
+
+            case R.id.animationDemo_customerAnimationDemoButton:
+                intent.setClass(this, CustomerAnimationDemoActivity.class);
                 break;
 
             default:

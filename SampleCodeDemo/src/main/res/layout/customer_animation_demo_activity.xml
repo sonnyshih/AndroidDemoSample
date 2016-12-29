@@ -14,21 +14,20 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/linearAnimationDemo_showButton"
+                android:id="@+id/linearAnimationDemo_slideUpButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="Show" />
+                android:text="Slide Up" />
 
             <Button
-                android:id="@+id/linearAnimationDemo_hideButton"
+                android:id="@+id/linearAnimationDemo_SlideDownButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="Hide" />
+                android:text="Slide Down" />
 
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/linearAnimationDemo_demoLayout"
@@ -53,9 +52,12 @@
                 android:layout_height="wrap_content"
                 android:text="This Linear Layout"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This Linear Layout"/>
+
         </LinearLayout>
-
-
 
     </LinearLayout>
 
