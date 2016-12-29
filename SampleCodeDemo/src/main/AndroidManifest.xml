@@ -160,6 +160,12 @@
             android:launchMode="singleTask" />
 
         <activity
+            android:name=".activity.AnimationDemo.CustomerAnimationDemo.CustomerAnimationDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="Customer Animation Demo"
+            android:launchMode="singleTask" />
+
+        <activity
             android:name=".activity.MenuAndActionBarDemo.MenuAndActionBarDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
