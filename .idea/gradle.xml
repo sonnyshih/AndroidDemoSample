@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/FirebaseCloudMessage" />
             <option value="$PROJECT_DIR$/SampleCodeDemo" />
             <option value="$PROJECT_DIR$/Service Demo" />
             <option value="$PROJECT_DIR$/Thread And Async Task Demo" />
