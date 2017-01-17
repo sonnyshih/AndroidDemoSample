@@ -1,1 +1,1 @@
-include ':SampleCodeDemo', ':Service Demo', ':Thread And Async Task Demo', ':gcmsender'
+include ':SampleCodeDemo', ':Service Demo', ':Thread And Async Task Demo', ':gcmsender', ':FirebaseCloudMessage'

@@ -8,6 +8,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="Firebase Cloud Message replaces the GCM"/>
+
     <Button
         android:id="@+id/gcmDemo_downstreamMessagingDemo"
         android:layout_width="wrap_content"
