@@ -19,9 +19,12 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class MainActivity extends AppCompatActivity implements OnClickListener{
+public class MainActivity extends AppCompatActivity implements OnClickListener {
     private String SERVER_API_KEY = "AAAAjNxrGQI:APA91bGXZcPkBcXB3vFv_tNEgndUC7kUe_0dLTdb09X8m4akjx8dUtXmQzld771gFGgezrK8LqcXZkChi3SUYjIIUnEj_MHGJao3J8rHDX1bDfbiMv4DJw2A2XhmWyyBTNzEGhCsGoEN";
     private String token = "";
+
+    String nexus9Token = "dtIkIIvLe2I:APA91bGDKJoirxIb_-kE9l7mNLutW9vqHnpreOsO4Re4EJEX1RdUoa5Yr__2IejJ6UaKYOnCmR5pXvduToNOVOhV-t_EubRbyWYY-xdQCj1MOT0SiOpB8MjuMj21vDPYeo3w8LVS1DW2";
+    String nexus4Token = "cL3QYDgdtgM:APA91bEZdEp-65xRIJ1sM6E8_TFTPsuTE7e8XLwIaR9HLeBtP5xqmSHrIrkKG_-xk9UaR-QixJwU3FUIGJmS2jtLEOx0Aj2-TRL9fI-JzHT9yMaJedTUhRb--wP_lpJH853yLnOzPoHa";
 
     private TextView sendMessageTextView;
     private TextView responseMessageTextView;
@@ -43,9 +46,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         Button pushMultiDeviceNotificationButton = (Button) findViewById(R.id.main_pushMultiDeviceNotificationButton);
         pushMultiDeviceNotificationButton.setOnClickListener(this);
 
+        Button pushSingleDeviceDataButton = (Button) findViewById(R.id.main_pushSingleDeviceDataButton);
+        pushSingleDeviceDataButton.setOnClickListener(this);
+
+        Button pushMultiDeviceDataButton = (Button) findViewById(R.id.main_pushMultiDeviceDataButton);
+        pushMultiDeviceDataButton.setOnClickListener(this);
+
     }
 
-    private void pushSingleDeviceNotification(final String sendMessage){
+    private void pushMessageToDevice(final String sendMessage) {
 
         new Thread(new Runnable() {
             @Override
@@ -88,9 +97,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
     }
 
-    private String getSingleDeviceNotification(String token){
-        String sendMessage ="{" +
-                "    \"to\" : \""+ token+ "\"," +
+    private void pushSingleDeviceNotification() {
+        String sendMessage = getSingleDeviceNotification(token);
+        pushMessageToDevice(sendMessage);
+    }
+
+    private String getSingleDeviceNotification(String token) {
+        String sendMessage = "{" +
+                "    \"to\" : \"" + token + "\"," +
                 "    \"notification\" : {" +
                 "      \"body\" : \"great match!\"," +
                 "      \"title\" : \"Portugal vs. Denmark\"," +
@@ -101,17 +115,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         return sendMessage;
     }
 
-    private void pushMultiDeviceNotification(){
+    private void pushMultiDeviceNotification() {
         String sendMessage = getMultiDeviceNotification();
-        pushSingleDeviceNotification(sendMessage);
+        pushMessageToDevice(sendMessage);
     }
 
-    private String getMultiDeviceNotification(){
-        String nexus9Token= "dtIkIIvLe2I:APA91bGDKJoirxIb_-kE9l7mNLutW9vqHnpreOsO4Re4EJEX1RdUoa5Yr__2IejJ6UaKYOnCmR5pXvduToNOVOhV-t_EubRbyWYY-xdQCj1MOT0SiOpB8MjuMj21vDPYeo3w8LVS1DW2";
-        String nexus4Token= "cL3QYDgdtgM:APA91bEZdEp-65xRIJ1sM6E8_TFTPsuTE7e8XLwIaR9HLeBtP5xqmSHrIrkKG_-xk9UaR-QixJwU3FUIGJmS2jtLEOx0Aj2-TRL9fI-JzHT9yMaJedTUhRb--wP_lpJH853yLnOzPoHa";
+    private String getMultiDeviceNotification() {
 
-        String sendMessage ="{" +
-                "    \"registration_ids\" : [\""+ nexus4Token+ "\",\""+nexus9Token+"\"]," +
+        String sendMessage = "{" +
+                "    \"registration_ids\" : [\"" + nexus4Token + "\",\"" + nexus9Token + "\"]," +
                 "    \"notification\" : {" +
                 "      \"body\" : \"great match!\"," +
                 "      \"title\" : \"Portugal vs. Denmark\"," +
@@ -121,6 +133,49 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
         return sendMessage;
 
+    }
+
+    private void pushSingleDeviceData() {
+        String sendMessage = getSingleDeviceData(token);
+        pushMessageToDevice(sendMessage);
+    }
+
+    private String getSingleDeviceData(String token) {
+
+        String sendMessage = "{" +
+                "\"to\":\"" + token + "\"," +
+                "\"data\":{" +
+                "   \"message\":{" +
+                "       \"model\":\"AAA-001\"," +
+                "       \"name\":\"Car\"," +
+                "       \"color\":\"Red\"" +
+                "       }" +
+                "   }" +
+                "}";
+
+        return sendMessage;
+    }
+
+    private void pushMultiDeviceData() {
+        String sendMessage = getMultiDeviceData();
+        pushMessageToDevice(sendMessage);
+    }
+
+
+    private String getMultiDeviceData() {
+
+        String sendMessage = "{" +
+                "\"registration_ids\" : [\"" + nexus4Token + "\",\"" + nexus9Token + "\"]," +
+                "\"data\":{" +
+                "   \"message\":{" +
+                "       \"model\":\"AAA-001\"," +
+                "       \"name\":\"Car\"," +
+                "       \"color\":\"Red\"" +
+                "       }" +
+                "   }" +
+                "}";
+
+        return sendMessage;
     }
 
     private void showResponse(InputStream inputStream) {
@@ -151,7 +206,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         showResponseMessage(stringBuilder.toString());
     }
 
-    private void showSendMessage(final String message){
+    private void showSendMessage(final String message) {
+        Log.d("Mylog", "sendMessage=" + message);
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -161,7 +218,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
     }
 
-    private void showResponseMessage(final String message){
+    private void showResponseMessage(final String message) {
+        Log.d("Mylog", "responseMessage=" + message);
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -182,12 +241,19 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                 break;
 
             case R.id.main_pushSingleDeviceNotificationButton:
-                String sendMessage = getSingleDeviceNotification(token);
-                pushSingleDeviceNotification(sendMessage);
+                pushSingleDeviceNotification();
                 break;
 
             case R.id.main_pushMultiDeviceNotificationButton:
                 pushMultiDeviceNotification();
+                break;
+
+            case R.id.main_pushSingleDeviceDataButton:
+                pushSingleDeviceData();
+                break;
+
+            case R.id.main_pushMultiDeviceDataButton:
+                pushMultiDeviceData();
                 break;
 
             default:
