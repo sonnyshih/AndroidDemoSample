@@ -13,7 +13,6 @@
             <option value="$PROJECT_DIR$/SampleCodeDemo" />
             <option value="$PROJECT_DIR$/Service Demo" />
             <option value="$PROJECT_DIR$/Thread And Async Task Demo" />
-            <option value="$PROJECT_DIR$/gcmsender" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
