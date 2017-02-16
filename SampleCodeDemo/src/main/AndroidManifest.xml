@@ -425,7 +425,15 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
-            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewActivity"
+            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.UseLinearLayoutDisplayFullGridViewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewDemo.FullGridViewUseViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
+        <activity
+            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewHolderDemo.FullGridViewUseViewHolderDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <!-- Alarm Manager Demo Start -->
