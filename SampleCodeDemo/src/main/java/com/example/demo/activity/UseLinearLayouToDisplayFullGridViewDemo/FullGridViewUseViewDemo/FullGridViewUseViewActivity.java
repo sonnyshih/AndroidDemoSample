@@ -1,5 +1,5 @@
 
-package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo;
+package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewDemo;
 
 
 import android.app.Activity;
@@ -12,20 +12,19 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullyGridLinearLayout.FullyGridLinearLayoutListener;
-
 import com.example.demo.R;
+import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.entity.Data;
 
 import java.util.ArrayList;
 
-public class FullGridViewActivity extends Activity implements OnClickListener {
+public class FullGridViewUseViewActivity extends Activity implements OnClickListener {
 
     private ArrayList<Data> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.full_grid_view_activity);
+        setContentView(R.layout.full_grid_view_use_view_activity);
 
         list = generateList();
         layoutFullGridView();
@@ -48,12 +47,12 @@ public class FullGridViewActivity extends Activity implements OnClickListener {
     private void layoutFullGridView() {
 
         int column = Integer.valueOf(getResources().getString(R.string.column_number));
-        final LinearLayout mainLinearLayout = (LinearLayout) findViewById(R.id.fullGridView_mainLinear);
+        final LinearLayout mainLinearLayout = (LinearLayout) findViewById(R.id.fullGridViewUseView_mainLinear);
 
         FullyGridLinearLayout fullyGridLinearLayout = new FullyGridLinearLayout(this,
                 mainLinearLayout,
-                R.layout.full_grid_view_adapter,
-                new FullyGridLinearLayoutListener() {
+                R.layout.full_grid_view_adapter1,
+                new FullyGridLinearLayout.FullyGridLinearLayoutListener() {
 
                     @Override
                     public void setSubItemListener(View convertView, int position,
@@ -109,25 +108,4 @@ public class FullGridViewActivity extends Activity implements OnClickListener {
                 Toast.LENGTH_SHORT).show();
     }
 
-
-    public class Data {
-        private String title;
-        private String description;
-
-        public String getDescription() {
-            return description;
-        }
-
-        public void setDescription(String description) {
-            this.description = description;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-    }
 }

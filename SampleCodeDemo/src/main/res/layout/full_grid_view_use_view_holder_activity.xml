@@ -18,7 +18,7 @@
             android:text="hello world" />
 
         <LinearLayout
-            android:id="@+id/fullGridView_mainLinear"
+            android:id="@+id/fullGridViewUseViewHolder_mainLinear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">

@@ -11,6 +11,11 @@
     android:orientation="vertical">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Grid View Adapter 1"/>
+
+    <TextView
         android:id="@+id/fullGridView_titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
