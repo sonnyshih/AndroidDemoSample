@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.demo.R;
+import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.CustomLinearLayoutDemo.CustomLinearLayoutDemoActivity;
 import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewDemo.FullGridViewUseViewActivity;
 import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewHolderDemo.FullGridViewUseViewHolderDemoActivity;
 
@@ -26,6 +27,9 @@ public class UseLinearLayoutDisplayFullGridViewDemoActivity extends AppCompatAct
         Button useViewHolderButton =(Button) findViewById(R.id.useLinearLayoutDisplayFullGridViewDemo_useViewHolderButton);
         useViewHolderButton.setOnClickListener(this);
 
+        Button customLinearLayoutButton =(Button) findViewById(R.id.useLinearLayoutDisplayFullGridViewDemo_customLinearLayoutButton);
+        customLinearLayoutButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -39,6 +43,10 @@ public class UseLinearLayoutDisplayFullGridViewDemoActivity extends AppCompatAct
 
             case R.id.useLinearLayoutDisplayFullGridViewDemo_useViewHolderButton:
                 intent.setClass(this, FullGridViewUseViewHolderDemoActivity.class);
+                break;
+
+            case R.id.useLinearLayoutDisplayFullGridViewDemo_customLinearLayoutButton:
+                intent.setClass(this, CustomLinearLayoutDemoActivity.class);
                 break;
 
             default:
