@@ -12,7 +12,6 @@ import com.example.demo.R;
 import com.example.demo.activity.AlarmManagerDemo.AlarmManagerDemoActivity;
 import com.example.demo.activity.AlertDialogDemo.AlertDialogDemoActivity;
 import com.example.demo.activity.AnimationDemo.AnimationDemoActivity;
-import com.example.demo.activity.AnimationDemo.RotationDemo.RotationAnimationDemoActivity;
 import com.example.demo.activity.CardViewDemo.CardViewDemoActivity;
 import com.example.demo.activity.CheckPermissionDemoMoreThanAndroidV60.CheckPermissionDemoActivity;
 import com.example.demo.activity.DrawerDemo.DrawerDemoActivity;
@@ -31,7 +30,8 @@ import com.example.demo.activity.SendNotificationDemo.SendNotificationDemoActivi
 import com.example.demo.activity.SettingLanguageDemo.SettingLanguageActivity;
 import com.example.demo.activity.TabHost.TabHostDemoActivity;
 import com.example.demo.activity.TextviewEditTextDemo.TextViewAndEditViewDemoActivity;
-import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewActivity;
+import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewDemo.FullGridViewUseViewActivity;
+import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.UseLinearLayoutDisplayFullGridViewDemoActivity;
 import com.example.demo.activity.Video.VideoDemoActivity;
 import com.example.demo.activity.ViewHolderDemo.ViewHolderDemoActvity;
 import com.example.demo.activity.VolleyDemo.VolleyDemoActivity;
@@ -222,7 +222,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
 
             case R.id.main_fullGridViewDemoButton:
-                intent.setClass(this, FullGridViewActivity.class);
+                intent.setClass(this, UseLinearLayoutDisplayFullGridViewDemoActivity.class);
                 break;
 
             case R.id.main_alarmManagerDemoButton:
