@@ -11,6 +11,7 @@ import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 
 import com.example.demo.R;
+import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.CustomLinearLayoutDemo.CustomGridViewLinearLayout;
 import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.entity.Data;
 
 import java.util.ArrayList;
@@ -18,21 +19,19 @@ import java.util.List;
 
 public class FullGridViewUseViewHolderDemoActivity extends AppCompatActivity {
 
-    private LinearLayout mainLinear;
+    private CustomGridViewLinearLayout linearLayout;
     private List<Data> list;
-    private List <ItemViewHolderInfo> viewHolderList;
+    private List <ViewHolderInfo> viewHolderInfoList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.full_grid_view_use_view_holder_activity);
 
-        mainLinear = (LinearLayout) findViewById(R.id.fullGridViewUseViewHolder_mainLinear);
-
+        linearLayout = (CustomGridViewLinearLayout) findViewById(R.id.fullGridViewUseViewHolder_mainLinear);
         list = generateList();
-        viewHolderList = generateViewHolderInfoList(list);
-        layoutFullyGridLinearLayout(viewHolderList);
-        getWidth();
+        viewHolderInfoList = generateViewHolderInfoList(list);
+        layoutFullyGridLinearLayout();
     }
 
     @Override
@@ -40,41 +39,41 @@ public class FullGridViewUseViewHolderDemoActivity extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
 
         // Waiting for completing to rotate.
-        mainLinear.postDelayed(new Runnable() {
+        linearLayout.postDelayed(new Runnable() {
             @Override
             public void run() {
                 getWidth();
-                layoutFullyGridLinearLayout(viewHolderList);
+                layoutFullyGridLinearLayout();
             }
         }, 100);
     }
 
     private void getWidth(){
-        ViewTreeObserver vto = mainLinear.getViewTreeObserver();
+        ViewTreeObserver vto = linearLayout.getViewTreeObserver();
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
 
-                Log.d("Mylog", "mainLinear.getWidth()="+mainLinear.getWidth());
-//                layoutView(mainLinearLayout.getWidth());
+                Log.d("Mylog", "mainLinear.getWidth()="+linearLayout.getWidth());
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                    mainLinear.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                    linearLayout.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 } else {
-                    mainLinear.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                    linearLayout.getViewTreeObserver().removeGlobalOnLayoutListener(this);
                 }
 
             }
         });
     }
 
-    private void layoutFullyGridLinearLayout(List<ItemViewHolderInfo> list){
+    private void layoutFullyGridLinearLayout(){
         int column = Integer.valueOf(getResources().getString(R.string.column_number));
-
-        MyAdapter myAdapter = new MyAdapter(this, mainLinear, list, column);
-        myAdapter.startLayout();
-
+        MyAdapter myAdapter = new MyAdapter();
+        myAdapter.addAll(viewHolderInfoList);
+        linearLayout.setColumn(column);
+        linearLayout.setAdapter(myAdapter);
     }
+
 
 
     private ArrayList<Data> generateList() {
@@ -92,8 +91,8 @@ public class FullGridViewUseViewHolderDemoActivity extends AppCompatActivity {
         return list;
     }
 
-    private List<ItemViewHolderInfo> generateViewHolderInfoList (List<Data> list){
-        List<ItemViewHolderInfo> viewHolderList = new ArrayList<>();
+    private List<ViewHolderInfo> generateViewHolderInfoList (List<Data> list){
+        List<ViewHolderInfo> viewHolderList = new ArrayList<>();
 
         for (Data data: list) {
             ItemViewHolderInfo itemViewHolderInfo = new ItemViewHolderInfo(data);
