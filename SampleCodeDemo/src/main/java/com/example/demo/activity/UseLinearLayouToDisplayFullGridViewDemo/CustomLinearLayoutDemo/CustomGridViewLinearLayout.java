@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 public class CustomGridViewLinearLayout extends LinearLayout {
     private LinearLayout linearLayout;
     private Adapter adapter;
-    private int column = 1;
+    private int spanCount = 1;
 
 
     public CustomGridViewLinearLayout(Context context) {
@@ -28,8 +28,17 @@ public class CustomGridViewLinearLayout extends LinearLayout {
         super(context, attrs, defStyleAttr);
     }
 
-    public void setColumn(int column){
-        this.column = column;
+    public void setSpanCount(int spanCount){
+        if (spanCount == this.spanCount) {
+            return;
+        }
+
+        this.spanCount = spanCount;
+
+        if (adapter != null){
+            startLayout();
+        }
+
     }
 
     public void setAdapter(Adapter adapter) {
@@ -64,12 +73,12 @@ public class CustomGridViewLinearLayout extends LinearLayout {
 
         int row = 0;
 
-        int remainder = itemCount % column;
+        int remainder = itemCount % spanCount;
 
         if (remainder > 0) {
-            row = itemCount / column + 1;
+            row = itemCount / spanCount + 1;
         } else {
-            row = itemCount / column;
+            row = itemCount / spanCount;
         }
 
         for (int i = 0; i < row; i++) {
@@ -81,12 +90,12 @@ public class CustomGridViewLinearLayout extends LinearLayout {
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
             linearLayout.setLayoutParams(rowLayoutParams);
 
-            for (int j = 0; j < column; j++) {
+            for (int j = 0; j < spanCount; j++) {
 
-                ViewGroup.LayoutParams columnLayoutParams = new ViewGroup.LayoutParams((int) width / column,
+                ViewGroup.LayoutParams columnLayoutParams = new ViewGroup.LayoutParams((int) width / spanCount,
                         ViewGroup.LayoutParams.MATCH_PARENT);
 
-                int index = i * column + j;
+                int index = i * spanCount + j;
 
                 if (index < itemCount) {
                     ViewHolder viewHolder = adapter.createViewHolder(this, adapter.getItemViewType(index));
