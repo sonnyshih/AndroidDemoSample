@@ -1,4 +1,4 @@
-package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewHolderDemo;
+package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.GridViewUseViewHolderDemo;
 
 
 import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.entity.Data;

@@ -17,14 +17,13 @@
             android:layout_height="wrap_content"
             android:text="hello world" />
 
-        <LinearLayout
-            android:id="@+id/fullGridViewUseView_mainLinear"
+
+        <com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.CustomLinearLayoutDemo.CustomGridViewLinearLayout
+            android:id="@+id/gridViewUseViewHolder_mainLinear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-
-        </LinearLayout>
+        </com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.CustomLinearLayoutDemo.CustomGridViewLinearLayout>
 
     </LinearLayout>
 

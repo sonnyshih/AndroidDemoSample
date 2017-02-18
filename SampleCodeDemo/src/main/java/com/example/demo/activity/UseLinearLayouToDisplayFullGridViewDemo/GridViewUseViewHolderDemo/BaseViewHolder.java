@@ -1,4 +1,4 @@
-package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewHolderDemo;
+package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.GridViewUseViewHolderDemo;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

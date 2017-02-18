@@ -173,12 +173,12 @@
             android:text="Check Premission Demo" />
 
         <Button
-            android:id="@+id/main_fullGridViewDemoButton"
+            android:id="@+id/main_gridViewDemoButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textAllCaps="false"
-            android:text="Full Gride View Demo" />
+            android:text="Gride View Demo" />
 
         <Button
             android:id="@+id/main_alarmManagerDemoButton"

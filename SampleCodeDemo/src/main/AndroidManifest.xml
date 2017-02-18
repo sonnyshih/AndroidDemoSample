@@ -425,15 +425,15 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
-            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.UseLinearLayoutDisplayFullGridViewDemoActivity"
+            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.UseLinearLayoutDisplayGridViewDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
-            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewDemo.FullGridViewUseViewActivity"
+            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.GridViewUseViewDemo.GridViewUseViewActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity
-            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewHolderDemo.FullGridViewUseViewHolderDemoActivity"
+            android:name=".activity.UseLinearLayouToDisplayFullGridViewDemo.GridViewUseViewHolderDemo.GridViewUseViewHolderDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
         <activity

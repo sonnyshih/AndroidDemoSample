@@ -1,6 +1,5 @@
-package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewHolderDemo;
+package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.GridViewUseViewHolderDemo;
 
-import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -19,8 +18,8 @@ public class ViewHolder2 extends BaseViewHolder{
         super(itemView);
 
         itemLayout = (LinearLayout) itemView.findViewById(R.id.fullGridView_itemLayout);
-        titleTextView = (TextView) itemView.findViewById(R.id.fullGridView_titleTextView);
-        descriptionTextView = (TextView) itemView.findViewById(R.id.fullGridView_descriptionTextView);
+        titleTextView = (TextView) itemView.findViewById(R.id.gridView_titleTextView);
+        descriptionTextView = (TextView) itemView.findViewById(R.id.gridView_descriptionTextView);
 
     }
 
