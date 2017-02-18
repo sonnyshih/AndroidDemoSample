@@ -42,7 +42,7 @@ public class CustomLinearLayoutDemoActivity extends AppCompatActivity{
     private void layoutFullyGridLinearLayout(){
         int column = Integer.valueOf(getResources().getString(R.string.column_number));
         CustomAdapter customAdapter = new CustomAdapter(list);
-        linearLayout.setColumn(column);
+        linearLayout.setSpanCount(column);
         linearLayout.setAdapter(customAdapter);
     }
 

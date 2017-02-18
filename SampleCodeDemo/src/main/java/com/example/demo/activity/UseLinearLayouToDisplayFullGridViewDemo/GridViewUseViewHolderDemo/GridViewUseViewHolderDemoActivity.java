@@ -41,7 +41,7 @@ public class GridViewUseViewHolderDemoActivity extends AppCompatActivity {
             @Override
             public void run() {
                 getWidth();
-                layoutGridLinearLayout();
+                setLayoutSpanCount();
             }
         }, 100);
     }
@@ -64,11 +64,15 @@ public class GridViewUseViewHolderDemoActivity extends AppCompatActivity {
         });
     }
 
-    private void layoutGridLinearLayout(){
+    private void setLayoutSpanCount(){
         int column = Integer.valueOf(getResources().getString(R.string.column_number));
+        linearLayout.setSpanCount(column);
+    }
+
+    private void layoutGridLinearLayout(){
+        setLayoutSpanCount();
         MyAdapter myAdapter = new MyAdapter();
         myAdapter.addAll(viewHolderInfoList);
-        linearLayout.setColumn(column);
         linearLayout.setAdapter(myAdapter);
     }
 
