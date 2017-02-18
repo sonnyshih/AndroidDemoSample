@@ -30,8 +30,7 @@ import com.example.demo.activity.SendNotificationDemo.SendNotificationDemoActivi
 import com.example.demo.activity.SettingLanguageDemo.SettingLanguageActivity;
 import com.example.demo.activity.TabHost.TabHostDemoActivity;
 import com.example.demo.activity.TextviewEditTextDemo.TextViewAndEditViewDemoActivity;
-import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewDemo.FullGridViewUseViewActivity;
-import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.UseLinearLayoutDisplayFullGridViewDemoActivity;
+import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.UseLinearLayoutDisplayGridViewDemoActivity;
 import com.example.demo.activity.Video.VideoDemoActivity;
 import com.example.demo.activity.ViewHolderDemo.ViewHolderDemoActvity;
 import com.example.demo.activity.VolleyDemo.VolleyDemoActivity;
@@ -107,7 +106,7 @@ public class MainActivity extends Activity implements OnClickListener {
         Button checkPremissionDemoButton = (Button) findViewById(R.id.main_checkPremissionDemoButton);
         checkPremissionDemoButton.setOnClickListener(this);
 
-        Button fullGridViewDemoButton = (Button) findViewById(R.id.main_fullGridViewDemoButton);
+        Button fullGridViewDemoButton = (Button) findViewById(R.id.main_gridViewDemoButton);
         fullGridViewDemoButton.setOnClickListener(this);
 
         Button alarmManagerDemoButton = (Button) findViewById(R.id.main_alarmManagerDemoButton);
@@ -221,8 +220,8 @@ public class MainActivity extends Activity implements OnClickListener {
                 intent.setClass(this, CheckPermissionDemoActivity.class);
                 break;
 
-            case R.id.main_fullGridViewDemoButton:
-                intent.setClass(this, UseLinearLayoutDisplayFullGridViewDemoActivity.class);
+            case R.id.main_gridViewDemoButton:
+                intent.setClass(this, UseLinearLayoutDisplayGridViewDemoActivity.class);
                 break;
 
             case R.id.main_alarmManagerDemoButton:

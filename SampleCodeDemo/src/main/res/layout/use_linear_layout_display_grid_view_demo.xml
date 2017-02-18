@@ -9,21 +9,14 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <Button
-        android:id="@+id/useLinearLayoutDisplayFullGridViewDemo_useViewButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Use View"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/useLinearLayoutDisplayFullGridViewDemo_useViewHolderButton"
+        android:id="@+id/useLinearLayoutDisplayGridViewDemo_useViewHolderButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Use View Holder"
         android:textAllCaps="false"/>
 
     <Button
-        android:id="@+id/useLinearLayoutDisplayFullGridViewDemo_customLinearLayoutButton"
+        android:id="@+id/useLinearLayoutDisplayGridViewDemo_customLinearLayoutButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Custom Linear Layout"

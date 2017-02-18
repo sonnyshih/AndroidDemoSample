@@ -1,14 +1,12 @@
-package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewHolderDemo;
+package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.GridViewUseViewHolderDemo;
 
 
-import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.ViewTreeObserver;
-import android.widget.LinearLayout;
 
 import com.example.demo.R;
 import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.CustomLinearLayoutDemo.CustomGridViewLinearLayout;
@@ -17,7 +15,7 @@ import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.entity.
 import java.util.ArrayList;
 import java.util.List;
 
-public class FullGridViewUseViewHolderDemoActivity extends AppCompatActivity {
+public class GridViewUseViewHolderDemoActivity extends AppCompatActivity {
 
     private CustomGridViewLinearLayout linearLayout;
     private List<Data> list;
@@ -26,12 +24,12 @@ public class FullGridViewUseViewHolderDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.full_grid_view_use_view_holder_activity);
+        setContentView(R.layout.grid_view_use_view_holder_activity);
 
-        linearLayout = (CustomGridViewLinearLayout) findViewById(R.id.fullGridViewUseViewHolder_mainLinear);
+        linearLayout = (CustomGridViewLinearLayout) findViewById(R.id.gridViewUseViewHolder_mainLinear);
         list = generateList();
         viewHolderInfoList = generateViewHolderInfoList(list);
-        layoutFullyGridLinearLayout();
+        layoutGridLinearLayout();
     }
 
     @Override
@@ -43,7 +41,7 @@ public class FullGridViewUseViewHolderDemoActivity extends AppCompatActivity {
             @Override
             public void run() {
                 getWidth();
-                layoutFullyGridLinearLayout();
+                layoutGridLinearLayout();
             }
         }, 100);
     }
@@ -66,7 +64,7 @@ public class FullGridViewUseViewHolderDemoActivity extends AppCompatActivity {
         });
     }
 
-    private void layoutFullyGridLinearLayout(){
+    private void layoutGridLinearLayout(){
         int column = Integer.valueOf(getResources().getString(R.string.column_number));
         MyAdapter myAdapter = new MyAdapter();
         myAdapter.addAll(viewHolderInfoList);

@@ -13,16 +13,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Full Grid View Adapter 1"/>
+        android:text="Full Grid View Adapter 2"/>
 
     <TextView
-        android:id="@+id/fullGridView_titleTextView"
+        android:id="@+id/gridView_titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Title"/>
 
     <TextView
-        android:id="@+id/fullGridView_descriptionTextView"
+        android:id="@+id/gridView_descriptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Description"/>

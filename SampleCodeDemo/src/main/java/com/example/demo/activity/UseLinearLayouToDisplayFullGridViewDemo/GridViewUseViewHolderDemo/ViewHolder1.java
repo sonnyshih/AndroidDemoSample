@@ -1,4 +1,4 @@
-package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewHolderDemo;
+package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.GridViewUseViewHolderDemo;
 
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,8 +19,8 @@ public class ViewHolder1 extends BaseViewHolder{
         super(itemView);
 
         itemLayout = (LinearLayout) itemView.findViewById(R.id.fullGridView_itemLayout);
-        titleTextView = (TextView) itemView.findViewById(R.id.fullGridView_titleTextView);
-        descriptionTextView = (TextView) itemView.findViewById(R.id.fullGridView_descriptionTextView);
+        titleTextView = (TextView) itemView.findViewById(R.id.gridView_titleTextView);
+        descriptionTextView = (TextView) itemView.findViewById(R.id.gridView_descriptionTextView);
 
     }
 

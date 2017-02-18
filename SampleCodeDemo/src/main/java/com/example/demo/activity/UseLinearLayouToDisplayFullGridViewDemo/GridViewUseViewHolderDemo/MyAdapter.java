@@ -1,5 +1,5 @@
 
-package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.FullGridViewUseViewHolderDemo;
+package com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.GridViewUseViewHolderDemo;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -15,10 +15,10 @@ public class MyAdapter extends BaseRecyclerViewAdapter{
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         switch (viewType) {
             case 1:
-                return new ViewHolder1(inflater.inflate(R.layout.full_grid_view_adapter1, parent, false));
+                return new ViewHolder1(inflater.inflate(R.layout.grid_view_adapter1, parent, false));
 
             case 2:
-                return new ViewHolder2(inflater.inflate(R.layout.full_grid_view_adapter2, parent, false));
+                return new ViewHolder2(inflater.inflate(R.layout.grid_view_adapter2, parent, false));
 
             default:
                 return null;
