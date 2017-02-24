@@ -44,7 +44,9 @@ public abstract class WebServiceWorker <R> {
                         break;
                 }
             }
-        }.execute();
+        };
+
+        headerAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     public void cancelTask() {
