@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Firebase Performance Monitoring And OkHttp" />
             <option value="$PROJECT_DIR$/FirebaseAnalytics" />
             <option value="$PROJECT_DIR$/FirebaseCloudMessage" />
             <option value="$PROJECT_DIR$/SampleCodeDemo" />

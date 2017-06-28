@@ -1,1 +1,1 @@
-include ':SampleCodeDemo', ':Service Demo', ':Thread And Async Task Demo', ':FirebaseCloudMessage', ':FirebaseAnalytics'
+include ':SampleCodeDemo', ':Service Demo', ':Thread And Async Task Demo', ':FirebaseCloudMessage', ':FirebaseAnalytics', ':Firebase Performance Monitoring And OkHttp'
