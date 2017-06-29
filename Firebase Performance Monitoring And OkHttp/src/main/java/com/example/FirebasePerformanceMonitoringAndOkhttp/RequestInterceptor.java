@@ -1,4 +1,4 @@
-package com.example;
+package com.example.FirebasePerformanceMonitoringAndOkhttp;
 
 import android.util.Log;
 
