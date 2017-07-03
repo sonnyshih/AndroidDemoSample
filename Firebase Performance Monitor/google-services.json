@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "209001104721",
+    "firebase_url": "https://okhttp-and-performance-monitor.firebaseio.com",
+    "project_id": "okhttp-and-performance-monitor",
+    "storage_bucket": "okhttp-and-performance-monitor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209001104721:android:2ff78ff88e1a9c93",
+        "android_client_info": {
+          "package_name": "com.sonny.exaple.firebaseperformancemonitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209001104721-9tlhfb6n5adg97p60he6eb7mfgprnjmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Sj6ygt3xKTtec7B9VZ4tCsvWuEfqt7w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
