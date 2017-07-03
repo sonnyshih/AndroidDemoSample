@@ -1,4 +1,4 @@
-package com.example.FirebasePerformanceMonitoringAndOkhttp;
+package com.sonny.example.okhttpexample;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
