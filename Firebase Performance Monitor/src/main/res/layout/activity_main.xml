@@ -13,6 +13,27 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/main_getPicButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Get Picture"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/main_getDataTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empty" />
+
+        <ImageView
+            android:id="@+id/main_getImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+
+        <!--
+        <Button
             android:id="@+id/main_getDataButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,22 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Empty" />
-
-
-        <Button
-            android:id="@+id/main_getPicButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Get Picture"
-            android:textAllCaps="false" />
-
-        <ImageView
-            android:id="@+id/main_getImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"/>
-
+        -->
 
     </LinearLayout>
 
