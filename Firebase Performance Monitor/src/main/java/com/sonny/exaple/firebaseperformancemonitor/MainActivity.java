@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.perf.FirebasePerformance;
+import com.google.firebase.perf.metrics.AddTrace;
 import com.google.firebase.perf.metrics.Trace;
 
 import java.io.IOException;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
     private Trace mTrace;
     private String STARTUP_TRACE_NAME = "startup_trace";
-    private String REQUESTS_COUNTER_NAME = "requests sent";
+    private String REQUESTS_COUNTER_NAME = "Get a photo";
 
 
     @Override
@@ -43,48 +44,50 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         setContentView(R.layout.activity_main);
 
         // Begin tracing app startup tasks.
-//        mTrace = FirebasePerformance.getInstance().newTrace(STARTUP_TRACE_NAME);
-//        Log.d(TAG, "Starting trace");
-//        mTrace.start();
+        mTrace = FirebasePerformance.getInstance().newTrace(STARTUP_TRACE_NAME);
+
 
         Button getPicButton = (Button) findViewById(R.id.main_getPicButton);
         getPicButton.setOnClickListener(this);
 
         initClientWithApplicationUseAddInterceptor();       // usually use this.
-//        loadImageFromWeb();
-        // Increment the counter of number of requests sent in the trace.
-//        Log.d(TAG, "Incrementing number of requests counter in trace");
-//        mTrace.incrementCounter(REQUESTS_COUNTER_NAME);
-//
-//
-//        Log.d(TAG, "Stopping trace");
-//        mTrace.stop();
 
     }
 
     private void initClientWithApplicationUseAddInterceptor(){
         client = new OkHttpClient.Builder()
-//                .addInterceptor(new RequestInterceptor())
-//                .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+                .addInterceptor(new RequestInterceptor())
+                .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
                 .build();
     }
 
 
     private void onGetPicButtonClick(){
+        Log.d(TAG, "Starting trace");
+        mTrace.start();
+
+        // Increment the counter of number of requests sent in the trace.
+        Log.d(TAG, "Incrementing number of requests counter in trace");
+        mTrace.incrementCounter(REQUESTS_COUNTER_NAME);
+
         layoutImage(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
 
-        String url = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png";
+//        String url = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png";
+        String url = "https://c1.neweggimages.com/ProductImageCompressAll300/22-178-422-02.jpg";
         Request request = new Request.Builder()
                 .url(url)
                 .build();
         requestGetImageAsynchronous(request);
     }
 
+    @AddTrace(name = "requestGetImageAsynchronousTrace", enabled = true/*Optional*/)
     private void requestGetImageAsynchronous(Request request){
         call = client.newCall(request);
         call.enqueue(new Callback() {
             @Override
             public void onResponse(Call call, final Response response) throws IOException {
+                Log.d(TAG, "Stopping trace");
+                mTrace.stop();
 
                 if (response.isSuccessful()) {
                     final Bitmap bitmap = BitmapFactory.decodeStream(response.body().byteStream());

@@ -33,7 +33,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:$project.ANDROID_SUPPORT_VERSION"
 
     // Firebase performance monitor
-    compile 'com.google.firebase:firebase-perf:11.0.1'
+    compile "com.google.firebase:firebase-perf:$project.GOOGLE_PLAY_SERVICE_VERSION"
 
     //OKHttp Lib
     compile 'com.squareup.okhttp3:okhttp:3.8.1'
