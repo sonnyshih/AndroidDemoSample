@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "209001104721",
-    "firebase_url": "https://okhttp-and-performance-monitor.firebaseio.com",
-    "project_id": "okhttp-and-performance-monitor",
-    "storage_bucket": "okhttp-and-performance-monitor.appspot.com"
+    "project_number": "13136154845",
+    "firebase_url": "https://sonny-demo.firebaseio.com",
+    "project_id": "sonny-demo",
+    "storage_bucket": "sonny-demo.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:209001104721:android:2ff78ff88e1a9c93",
+        "mobilesdk_app_id": "1:13136154845:android:2ff78ff88e1a9c93",
         "android_client_info": {
           "package_name": "com.sonny.exaple.firebaseperformancemonitor"
         }
       },
       "oauth_client": [
         {
-          "client_id": "209001104721-9tlhfb6n5adg97p60he6eb7mfgprnjmj.apps.googleusercontent.com",
+          "client_id": "13136154845-c0li8rggnleelaur279tccukjdbmko7v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD2Sj6ygt3xKTtec7B9VZ4tCsvWuEfqt7w"
+          "current_key": "AIzaSyBM0ZiPHCZDvbEN9-hBwaIXkC31vf-z97E"
         }
       ],
       "services": {
