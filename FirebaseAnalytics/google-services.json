@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "325757746023",
-    "firebase_url": "https://analytics-demo-524d8.firebaseio.com",
-    "project_id": "analytics-demo-524d8",
-    "storage_bucket": "analytics-demo-524d8.appspot.com"
+    "project_number": "13136154845",
+    "firebase_url": "https://sonny-demo.firebaseio.com",
+    "project_id": "sonny-demo",
+    "storage_bucket": "sonny-demo.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:325757746023:android:b6d372f8e9a7a7ec",
+        "mobilesdk_app_id": "1:13136154845:android:2ff78ff88e1a9c93",
         "android_client_info": {
-          "package_name": "com.sonny.firebaseanalytics"
+          "package_name": "com.sonny.exaple.firebaseperformancemonitor"
         }
       },
       "oauth_client": [
         {
-          "client_id": "325757746023-lc4ivrd9c6bbjr7uv65dn3i23ipemuvc.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.sonny.firebaseanalytics",
-            "certificate_hash": "261BA87038DF03601CC9ABDFEB43C5F23944915B"
-          }
-        },
-        {
-          "client_id": "325757746023-8q462vnsr0g15t6uff789a412gknh438.apps.googleusercontent.com",
+          "client_id": "13136154845-c0li8rggnleelaur279tccukjdbmko7v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD7wHh8XJkvofJdncYgrSEQilFWtZb2_Qw"
+          "current_key": "AIzaSyBM0ZiPHCZDvbEN9-hBwaIXkC31vf-z97E"
         }
       ],
       "services": {
@@ -37,13 +29,70 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "325757746023-8q462vnsr0g15t6uff789a412gknh438.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13136154845:android:b373c2462c63f088",
+        "android_client_info": {
+          "package_name": "com.sonny.example.firebaserealtimedatabase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13136154845-c0li8rggnleelaur279tccukjdbmko7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM0ZiPHCZDvbEN9-hBwaIXkC31vf-z97E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13136154845:android:b6d372f8e9a7a7ec",
+        "android_client_info": {
+          "package_name": "com.sonny.firebaseanalytics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13136154845-c0li8rggnleelaur279tccukjdbmko7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM0ZiPHCZDvbEN9-hBwaIXkC31vf-z97E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
