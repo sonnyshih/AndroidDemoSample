@@ -20,7 +20,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
-    private String SERVER_API_KEY = "AAAAjNxrGQI:APA91bGXZcPkBcXB3vFv_tNEgndUC7kUe_0dLTdb09X8m4akjx8dUtXmQzld771gFGgezrK8LqcXZkChi3SUYjIIUnEj_MHGJao3J8rHDX1bDfbiMv4DJw2A2XhmWyyBTNzEGhCsGoEN";
+    private String SERVER_API_KEY = "AAAAAw750N0:APA91bG7_61z5X0iRYiEUK6McMX4pOWvXo1aVW01QygVgK5hVZ7naBnc_RDzYUhbIRxJ2qvH37BinHaCXEWP7pfbtXKV81nZ8ohv4avQEqTe3JyE9JD0Gw-8cutHG9PEYlwKLWiFkcuE";
     private String token = "";
 
     String nexus9Token = "dtIkIIvLe2I:APA91bGDKJoirxIb_-kE9l7mNLutW9vqHnpreOsO4Re4EJEX1RdUoa5Yr__2IejJ6UaKYOnCmR5pXvduToNOVOhV-t_EubRbyWYY-xdQCj1MOT0SiOpB8MjuMj21vDPYeo3w8LVS1DW2";
