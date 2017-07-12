@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
         Button accountPasswordButton = (Button) findViewById(R.id.main_accountPasswordButton);
         accountPasswordButton.setOnClickListener(this);
+
+        Button main_phoneNumberButton = (Button) findViewById(R.id.main_phoneNumberButton);
+        main_phoneNumberButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -26,6 +30,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         switch (view.getId()){
             case R.id.main_accountPasswordButton:
                 intent.setClass(this, AccountPasswordAuthActivity.class);
+                break;
+
+            case R.id.main_phoneNumberButton:
+                intent.setClass(this, PhoneNumberAuthActivity.class);
                 break;
 
             default:

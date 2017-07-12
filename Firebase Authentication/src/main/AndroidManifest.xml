@@ -18,6 +18,13 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:label="Account Password Auth Demo"
             android:launchMode="singleTask" />
+
+        <activity
+            android:name=".PhoneNumberAuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="Phone Number Auth Demo"
+            android:launchMode="singleTask" />
+
     </application>
 
 </manifest>
