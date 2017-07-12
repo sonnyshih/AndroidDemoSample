@@ -25,7 +25,6 @@
             android:text="Phone Number Auth"
             android:textAllCaps="false" />
 
-
     </LinearLayout>
 
 </ScrollView>
