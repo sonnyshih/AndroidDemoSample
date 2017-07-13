@@ -25,6 +25,12 @@
             android:label="Phone Number Auth Demo"
             android:launchMode="singleTask" />
 
+        <activity
+            android:name=".GoogleSignInActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="Google Sign Auth Demo"
+            android:launchMode="singleTask" />
+
     </application>
 
 </manifest>

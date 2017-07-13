@@ -17,8 +17,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         Button accountPasswordButton = (Button) findViewById(R.id.main_accountPasswordButton);
         accountPasswordButton.setOnClickListener(this);
 
-        Button main_phoneNumberButton = (Button) findViewById(R.id.main_phoneNumberButton);
-        main_phoneNumberButton.setOnClickListener(this);
+        Button phoneNumberButton = (Button) findViewById(R.id.main_phoneNumberButton);
+        phoneNumberButton.setOnClickListener(this);
+
+        Button googleSignInButton = (Button) findViewById(R.id.main_googleSignInButton);
+        googleSignInButton.setOnClickListener(this);
 
     }
 
@@ -34,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
             case R.id.main_phoneNumberButton:
                 intent.setClass(this, PhoneNumberAuthActivity.class);
+                break;
+
+            case R.id.main_googleSignInButton:
+                intent.setClass(this, GoogleSignInActivity.class);
                 break;
 
             default:
