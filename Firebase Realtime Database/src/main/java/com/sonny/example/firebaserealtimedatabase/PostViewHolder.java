@@ -25,7 +25,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         bodyView = (TextView) itemView.findViewById(R.id.post_body);
     }
 
-    public void bindToPost(Post post, View.OnClickListener starClickListener) {
+    public void setViewHolder(Post post, View.OnClickListener starClickListener) {
         titleView.setText(post.title);
         authorView.setText(post.author);
         numStarsView.setText(String.valueOf(post.starCount));

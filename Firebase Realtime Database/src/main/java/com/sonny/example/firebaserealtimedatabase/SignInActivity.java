@@ -53,6 +53,17 @@ public class SignInActivity extends BaseActivity implements OnClickListener {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        // Check auth on Activity start
+        if (mAuth.getCurrentUser() != null) {
+            onAuthSuccess(mAuth.getCurrentUser());
+        } else {
+            layoutUserData(null);
+        }
+    }
+
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
         finish();
@@ -144,9 +155,7 @@ public class SignInActivity extends BaseActivity implements OnClickListener {
         writeNewUserToRealtimeDatabase(user.getUid(), username, user.getEmail());
 
         layoutUserData(user);
-        // Go to MainActivity
-//        startActivity(new Intent(SignInActivity.this, MainActivity.class));
-//        finish();
+
     }
 
     private String usernameFromEmail(String email) {
