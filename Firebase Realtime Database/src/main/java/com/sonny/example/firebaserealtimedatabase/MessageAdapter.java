@@ -19,14 +19,14 @@ import com.google.firebase.database.Transaction;
 import com.google.gson.Gson;
 import com.sonny.example.firebaserealtimedatabase.entity.Post;
 
-public class MessageRecyclerAdapter
+public class MessageAdapter
         extends FirebaseRecyclerAdapter<Post, PostViewHolder> {
 
     private DatabaseReference database;
     private Context context;
 
-    public MessageRecyclerAdapter(Context context, Class<Post> modelClass, int modelLayout,
-                                  Class<PostViewHolder> viewHolderClass, Query ref) {
+    public MessageAdapter(Context context, Class<Post> modelClass, int modelLayout,
+                          Class<PostViewHolder> viewHolderClass, Query ref) {
         super(modelClass, modelLayout, viewHolderClass, ref);
         this.context = context;
 

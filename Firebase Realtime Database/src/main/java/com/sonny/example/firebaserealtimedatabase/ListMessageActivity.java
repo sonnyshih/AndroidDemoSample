@@ -38,7 +38,7 @@ public class ListMessageActivity extends BaseActivity{
 
         Query postsQuery = getQuery(database);
 
-        adapter = new MessageRecyclerAdapter(this, Post.class, R.layout.item_post,
+        adapter = new MessageAdapter(this, Post.class, R.layout.item_post,
                 PostViewHolder.class, postsQuery);
 
         recycler.setAdapter(adapter);
