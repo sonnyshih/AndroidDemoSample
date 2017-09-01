@@ -49,10 +49,17 @@ public class ScrollViewDemoActivity extends AppCompatActivity implements OnClick
     }
 
     private void onGoToClickButton(){
-        View view = mainLayout.findViewWithTag(15);
+        final View view = mainLayout.findViewWithTag(15);
         Log.d("Mylog", "x="+view.getX());
         Log.d("Mylog", "y="+view.getY());
-        mainScrollView.smoothScrollTo(0, Math.round(view.getY()));
+
+        mainScrollView.post(new Runnable() {
+            @Override
+            public void run() {
+                mainScrollView.smoothScrollTo(0, Math.round(view.getY()));
+            }
+        });
+
     }
 
     @Override
