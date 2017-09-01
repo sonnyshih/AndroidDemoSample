@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.demo.R;
+import com.example.demo.activity.AddViewDemo.AddViewDemoActivity;
 import com.example.demo.activity.AlarmManagerDemo.AlarmManagerDemoActivity;
 import com.example.demo.activity.AlertDialogDemo.AlertDialogDemoActivity;
 import com.example.demo.activity.AnimationDemo.AnimationDemoActivity;
@@ -45,6 +46,9 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+
+        Button addViewDemoButton = (Button) findViewById(R.id.main_AddViewDemoButton);
+        addViewDemoButton.setOnClickListener(this);
 
         Button fragmentDemoButton = (Button) findViewById(R.id.main_fragmentDemoButton);
         fragmentDemoButton.setOnClickListener(this);
@@ -139,6 +143,9 @@ public class MainActivity extends Activity implements OnClickListener {
         Intent intent = new Intent();
 
         switch (view.getId()) {
+            case R.id.main_AddViewDemoButton:
+                intent.setClass(this, AddViewDemoActivity.class);
+                break;
 
             case R.id.main_fragmentDemoButton:
                 intent.setClass(this, FragmentDemoActivity.class);

@@ -45,6 +45,18 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".activity.AddViewDemo.AddViewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="Add View Demo"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".activity.AddViewDemo.ScrollViewDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="ScrollView Demo"
+            android:launchMode="singleTask" />
+
         <!-- Fragment Demo Start -->
         <activity
             android:name=".activity.FragmentDemo.FragmentDemoActivity"

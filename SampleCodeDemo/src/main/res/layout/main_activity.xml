@@ -13,6 +13,14 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/main_AddViewDemoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAllCaps="false"
+            android:text="Add View Demo" />
+
+        <Button
             android:id="@+id/main_fragmentDemoButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
