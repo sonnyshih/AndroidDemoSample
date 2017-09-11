@@ -4,6 +4,7 @@ package com.example.demo.activity.home;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -38,6 +39,7 @@ import com.example.demo.activity.VolleyDemo.VolleyDemoActivity;
 import com.example.demo.activity.WebServiceTaskManagerDemo.WebServiceTaskManagerDemoActivity;
 import com.example.demo.activity.WebViewDemo.WebViewDemoActivity;
 import com.example.demo.activity.swipeRefreshDemo.SwipeRefreshDemoActivity;
+import com.example.demo.util.PhoneIpUtil;
 
 public class MainActivity extends Activity implements OnClickListener {
     public static final String BUNDLE_BOOLEAN_IS_CHANGE_LANGUAGE = "BUNDLE_BOOLEAN_IS_CHANGE_LANGUAGE";
@@ -46,6 +48,9 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+
+        Log.d("Mylog", "IPV4="+ PhoneIpUtil.getIPAddress(true));
+        Log.d("Mylog", "MAC="+ PhoneIpUtil.getMACAddress(null));
 
         Button addViewDemoButton = (Button) findViewById(R.id.main_AddViewDemoButton);
         addViewDemoButton.setOnClickListener(this);
