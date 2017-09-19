@@ -1,8 +1,5 @@
 package com.example.demo.util;
 
-
-//import org.apache.http.conn.util.InetAddressUtils;
-
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -11,8 +8,19 @@ import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.util.Collections;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PhoneIpUtil {
+    private static Pattern VALID_IPV4_PATTERN = null;
+    private static Pattern VALID_IPV6_PATTERN = null;
+    private static final String ipv4Pattern = "(([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.){3}([01]?\\d\\d?|2[0-4]\\d|25[0-5])";
+    private static final String ipv6Pattern = "([0-9a-f]{1,4}:){7}([0-9a-f]){1,4}";
+
+    private static final String defaultIpAddress = "0.0.0.0";
+
+    private static final int CONNECTION_TIMEOUT = 120000;
+    private static final int READ_TIMEOUT = 60000;
 
     /**
      * Convert byte array to hex string
@@ -126,6 +134,16 @@ public class PhoneIpUtil {
             }
         } catch (Exception ex) { } // for now eat exceptions
         return "";
+    }
+
+    public static boolean isIpAddress(String ipAddress) {
+
+        Matcher m1 = PhoneIpUtil.VALID_IPV4_PATTERN.matcher(ipAddress);
+        if (m1.matches()) {
+            return true;
+        }
+        Matcher m2 = PhoneIpUtil.VALID_IPV6_PATTERN.matcher(ipAddress);
+        return m2.matches();
     }
 
 }
