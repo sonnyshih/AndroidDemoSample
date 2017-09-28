@@ -560,6 +560,11 @@
             android:name=".activity.SettingLanguageDemo.SettingLanguageActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 
+        <!-- Bottom Sheet Demo -->
+        <activity
+            android:name=".activity.BottomSheetDemo.BottomSheetDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+
     </application>
 
 </manifest>

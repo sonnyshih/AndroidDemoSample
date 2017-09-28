@@ -14,6 +14,7 @@ import com.example.demo.activity.AddViewDemo.AddViewDemoActivity;
 import com.example.demo.activity.AlarmManagerDemo.AlarmManagerDemoActivity;
 import com.example.demo.activity.AlertDialogDemo.AlertDialogDemoActivity;
 import com.example.demo.activity.AnimationDemo.AnimationDemoActivity;
+import com.example.demo.activity.BottomSheetDemo.BottomSheetDemoActivity;
 import com.example.demo.activity.CardViewDemo.CardViewDemoActivity;
 import com.example.demo.activity.CheckPermissionDemoMoreThanAndroidV60.CheckPermissionDemoActivity;
 import com.example.demo.activity.DrawerDemo.DrawerDemoActivity;
@@ -139,6 +140,9 @@ public class MainActivity extends Activity implements OnClickListener {
         Button settingLanguageDemoButton = (Button) findViewById(R.id.main_settingLanguageDemoButton);
         settingLanguageDemoButton.setOnClickListener(this);
 
+        Button bottomSheetDemoButton = (Button) findViewById(R.id.main_bottomSheetDemoButton);
+        bottomSheetDemoButton.setOnClickListener(this);
+
     }
 
 
@@ -262,6 +266,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_settingLanguageDemoButton:
                 intent.setClass(this, SettingLanguageActivity.class);
+                break;
+
+            case R.id.main_bottomSheetDemoButton:
+                intent.setClass(this, BottomSheetDemoActivity.class);
                 break;
 
             default:

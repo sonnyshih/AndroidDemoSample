@@ -3,10 +3,12 @@
     <color name="red">#ffff0000</color>
     <color name="yellow">#FF0</color>
     <color name="black">#000000</color>
-     <color name="white">#ffffff</color>
+    <color name="white">#ffffff</color>
     <color name="background_gray">#ededed</color>
     <color name="transparent_background">#50000000</color>
-    
+
+    <color name="color_text_black">#000000</color>
+    <color name="color_white">#ffffff</color>
     <color name="menu_border_gray">#E5E5E5</color>
     
     <color name="content_below_linking_background">#dde9f6</color>
@@ -32,5 +34,7 @@
 
     <color name="color_divider">#eeeeee</color>
 
-
+    <!-- for click ripple -->
+    <color name="color_grayc2">#C2C2C2</color>
+    <color name="color_grayde">#DEDEDE</color>
 </resources>
