@@ -1,4 +1,4 @@
-include ':SampleCodeDemo', ':Firebase Authentication', ':Firebase Realtime Database',
+include ':SampleCodeDemo', ':Firebase Authentication', ':Firebase Realtime Database', ':GoogleCaptcha',
         ':Service Demo',
         ':Thread And Async Task Demo',
         ':Okhttp Example',
