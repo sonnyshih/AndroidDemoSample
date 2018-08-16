@@ -90,6 +90,10 @@
             android:theme="@style/com.sonny.customer.AppTheme.Transparent" />
 
         <activity
+            android:name=".activity.TextviewEditTextDemo.TextViewHtmlUrlDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+        <activity
             android:name=".activity.TabHost.TabHostDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
 

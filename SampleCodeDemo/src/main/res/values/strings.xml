@@ -26,11 +26,11 @@
     <string name="menu_wishListTitle">Wish List</string>
     <string name="menu_informationTitle">Information</string>
     <string name="menu_searchGoogleTvTitle">Search Google TV</string>
-    
+
     <!-- Alert Dialog Demo -->
     <string name="alertDialogDemo_email">Email:</string>
-	<string name="alertDialogDemo_password">Password:</string>
-    
+    <string name="alertDialogDemo_password">Password:</string>
+
     <string name="alertDialogDemo_standardAlertDialogDemoMessage">
         Plloaso mako nuto siwuf cakso dodtos anr koop a
         cupy uf cak vux noaw yerw phuno. Whag schengos, uf efed, quiel
@@ -69,12 +69,12 @@
         kipg naar mixent phona. Cak pwico siructiun
         ruous nust apoply tyu cak Uhex sisulutiun munityuw uw dseg\n\n</string>
 
-    
+
     <string-array name="itemSelectArray">
         <item></item>
         <item>select all</item>
         <item>unselect all</item>
-        </string-array>
+    </string-array>
 
 
     <!-- Cardview List Demo -->
@@ -83,8 +83,7 @@
         shadows and rounded corners.
         \n\nTo create a card with a shadow, use the <font fgcolor="#FFFFFFFF">android:elevation</font>
         attribute.
-        \n\nTo set the corner radius in your layouts, use the <font
-            fgcolor="#FFFFFFFF">card_view:cardCornerRadius</font> attribute.
+        \n\nTo set the corner radius in your layouts, use the <font fgcolor="#FFFFFFFF">card_view:cardCornerRadius</font> attribute.
     </string>
     <string name="cardview_radius_seekbar_text">Radius</string>
     <string name="cardview_elevation_seekbar_text">Elevation</string>
@@ -101,4 +100,30 @@
     <string name="setting_Version">Version</string>
     <string name="setting_share">Share this App</string>
 
+
+    <string name="html">
+        <![CDATA[
+        <b><a href="https://www.youtube.com/watch?v=6xc3dHjPje0">說好的幸福呢</a></b>
+        <br>
+        作詞：<a href="https://www.google.com.tw/">方文山</a><br>
+        作曲：<a href="https://tw.yahoo.com/">周杰倫</a><br>
+        <br>
+        妳的回話凌亂著 在這個時刻<br>
+        我想起噴泉旁的白鴿 甜蜜散落了<br>
+        <br>
+        情緒莫名的拉扯 我還愛妳呢<br>
+        而妳斷斷續續唱著歌 假裝沒事了<br>
+        <br>
+        時間過了 走了 愛情面臨選擇 妳冷了 倦了 我哭了<br>
+        離開時的不快樂 妳用卡片手寫著 有些愛只給到這 真的痛了<br>
+        怎麼了 妳累了 說好的 幸福呢<br>
+        我懂了 不說了 愛淡了 夢遠了<br>
+        開心與不開心一一細數著 妳再不捨<br>
+        那些愛過的感覺都太深刻 我都還記得<br>
+        <br>
+        妳不等了 說好的 幸福呢<br>
+        我錯了 淚乾了 放手了 後悔了<br>
+        只是回憶的音樂盒還旋轉著 要怎麼停呢<br>
+        ]]>
+    </string>
 </resources>

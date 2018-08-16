@@ -33,6 +33,7 @@ import com.example.demo.activity.SendNotificationDemo.SendNotificationDemoActivi
 import com.example.demo.activity.SettingLanguageDemo.SettingLanguageActivity;
 import com.example.demo.activity.TabHost.TabHostDemoActivity;
 import com.example.demo.activity.TextviewEditTextDemo.TextViewAndEditViewDemoActivity;
+import com.example.demo.activity.TextviewEditTextDemo.TextViewHtmlUrlDemoActivity;
 import com.example.demo.activity.UseLinearLayouToDisplayFullGridViewDemo.UseLinearLayoutDisplayGridViewDemoActivity;
 import com.example.demo.activity.Video.VideoDemoActivity;
 import com.example.demo.activity.ViewHolderDemo.ViewHolderDemoActvity;
@@ -61,6 +62,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
         Button textviewAndEditTextDemoButton = (Button) findViewById(R.id.main_textviewAndEditTextDemoButton);
         textviewAndEditTextDemoButton.setOnClickListener(this);
+
+        Button textViewHtmlUrlDemoButton = (Button) findViewById(R.id.main_textViewHtmlUrlDemoButton);
+        textViewHtmlUrlDemoButton.setOnClickListener(this);
 
         Button imageViewDemoButton = (Button) findViewById(R.id.main_imageViewDemoButton);
         imageViewDemoButton.setOnClickListener(this);
@@ -162,6 +166,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.main_textviewAndEditTextDemoButton:
                 intent.setClass(this, TextViewAndEditViewDemoActivity.class);
+                break;
+
+            case R.id.main_textViewHtmlUrlDemoButton:
+                intent.setClass(this, TextViewHtmlUrlDemoActivity.class);
                 break;
 
             case R.id.main_imageViewDemoButton:

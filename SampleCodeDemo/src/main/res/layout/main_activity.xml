@@ -37,6 +37,14 @@
             android:text="TextView and EditText Demo" />
 
         <Button
+            android:id="@+id/main_textViewHtmlUrlDemoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAllCaps="false"
+            android:text="Show HTML in TextView Demo" />
+
+        <Button
             android:id="@+id/main_imageViewDemoButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
