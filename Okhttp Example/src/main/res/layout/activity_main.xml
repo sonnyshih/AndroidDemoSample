@@ -36,6 +36,14 @@
             android:text="Post JSON Data"
             android:textAllCaps="false" />
 
+        <Button
+            android:id="@+id/main_postParameterDataButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Post Parameter Data"
+            android:textAllCaps="false" />
+
         <TextView
             android:id="@+id/main_getDataTextView"
             android:layout_width="wrap_content"

@@ -20,6 +20,7 @@ import java.util.zip.GZIPInputStream;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.HttpUrl;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -48,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
         Button postJsonDataButton = (Button) findViewById(R.id.main_postJsonDataButton);
         postJsonDataButton.setOnClickListener(this);
+
+        Button postParameterDataButton = (Button) findViewById(R.id.main_postParameterDataButton);
+        postParameterDataButton.setOnClickListener(this);
 
         Button getPicButton = (Button) findViewById(R.id.main_getPicButton);
         getPicButton.setOnClickListener(this);
@@ -119,7 +123,26 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                 .post(requestBody)
                 .build();
         requestGetJsonDataAsynchronous(request);
-    };
+    }
+
+    private void onPostParameterDataButtonClick(){
+        layoutTextView("Getting Data....");
+
+        String url = "http://220.134.116.168/ASM_WebService/AS_WebService.asmx/wsLogon";
+
+        HttpUrl.Builder httpBuilder = HttpUrl.parse(url).newBuilder();
+        httpBuilder.addQueryParameter("accountId","admin");
+        httpBuilder.addQueryParameter("password","pflag");
+
+        Request request = new Request.Builder()
+                .url(httpBuilder.build())
+                .header("Accept-Charset", "utf-8")
+                .header("Accept", "application/json")
+                .header("Content-Type", "application/json")
+                .build();
+        requestGetJsonDataAsynchronous(request);
+
+    }
 
     private void onGetPicButtonClick(){
         layoutImage(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
@@ -273,7 +296,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         BufferedReader reader = null;
 
         try {
-            if (contentEncoding == null && contentEncoding == "") {
+            if (contentEncoding == null || contentEncoding == "") {
                 return response.body().string();
             } else if (contentEncoding.equalsIgnoreCase("gzip")) {
                 GZIPInputStream gzip = new GZIPInputStream(response.body().byteStream());
@@ -329,6 +352,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
             case R.id.main_postJsonDataButton:
                 onPostJsonDataButtonClick();
+                break;
+
+            case R.id.main_postParameterDataButton:
+                onPostParameterDataButtonClick();
                 break;
 
             case R.id.main_getPicButton:
